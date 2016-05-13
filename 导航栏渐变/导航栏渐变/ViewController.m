@@ -66,4 +66,57 @@
     cell.textLabel.text = @"fdas";
     return cell;
 }
+
+//获取一张指定颜色和大小的图片
+-(UIImage *)imageWithBgColor:(UIColor *)color size:(CGSize)size{
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+    
+}
+
+//获取带文字的图片worldX 文字的起始点
+- ( UIImage *)createShareImage:( NSString *)str imageColor:(UIColor * )color imageSize:(CGSize)size font:(CGFloat)font worldX:(CGFloat)worldX;
+{
+    
+    UIImage *image = [self imageWithBgColor:color size:size];
+    
+    UIGraphicsBeginImageContextWithOptions (size, NO , 0.0 );
+    
+    [image drawAtPoint:CGPointMake(0,0)];
+    
+    // 获得一个位图图形上下文
+    
+    CGContextRef context= UIGraphicsGetCurrentContext();
+    
+    CGContextDrawPath (context, kCGPathStroke );
+    
+    // 画 打败了多少用户
+    
+    [str drawAtPoint : CGPointMake (worldX,(size.height - font)*0.5) withAttributes : @{ NSFontAttributeName :[ UIFont fontWithName : @"Arial-BoldMT" size : font ], NSForegroundColorAttributeName :[ UIColor whiteColor ] } ];
+    
+    //画自己想画的内容。。。。。
+    
+    // 返回绘制的新图形
+    
+    UIImage *newImage= UIGraphicsGetImageFromCurrentImageContext ();
+    
+    UIGraphicsEndImageContext ();
+    
+    return newImage;
+    
+}
 @end
