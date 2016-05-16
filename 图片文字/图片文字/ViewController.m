@@ -41,7 +41,6 @@
     UIGraphicsEndImageContext();
     
     return image;
-    
 }
 
 //获取带文字的图片worldX 文字的起始点
@@ -77,8 +76,7 @@
 }
 
 //这个是用来获取一个文字图片的，文字多大，图片就多大
-//获取带文字的图片worldX 文字的起始点
--( UIImage *)createImageWithColor:(UIColor * )color worlds:( NSString *)worlds worldsColor:(UIColor * )worldsColor font:(CGFloat)font worldX:(CGFloat)worldX
+-(UIImage *)createImageWithColor:(UIColor * )color worlds:( NSString *)worlds worldsColor:(UIColor * )worldsColor font:(CGFloat)font
 {
     //    [ UIFont fontWithName : @"Arial-BoldMT" size : font ]
     NSDictionary * attributesDic = @{ NSFontAttributeName :[ UIFont systemFontOfSize:font], NSForegroundColorAttributeName :worldsColor};
@@ -99,9 +97,7 @@
     
     // 画 打败了多少用户
     
-    [worlds drawAtPoint : CGPointMake (worldX,(image.size.height - font)*0.5) withAttributes :attributesDic];
-    
-    //画自己想画的内容。。。。。
+    [worlds drawAtPoint : CGPointMake (0,(image.size.height - font)*0.5) withAttributes :attributesDic];
     
     // 返回绘制的新图形
     
@@ -110,7 +106,6 @@
     UIGraphicsEndImageContext ();
     
     return newImage;
-    
 }
 
 

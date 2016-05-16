@@ -1,0 +1,45 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+//在下面定义或者引用的东西 只能.m .mm文件用
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+
+
+
+// RGB颜色
+#define LDColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//纯色
+#define LDColorZ(z) LDColor(z, z, z)
+
+// 随机色
+#define LDRandomColor LDColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+//调试模式
+#ifdef DEBUG
+
+#define LDLog(...) NSLog(__VA_ARGS__)
+
+#else
+//发布模式(release)
+#define LDLog(...)
+
+#endif
+
+
+#endif
+
+
+
