@@ -22,5 +22,7 @@
 +(instancetype) imageCapWithView:(UIImageView *) view;
 
 /**获取指定颜色和大小的图片*/
-+(UIImage *)imageWithBgColor:(UIColor *)color size:(CGSize)size
++(UIImage *)imageWithBgColor:(UIColor *)color size:(CGSize)size;
+
++(instancetype)imageName:(NSString *)imageName inBundleName:(NSString *)bundleName;
 @end

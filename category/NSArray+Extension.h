@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Description)
-
+@interface NSArray (Extension)
+/**
+ *  加载bundle里面的plist文件
+ */
++(instancetype)arrayWithBundleName:(NSString *)bundleName;
 @end

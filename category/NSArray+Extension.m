@@ -6,9 +6,10 @@
 //  Copyright (c) 2015年 LD. All rights reserved.
 //
 
-#import "NSArray+Description.h"
+#import "NSArray+Extension.h"
 
-@implementation NSArray (Description)
+@implementation NSArray (Extension)
+
 -(NSString *)descriptionWithLocale:(id)locale{
     
     NSMutableString * strM = [NSMutableString stringWithFormat:@"("];
@@ -17,7 +18,10 @@
     }];
     [strM appendFormat:@"\n)"];
     return strM;
-    
+}
 
++(instancetype)arrayWithBundleName:(NSString *)bundleName
+{
+   return  [NSArray arrayWithContentsOfFile:[[NSBundle bundleWithPath:[[NSBundle mainBundle]pathForResource:@"EmoticonQQ" ofType:@"bundle"]]pathForResource:@"info" ofType:@"plist"]];
 }
 @end

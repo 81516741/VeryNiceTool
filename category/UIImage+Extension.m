@@ -120,5 +120,9 @@
     return image;
 }
 
++(instancetype)imageName:(NSString *)imageName inBundleName:(NSString *)bundleName{
+    return [UIImage imageNamed:imageName inBundle:[NSBundle bundleWithPath:[[NSBundle mainBundle]pathForResource:bundleName ofType:@"bundle"]] compatibleWithTraitCollection:nil];
+}
+
 @end
 

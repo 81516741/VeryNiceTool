@@ -9,7 +9,7 @@
 #import "NSString+Extension.h"
 
 @implementation NSString (Extension)
-
+@dynamic linkValue,fileSize,documentPath,cachesPath,tempPath;
 -(CGSize)sizeOftextWith :(CGSize)size andFont:(CGFloat)font{
     
     return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil].size;
