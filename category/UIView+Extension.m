@@ -6,6 +6,10 @@
 //
 
 #import "UIView+Extension.h"
+#import <objc/message.h>
+#import <objc/runtime.h>
+
+#define LDViewTouchDeliver(target,sel) ((void (*)(id,SEL,UIView *))objc_msgSend)((id)target,sel,self)
 
 @implementation UIView (Extension)
 
@@ -155,6 +159,46 @@
             [subView removeFromSuperview];
         }
     }
+}
+
+
+
+
+
+-(void)addTarget:(id)target sel:(SEL)sel
+{
+    self.target = target;
+    self.sel = sel;
+}
+
+#pragma view被点击后将事件传出去
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    if ([self.target respondsToSelector:self.sel]) {
+        LDViewTouchDeliver(self.target, self.sel);
+    }
+}
+
+#pragma 动态绑定一个target 和一个sel（有点类似添加两个变量）
+-(id)target
+{
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+-(void)setTarget:(id)target
+{
+    objc_setAssociatedObject(self, @selector(target), target, OBJC_ASSOCIATION_RETAIN);
+}
+
+-(SEL)sel
+{
+    return NSSelectorFromString(objc_getAssociatedObject(self, _cmd));
+}
+
+-(void)setSel:(SEL)sel
+{
+    objc_setAssociatedObject(self,@selector(sel),NSStringFromSelector(sel), OBJC_ASSOCIATION_RETAIN);
 }
 
 @end
