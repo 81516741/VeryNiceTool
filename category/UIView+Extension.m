@@ -122,4 +122,39 @@
 -(CGFloat)minY{
     return CGRectGetMinY(self.frame);
 }
+
+//显示小红点
+- (void)showBadgeInItemAtIndex:(NSUInteger)index itemCount:(NSUInteger)itemCount centerXOffsetInItem:(CGFloat)centerXOffsetInItem yOffsetInItem:(CGFloat)yOffsetInItem{
+    //移除之前的小红点
+    [self removeBadgeOnItemIndex:index];
+    
+    //新建小红点
+    UIView *badgeView = [[UIView alloc]init];
+    badgeView.tag = 888 + index;
+    badgeView.layer.cornerRadius = 4;//圆形
+    badgeView.backgroundColor = [UIColor redColor];//颜色
+    
+    //确定小红点的位置 大小
+    float perWidth = [UIScreen mainScreen].bounds.size.width / itemCount;
+    badgeView.frame = CGRectMake(perWidth *index + perWidth * 0.5 + centerXOffsetInItem, yOffsetInItem, 8.0, 8.0);
+    
+    [self addSubview:badgeView];
+}
+
+//隐藏小红点
+- (void)hideBadgeFromItemAtIndex:(NSUInteger)index{
+    //移除小红点
+    [self removeBadgeOnItemIndex:index];
+}
+
+//移除小红点
+- (void)removeBadgeOnItemIndex:(NSUInteger)index{
+    //按照tag值进行移除
+    for (UIView *subView in self.subviews) {
+        if (subView.tag == 888+index) {
+            [subView removeFromSuperview];
+        }
+    }
+}
+
 @end

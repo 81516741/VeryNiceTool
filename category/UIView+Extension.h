@@ -25,4 +25,8 @@
 
 -(CGFloat)minY;
 
+- (void)showBadgeInItemAtIndex:(NSUInteger)index itemCount:(NSUInteger)itemCount centerXOffsetInItem:(CGFloat)centerXOffsetInItem yOffsetInItem:(CGFloat)yOffsetInItem;   //显示小红点
+
+- (void)hideBadgeFromItemAtIndex:(NSUInteger)index; //隐藏小红点
+
 @end
