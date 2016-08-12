@@ -25,6 +25,7 @@
             @selector(numberWithShort:),
             @selector(numberWithInt:),
             @selector(numberWithLong:),
+            @selector(numberWithLongLong:),
         };
         
         for (NSUInteger index = 0; index < sizeof(selectors) / sizeof(SEL); ++index) {
@@ -57,8 +58,14 @@
 }
 
 + (NSNumber *)ld_numberWithLong:(long)value{
-    NSNumber *num = [self ld_numberWithLong:value];
+    NSNumber *num = [self ld_numberWithLongLong:value];
     num.ld_objCType = @encode(long);
+    return num;
+}
+
++ (NSNumber *)ld_numberWithLongLong:(long long)value{
+    NSNumber *num = [self ld_numberWithLongLong:value];
+    num.ld_objCType = @encode(long long);
     return num;
 }
 
@@ -116,39 +123,50 @@
             [mtData appendData:obj];
         }
     }];
-
-    mtData.ldOrder = order;
     return [NSData dataWithData:mtData];
 }
 
-- (char)getCharWithLocation:(NSInteger)loc;{
-    char value;
+- (int8_t)getInt8WithLocation:(NSInteger)loc{
+    int8_t value;
     [self getBytes:&value range:NSMakeRange(loc, sizeof(value))];
     return value;
 }
 
-- (short)getShortWithLocation:(NSInteger)loc{
-    short value;
+- (int16_t)getInt16WithLocation:(NSInteger)loc swap:(BOOL)swap{
+    int16_t value;
     [self getBytes:&value range:NSMakeRange(loc, sizeof(value))];
-    if(CFByteOrderGetCurrent() != self.ldOrder){
-       value = CFSwapInt16(value);
+    if(swap){
+        value = CFSwapInt16(value);
     }
     return value;
 }
 
-- (int)getIntWithLocation:(NSInteger)loc{
-    int value;
+- (int32_t)getInt32WithLocation:(NSInteger)loc swap:(BOOL)swap{
+    int32_t value;
     [self getBytes:&value range:NSMakeRange(loc, sizeof(value))];
-    if(CFByteOrderGetCurrent() != self.ldOrder){
+    if(swap){
         value = CFSwapInt32(value);
     }
     return value;
 }
 
-- (long)getLongWithLocation:(NSInteger)loc{
+- (long)getLongWithLocation:(NSInteger)loc swap:(BOOL)swap{
     long value;
     [self getBytes:&value range:NSMakeRange(loc, sizeof(value))];
-    if(CFByteOrderGetCurrent() != self.ldOrder){
+    if(swap){
+        if (sizeof(long) == 4) {
+            value = CFSwapInt32(value);
+        }else{
+          value = (long)CFSwapInt64(value);
+        }
+    }
+    return value;
+}
+
+- (int64_t)getInt64WithLocation:(NSInteger)loc swap:(BOOL)swap{
+    int64_t value;
+    [self getBytes:&value range:NSMakeRange(loc, sizeof(value))];
+    if(swap){
        value = CFSwapInt64(value);
     }
     return value;
@@ -157,33 +175,34 @@
 + (NSData *)numberConverData:(NSNumber *)number byteOrder:(DataByteOrder)order{
     
     NSData *data = nil;
-    if (strcmp([number ld_objCType], @encode(char)) == 0) {
+    if (strcmp([number ld_objCType], @encode(int8_t)) == 0) {
         data = [self dataWithChar:[number charValue]];
-    }else if (strcmp([number ld_objCType], @encode(short)) == 0){
+    }else if (strcmp([number ld_objCType], @encode(int16_t)) == 0){
         data = [self dataWithShort:[number shortValue] byteOrder:order];
-    }else if (strcmp([number ld_objCType], @encode(int)) == 0){
+    }else if (strcmp([number ld_objCType], @encode(int32_t)) == 0){
         data = [self dataWithInt:[number intValue] byteOrder:order];
     }else if (strcmp([number ld_objCType], @encode(long)) == 0){
         data = [self dataWithLong:[number longValue] byteOrder:order];
+    }else if (strcmp([number ld_objCType], @encode(int64_t)) == 0){
+        data = [self dataWithLongLong:[number longLongValue] byteOrder:order];
     }
-    data.ldOrder = order;
-    NSAssert(data != nil, @"需扩展添加类型");
+    NSAssert(data != nil, @"需扩展添加类型,不能使用long类型");
     
     return data;
 }
 
-+ (NSData *)dataWithChar:(char)value{
++ (NSData *)dataWithChar:(int8_t)value{
     NSData *data = [[NSData alloc] initWithBytes:&value length:sizeof(value)];
     return data;
 }
 
-+ (NSData *)dataWithShort:(short)value byteOrder:(DataByteOrder)order{
++ (NSData *)dataWithShort:(int16_t)value byteOrder:(DataByteOrder)order{
     if(CFByteOrderGetCurrent() != order) value = CFSwapInt16(value);
     NSData *data = [[NSData alloc] initWithBytes:&value length:sizeof(value)];
     return data;
 }
 
-+ (NSData *)dataWithInt:(int)value byteOrder:(DataByteOrder)order{
++ (NSData *)dataWithInt:(int32_t)value byteOrder:(DataByteOrder)order{
     if(CFByteOrderGetCurrent() != order){
         value = CFSwapInt32(value);
     }
@@ -192,19 +211,21 @@
 }
 
 + (NSData *)dataWithLong:(long)value byteOrder:(DataByteOrder)order{
-    if(CFByteOrderGetCurrent() != order) value = CFSwapInt64(value);
-    NSData *data = [[NSData alloc] initWithBytes:&value length:sizeof(value)];
+    if(CFByteOrderGetCurrent() != order) {
+        if(sizeof(long) == 4){
+            value = CFSwapInt32(value);
+        }else{
+            value = (long)CFSwapInt64(value);
+        }
+    }
+    NSData *data = [[NSData alloc] initWithBytes:&value length:sizeof(long)];
     return data;
 }
 
-#pragma getter & setter
-
-- (void)setLdOrder:(DataByteOrder)ldOrder{
-    objc_setAssociatedObject(self, @selector(ldOrder), @(ldOrder), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (DataByteOrder)ldOrder{
-   return  [objc_getAssociatedObject(self, @selector(ldOrder)) integerValue];
++ (NSData *)dataWithLongLong:(int64_t)value byteOrder:(DataByteOrder)order{
+    if(CFByteOrderGetCurrent() != order) value = CFSwapInt64(value);
+    NSData *data = [[NSData alloc] initWithBytes:&value length:sizeof(value)];
+    return data;
 }
 
 @end
