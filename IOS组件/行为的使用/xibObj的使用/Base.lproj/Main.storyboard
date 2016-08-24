@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NG3-Cd-Sl0">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fca-nn-vCb"/>
+                                    <constraint firstAttribute="height" constant="100" id="hap-A3-z6Y"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od8-cU-e51">
+                                <rect key="frame" x="180" y="100" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-gu-aHz">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AOD-gu-aHz" secondAttribute="bottom" id="30p-rp-1jj"/>
+                                    <constraint firstAttribute="width" constant="240" id="4V2-ve-vXn"/>
+                                    <constraint firstItem="AOD-gu-aHz" firstAttribute="top" secondItem="od8-cU-e51" secondAttribute="top" id="QIk-N4-mVu"/>
+                                    <constraint firstAttribute="height" constant="128" id="jgB-k1-cXd"/>
+                                    <constraint firstItem="AOD-gu-aHz" firstAttribute="leading" secondItem="od8-cU-e51" secondAttribute="leading" id="s3D-kX-0AH"/>
+                                    <constraint firstAttribute="trailing" secondItem="AOD-gu-aHz" secondAttribute="trailing" id="tcp-nD-znp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NG3-Cd-Sl0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="648-5V-356"/>
+                            <constraint firstItem="NG3-Cd-Sl0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ejg-Is-y4I"/>
+                            <constraint firstItem="od8-cU-e51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="edb-dO-IVp"/>
+                            <constraint firstItem="NG3-Cd-Sl0" firstAttribute="top" secondItem="od8-cU-e51" secondAttribute="bottom" constant="22" id="s4k-Id-1r4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="cAG-dz-LxC" customClass="LDImagePicker">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="MrG-0o-Lbw"/>
+                        <outlet property="imageView" destination="NG3-Cd-Sl0" id="fsN-vN-0Dp"/>
+                        <outlet property="owner" destination="BYZ-38-t0r" id="WPu-p0-Scb"/>
+                    </connections>
+                </customObject>
+                <customObject id="pc1-RK-ygu" customClass="LDRotationView">
+                    <connections>
+                        <outlet property="animationView" destination="od8-cU-e51" id="GLr-hL-Y7W"/>
+                        <outlet property="owner" destination="BYZ-38-t0r" id="T9m-x5-mWo"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="349" y="268"/>
+        </scene>
+    </scenes>
+</document>
