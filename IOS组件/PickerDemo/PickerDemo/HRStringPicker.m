@@ -42,6 +42,34 @@
 }
 
 #pragma mark - event action
+- (IBAction)selectRowBtnClick:(UIButton *)btn
+{
+    NSInteger currentIndex = [self.pickView selectedRowInComponent:0];
+    NSInteger itemCount = _items.count;
+    switch (btn.tag) {
+        case 1://上移 上一个
+        {
+            NSInteger preIndex = --currentIndex;
+            if (preIndex < 0) {
+                preIndex = 0;
+            }
+            [self.pickView selectRow:preIndex inComponent:0 animated:true];
+            break;
+        }
+        case 2://下移  下一个
+        {
+            NSInteger nextIndex = ++currentIndex;
+            if (nextIndex >= itemCount) {
+                nextIndex = itemCount - 1;
+            }
+            [self.pickView selectRow:nextIndex inComponent:0 animated:true];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
 
 - (IBAction)cancelAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -55,6 +83,7 @@
     [self cancelAction:nil];
 }
 
+#pragma  mark - 代理
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return self.items.count;

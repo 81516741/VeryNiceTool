@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81EF5BC1D6E800B005BB2C2 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = F81EF5BA1D6E800B005BB2C2 /* next.png */; };
+		F81EF5BD1D6E800B005BB2C2 /* pre.png in Resources */ = {isa = PBXBuildFile; fileRef = F81EF5BB1D6E800B005BB2C2 /* pre.png */; };
 		F8786C8C1D6BE82D00D0A54F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8786C8B1D6BE82D00D0A54F /* main.m */; };
 		F8786C8F1D6BE82D00D0A54F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8786C8E1D6BE82D00D0A54F /* AppDelegate.m */; };
 		F8786C921D6BE82E00D0A54F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8786C911D6BE82E00D0A54F /* ViewController.m */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F81EF5BA1D6E800B005BB2C2 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		F81EF5BB1D6E800B005BB2C2 /* pre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pre.png; sourceTree = "<group>"; };
 		F8786C871D6BE82D00D0A54F /* PickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8786C8B1D6BE82D00D0A54F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8786C8D1D6BE82D00D0A54F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		F8786C891D6BE82D00D0A54F /* PickerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F81EF5BA1D6E800B005BB2C2 /* next.png */,
+				F81EF5BB1D6E800B005BB2C2 /* pre.png */,
 				F8786CAB1D6BF6C800D0A54F /* HRDatePicker.h */,
 				F8786CAC1D6BF6C800D0A54F /* HRDatePicker.m */,
 				F8786CAD1D6BF6C800D0A54F /* HRDatePicker.xib */,
@@ -154,6 +160,8 @@
 			files = (
 				F8786C9A1D6BE82E00D0A54F /* LaunchScreen.storyboard in Resources */,
 				F8786CB41D6BF75A00D0A54F /* HRStringPicker.xib in Resources */,
+				F81EF5BD1D6E800B005BB2C2 /* pre.png in Resources */,
+				F81EF5BC1D6E800B005BB2C2 /* next.png in Resources */,
 				F8786CAF1D6BF6C800D0A54F /* HRDatePicker.xib in Resources */,
 				F8786C971D6BE82E00D0A54F /* Assets.xcassets in Resources */,
 				F8786C951D6BE82E00D0A54F /* Main.storyboard in Resources */,
