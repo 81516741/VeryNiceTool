@@ -78,6 +78,11 @@
 
 -(void)setImages:(NSMutableArray *)images
 {
+    for (UIView * subView in self.subviews) {
+        if ([subView isKindOfClass:[UIButton class]]) {
+            [subView removeFromSuperview];
+        }
+    }
     _images = images;
     NSInteger row = 0;
     NSInteger col = 0;
@@ -118,11 +123,6 @@
 -(void)btnClick:(UIButton *)btn
 {
     [_images removeObjectAtIndex:btn.tag];
-    for (UIView * subView in self.subviews) {
-        if ([subView isKindOfClass:[UIButton class]]) {
-            [subView removeFromSuperview];
-        }
-    }
     self.images = _images;
 }
 
