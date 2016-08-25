@@ -81,18 +81,28 @@
                                 <action selector="selectRowBtnClick:" destination="-1" eventType="touchUpInside" id="CvC-Vo-Cb4"/>
                             </connections>
                         </button>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nG-iK-T9l">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="qrD-MA-Vzl"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Tqn-Lo-xeF" secondAttribute="trailing" constant="10" id="0AY-NB-haA"/>
                         <constraint firstItem="Tqn-Lo-xeF" firstAttribute="centerY" secondItem="HWt-dF-IYp" secondAttribute="centerY" id="6J0-wf-bLU"/>
                         <constraint firstItem="Y3X-20-BsV" firstAttribute="top" secondItem="HWt-dF-IYp" secondAttribute="top" id="7Zg-gs-d4g"/>
+                        <constraint firstAttribute="trailing" secondItem="8nG-iK-T9l" secondAttribute="trailing" id="9Vg-W1-RJ3"/>
                         <constraint firstItem="rFa-bk-bWD" firstAttribute="leading" secondItem="Y3X-20-BsV" secondAttribute="trailing" id="9mh-PD-gni"/>
                         <constraint firstItem="HGj-aB-2cD" firstAttribute="leading" secondItem="HWt-dF-IYp" secondAttribute="leading" id="ITm-7C-tVf"/>
                         <constraint firstAttribute="height" constant="44" id="REO-yA-PES"/>
                         <constraint firstAttribute="bottom" secondItem="HGj-aB-2cD" secondAttribute="bottom" id="RHu-Gq-iiU"/>
                         <constraint firstItem="rFa-bk-bWD" firstAttribute="top" secondItem="HWt-dF-IYp" secondAttribute="top" id="T7x-cH-lw7"/>
+                        <constraint firstItem="8nG-iK-T9l" firstAttribute="leading" secondItem="HWt-dF-IYp" secondAttribute="leading" id="eod-oT-zYH"/>
                         <constraint firstAttribute="trailing" secondItem="HGj-aB-2cD" secondAttribute="trailing" id="hGv-cb-v6Y"/>
+                        <constraint firstItem="8nG-iK-T9l" firstAttribute="top" secondItem="HWt-dF-IYp" secondAttribute="top" id="vNy-n0-q8f"/>
                         <constraint firstItem="Y3X-20-BsV" firstAttribute="leading" secondItem="HWt-dF-IYp" secondAttribute="leading" constant="8" id="w3U-bk-02a"/>
                     </constraints>
                 </view>
