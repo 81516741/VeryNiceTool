@@ -16,6 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-Ys-4Cq">
+                    <rect key="frame" x="0.0" y="262" width="320" height="218"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="218" id="oqB-u9-R5h"/>
+                    </constraints>
+                </view>
                 <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-Kh-gQR">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -33,7 +40,7 @@
                                 <constraint firstAttribute="width" constant="44" id="Ehh-GT-ahA"/>
                                 <constraint firstAttribute="height" constant="44" id="RGL-BH-BSZ"/>
                             </constraints>
-                            <inset key="contentEdgeInsets" minX="20" minY="12" maxX="0.0" maxY="12"/>
+                            <inset key="contentEdgeInsets" minX="20" minY="14" maxX="10" maxY="14"/>
                             <state key="normal" image="pre.png">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -66,7 +73,7 @@
                                 <constraint firstAttribute="width" constant="44" id="3WO-S2-czL"/>
                                 <constraint firstAttribute="height" constant="44" id="vBv-Ye-WNN"/>
                             </constraints>
-                            <inset key="contentEdgeInsets" minX="0.0" minY="12" maxX="20" maxY="12"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="14" maxX="20" maxY="14"/>
                             <state key="normal" image="next.png">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -75,7 +82,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Tqn-Lo-xeF" secondAttribute="trailing" constant="10" id="0AY-NB-haA"/>
                         <constraint firstItem="Tqn-Lo-xeF" firstAttribute="centerY" secondItem="HWt-dF-IYp" secondAttribute="centerY" id="6J0-wf-bLU"/>
@@ -104,6 +111,7 @@
             <constraints>
                 <constraint firstItem="HWt-dF-IYp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Is-7k-E4G"/>
                 <constraint firstAttribute="bottom" secondItem="g3O-du-Fu6" secondAttribute="bottom" id="Chb-B7-oUA"/>
+                <constraint firstItem="UPe-Ys-4Cq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CzI-nV-2rS"/>
                 <constraint firstAttribute="trailing" secondItem="u4d-Kh-gQR" secondAttribute="trailing" id="K8Q-T8-huE"/>
                 <constraint firstAttribute="trailing" secondItem="HWt-dF-IYp" secondAttribute="trailing" id="Mjf-nb-p6Y"/>
                 <constraint firstAttribute="trailing" secondItem="g3O-du-Fu6" secondAttribute="trailing" id="VJk-4H-80z"/>
@@ -112,6 +120,8 @@
                 <constraint firstItem="u4d-Kh-gQR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c8z-pV-6Ia"/>
                 <constraint firstItem="u4d-Kh-gQR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jGn-6B-Ghz"/>
                 <constraint firstItem="g3O-du-Fu6" firstAttribute="top" secondItem="HWt-dF-IYp" secondAttribute="bottom" id="qBV-Id-F99"/>
+                <constraint firstAttribute="trailing" secondItem="UPe-Ys-4Cq" secondAttribute="trailing" id="t82-bh-u01"/>
+                <constraint firstAttribute="bottom" secondItem="UPe-Ys-4Cq" secondAttribute="bottom" id="yBM-ZG-0UI"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="364" y="276"/>

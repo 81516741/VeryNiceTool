@@ -16,6 +16,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Wr-jx-dqH">
+                    <rect key="frame" x="0.0" y="264" width="320" height="216"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="xRD-76-H8S"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YwT-9b-GI9">
                     <rect key="frame" x="0.0" y="264" width="320" height="216"/>
                     <subviews>
@@ -101,28 +108,39 @@
                     </constraints>
                 </view>
                 <view userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1v-RI-INn">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="zlD-UO-AOU" appends="YES" id="jmI-yc-AZo"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="S1v-RI-INn" secondAttribute="trailing" id="3c6-dL-3fj"/>
                 <constraint firstItem="S1v-RI-INn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="C6a-Am-736"/>
-                <constraint firstItem="2Sx-BM-TWT" firstAttribute="top" secondItem="S1v-RI-INn" secondAttribute="bottom" id="J11-sC-CuK"/>
+                <constraint firstItem="2Sx-BM-TWT" firstAttribute="top" secondItem="S1v-RI-INn" secondAttribute="bottom" constant="40" id="J11-sC-CuK"/>
+                <constraint firstAttribute="trailing" secondItem="3Wr-jx-dqH" secondAttribute="trailing" id="Lk7-ft-Wdz"/>
                 <constraint firstAttribute="trailing" secondItem="2Sx-BM-TWT" secondAttribute="trailing" id="MAU-kb-121"/>
                 <constraint firstAttribute="bottom" secondItem="YwT-9b-GI9" secondAttribute="bottom" id="NpU-ph-26G"/>
                 <constraint firstAttribute="bottom" secondItem="2Sx-BM-TWT" secondAttribute="bottom" constant="216" id="Q18-DS-PCy"/>
                 <constraint firstItem="YwT-9b-GI9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="R9w-PK-Syf"/>
                 <constraint firstItem="2Sx-BM-TWT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bgm-9j-Uny"/>
                 <constraint firstAttribute="trailing" secondItem="2Sx-BM-TWT" secondAttribute="trailing" id="eR7-Cl-js2"/>
+                <constraint firstAttribute="bottom" secondItem="3Wr-jx-dqH" secondAttribute="bottom" id="idL-WO-aIq"/>
                 <constraint firstAttribute="trailing" secondItem="YwT-9b-GI9" secondAttribute="trailing" id="pMv-Db-SaH"/>
                 <constraint firstItem="2Sx-BM-TWT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pmu-bJ-pRu"/>
                 <constraint firstItem="S1v-RI-INn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="shs-Uj-INq"/>
+                <constraint firstItem="3Wr-jx-dqH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tbe-wL-7Is"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="288" y="304"/>
         </view>
+        <tapGestureRecognizer id="zlD-UO-AOU">
+            <connections>
+                <action selector="cancelAction:" destination="-1" id="bCK-3M-cxo"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

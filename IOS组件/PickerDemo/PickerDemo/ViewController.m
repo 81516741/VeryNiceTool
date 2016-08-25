@@ -23,12 +23,12 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
-    [HRStringPicker showIn:self withItems:@[@"我不想买了",@"东西不好看",@"心里急的很"] handle:^(NSInteger currentIndex) {
-        NSLog(@"%ld",currentIndex);
-    }];
-//    [HRDatePicker showIn:self handle:^(UIDatePicker *picker) {
-//        NSLog(@"%@",picker);
+//    [HRStringPicker showIn:self withItems:@[@"我不想买了",@"东西不好看",@"心里急的很"] handle:^(NSInteger currentIndex) {
+//        NSLog(@"%ld",currentIndex);
 //    }];
+    [HRDatePicker showIn:self handle:^(UIDatePicker *picker) {
+        NSLog(@"%@",picker);
+    }];
 }
 
 @end
