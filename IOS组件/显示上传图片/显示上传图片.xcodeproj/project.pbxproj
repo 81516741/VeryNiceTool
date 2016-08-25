@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8CD6A661D6EF25200BDE99F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A651D6EF25200BDE99F /* main.m */; };
+		F8CD6A691D6EF25200BDE99F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A681D6EF25200BDE99F /* AppDelegate.m */; };
+		F8CD6A6C1D6EF25200BDE99F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A6B1D6EF25200BDE99F /* ViewController.m */; };
+		F8CD6A6F1D6EF25200BDE99F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6A6D1D6EF25200BDE99F /* Main.storyboard */; };
+		F8CD6A711D6EF25200BDE99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6A701D6EF25200BDE99F /* Assets.xcassets */; };
+		F8CD6A741D6EF25200BDE99F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6A721D6EF25200BDE99F /* LaunchScreen.storyboard */; };
+		F8CD6A961D6EF2E300BDE99F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6A7F1D6EF2E300BDE99F /* LICENSE */; };
+		F8CD6A971D6EF2E300BDE99F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A801D6EF2E300BDE99F /* README.md */; };
+		F8CD6A981D6EF2E300BDE99F /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A841D6EF2E300BDE99F /* TZAssetCell.m */; };
+		F8CD6A991D6EF2E300BDE99F /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A861D6EF2E300BDE99F /* TZAssetModel.m */; };
+		F8CD6A9A1D6EF2E300BDE99F /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A881D6EF2E300BDE99F /* TZImageManager.m */; };
+		F8CD6A9B1D6EF2E300BDE99F /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6A891D6EF2E300BDE99F /* TZImagePickerController.bundle */; };
+		F8CD6A9C1D6EF2E300BDE99F /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A8B1D6EF2E300BDE99F /* TZImagePickerController.m */; };
+		F8CD6A9D1D6EF2E300BDE99F /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A8D1D6EF2E300BDE99F /* TZPhotoPickerController.m */; };
+		F8CD6A9E1D6EF2E300BDE99F /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A8F1D6EF2E300BDE99F /* TZPhotoPreviewCell.m */; };
+		F8CD6A9F1D6EF2E300BDE99F /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A911D6EF2E300BDE99F /* TZPhotoPreviewController.m */; };
+		F8CD6AA01D6EF2E300BDE99F /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A931D6EF2E300BDE99F /* TZVideoPlayerController.m */; };
+		F8CD6AA11D6EF2E300BDE99F /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6A951D6EF2E300BDE99F /* UIView+Layout.m */; };
+		F8CD6AAD1D6EF51900BDE99F /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6AA91D6EF51900BDE99F /* add.png */; };
+		F8CD6AAE1D6EF51900BDE99F /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = F8CD6AAA1D6EF51900BDE99F /* delete.png */; };
+		F8CD6AAF1D6EF51900BDE99F /* ImageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CD6AAC1D6EF51900BDE99F /* ImageListView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8CD6A611D6EF25100BDE99F /* 显示上传图片.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "显示上传图片.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CD6A651D6EF25200BDE99F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8CD6A671D6EF25200BDE99F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8CD6A681D6EF25200BDE99F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F8CD6A6A1D6EF25200BDE99F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F8CD6A6B1D6EF25200BDE99F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F8CD6A6E1D6EF25200BDE99F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8CD6A701D6EF25200BDE99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8CD6A731D6EF25200BDE99F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8CD6A751D6EF25200BDE99F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8CD6A7F1D6EF2E300BDE99F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F8CD6A801D6EF2E300BDE99F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F8CD6A831D6EF2E300BDE99F /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		F8CD6A841D6EF2E300BDE99F /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		F8CD6A851D6EF2E300BDE99F /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		F8CD6A861D6EF2E300BDE99F /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		F8CD6A871D6EF2E300BDE99F /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		F8CD6A881D6EF2E300BDE99F /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		F8CD6A891D6EF2E300BDE99F /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		F8CD6A8A1D6EF2E300BDE99F /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		F8CD6A8B1D6EF2E300BDE99F /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		F8CD6A8C1D6EF2E300BDE99F /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		F8CD6A8D1D6EF2E300BDE99F /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		F8CD6A8E1D6EF2E300BDE99F /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		F8CD6A8F1D6EF2E300BDE99F /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		F8CD6A901D6EF2E300BDE99F /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		F8CD6A911D6EF2E300BDE99F /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		F8CD6A921D6EF2E300BDE99F /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		F8CD6A931D6EF2E300BDE99F /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		F8CD6A941D6EF2E300BDE99F /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		F8CD6A951D6EF2E300BDE99F /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		F8CD6AA91D6EF51900BDE99F /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		F8CD6AAA1D6EF51900BDE99F /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		F8CD6AAB1D6EF51900BDE99F /* ImageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageListView.h; sourceTree = "<group>"; };
+		F8CD6AAC1D6EF51900BDE99F /* ImageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageListView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8CD6A5E1D6EF25100BDE99F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8CD6A581D6EF25100BDE99F = {
+			isa = PBXGroup;
+			children = (
+				F8CD6A631D6EF25200BDE99F /* 显示上传图片 */,
+				F8CD6A621D6EF25100BDE99F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8CD6A621D6EF25100BDE99F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6A611D6EF25100BDE99F /* 显示上传图片.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8CD6A631D6EF25200BDE99F /* 显示上传图片 */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6AA81D6EF51900BDE99F /* ImageListView */,
+				F8CD6A7E1D6EF2E300BDE99F /* TZImagePickerController */,
+				F8CD6A671D6EF25200BDE99F /* AppDelegate.h */,
+				F8CD6A681D6EF25200BDE99F /* AppDelegate.m */,
+				F8CD6A6A1D6EF25200BDE99F /* ViewController.h */,
+				F8CD6A6B1D6EF25200BDE99F /* ViewController.m */,
+				F8CD6A6D1D6EF25200BDE99F /* Main.storyboard */,
+				F8CD6A701D6EF25200BDE99F /* Assets.xcassets */,
+				F8CD6A721D6EF25200BDE99F /* LaunchScreen.storyboard */,
+				F8CD6A751D6EF25200BDE99F /* Info.plist */,
+				F8CD6A641D6EF25200BDE99F /* Supporting Files */,
+			);
+			path = "显示上传图片";
+			sourceTree = "<group>";
+		};
+		F8CD6A641D6EF25200BDE99F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6A651D6EF25200BDE99F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8CD6A7E1D6EF2E300BDE99F /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6A7F1D6EF2E300BDE99F /* LICENSE */,
+				F8CD6A801D6EF2E300BDE99F /* README.md */,
+				F8CD6A811D6EF2E300BDE99F /* TZImagePickerController */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		F8CD6A811D6EF2E300BDE99F /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6A821D6EF2E300BDE99F /* TZImagePickerController */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		F8CD6A821D6EF2E300BDE99F /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6A831D6EF2E300BDE99F /* TZAssetCell.h */,
+				F8CD6A841D6EF2E300BDE99F /* TZAssetCell.m */,
+				F8CD6A851D6EF2E300BDE99F /* TZAssetModel.h */,
+				F8CD6A861D6EF2E300BDE99F /* TZAssetModel.m */,
+				F8CD6A871D6EF2E300BDE99F /* TZImageManager.h */,
+				F8CD6A881D6EF2E300BDE99F /* TZImageManager.m */,
+				F8CD6A891D6EF2E300BDE99F /* TZImagePickerController.bundle */,
+				F8CD6A8A1D6EF2E300BDE99F /* TZImagePickerController.h */,
+				F8CD6A8B1D6EF2E300BDE99F /* TZImagePickerController.m */,
+				F8CD6A8C1D6EF2E300BDE99F /* TZPhotoPickerController.h */,
+				F8CD6A8D1D6EF2E300BDE99F /* TZPhotoPickerController.m */,
+				F8CD6A8E1D6EF2E300BDE99F /* TZPhotoPreviewCell.h */,
+				F8CD6A8F1D6EF2E300BDE99F /* TZPhotoPreviewCell.m */,
+				F8CD6A901D6EF2E300BDE99F /* TZPhotoPreviewController.h */,
+				F8CD6A911D6EF2E300BDE99F /* TZPhotoPreviewController.m */,
+				F8CD6A921D6EF2E300BDE99F /* TZVideoPlayerController.h */,
+				F8CD6A931D6EF2E300BDE99F /* TZVideoPlayerController.m */,
+				F8CD6A941D6EF2E300BDE99F /* UIView+Layout.h */,
+				F8CD6A951D6EF2E300BDE99F /* UIView+Layout.m */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		F8CD6AA81D6EF51900BDE99F /* ImageListView */ = {
+			isa = PBXGroup;
+			children = (
+				F8CD6AA91D6EF51900BDE99F /* add.png */,
+				F8CD6AAA1D6EF51900BDE99F /* delete.png */,
+				F8CD6AAB1D6EF51900BDE99F /* ImageListView.h */,
+				F8CD6AAC1D6EF51900BDE99F /* ImageListView.m */,
+			);
+			path = ImageListView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8CD6A601D6EF25100BDE99F /* 显示上传图片 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8CD6A781D6EF25200BDE99F /* Build configuration list for PBXNativeTarget "显示上传图片" */;
+			buildPhases = (
+				F8CD6A5D1D6EF25100BDE99F /* Sources */,
+				F8CD6A5E1D6EF25100BDE99F /* Frameworks */,
+				F8CD6A5F1D6EF25100BDE99F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "显示上传图片";
+			productName = "显示上传图片";
+			productReference = F8CD6A611D6EF25100BDE99F /* 显示上传图片.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8CD6A591D6EF25100BDE99F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ld;
+				TargetAttributes = {
+					F8CD6A601D6EF25100BDE99F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = F8CD6A5C1D6EF25100BDE99F /* Build configuration list for PBXProject "显示上传图片" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8CD6A581D6EF25100BDE99F;
+			productRefGroup = F8CD6A621D6EF25100BDE99F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8CD6A601D6EF25100BDE99F /* 显示上传图片 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8CD6A5F1D6EF25100BDE99F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CD6A741D6EF25200BDE99F /* LaunchScreen.storyboard in Resources */,
+				F8CD6AAE1D6EF51900BDE99F /* delete.png in Resources */,
+				F8CD6AAD1D6EF51900BDE99F /* add.png in Resources */,
+				F8CD6A711D6EF25200BDE99F /* Assets.xcassets in Resources */,
+				F8CD6A9B1D6EF2E300BDE99F /* TZImagePickerController.bundle in Resources */,
+				F8CD6A961D6EF2E300BDE99F /* LICENSE in Resources */,
+				F8CD6A6F1D6EF25200BDE99F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8CD6A5D1D6EF25100BDE99F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CD6A9D1D6EF2E300BDE99F /* TZPhotoPickerController.m in Sources */,
+				F8CD6A9E1D6EF2E300BDE99F /* TZPhotoPreviewCell.m in Sources */,
+				F8CD6A6C1D6EF25200BDE99F /* ViewController.m in Sources */,
+				F8CD6AA11D6EF2E300BDE99F /* UIView+Layout.m in Sources */,
+				F8CD6AA01D6EF2E300BDE99F /* TZVideoPlayerController.m in Sources */,
+				F8CD6AAF1D6EF51900BDE99F /* ImageListView.m in Sources */,
+				F8CD6A981D6EF2E300BDE99F /* TZAssetCell.m in Sources */,
+				F8CD6A991D6EF2E300BDE99F /* TZAssetModel.m in Sources */,
+				F8CD6A971D6EF2E300BDE99F /* README.md in Sources */,
+				F8CD6A9F1D6EF2E300BDE99F /* TZPhotoPreviewController.m in Sources */,
+				F8CD6A691D6EF25200BDE99F /* AppDelegate.m in Sources */,
+				F8CD6A661D6EF25200BDE99F /* main.m in Sources */,
+				F8CD6A9C1D6EF2E300BDE99F /* TZImagePickerController.m in Sources */,
+				F8CD6A9A1D6EF2E300BDE99F /* TZImageManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8CD6A6D1D6EF25200BDE99F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8CD6A6E1D6EF25200BDE99F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8CD6A721D6EF25200BDE99F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8CD6A731D6EF25200BDE99F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8CD6A761D6EF25200BDE99F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8CD6A771D6EF25200BDE99F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8CD6A791D6EF25200BDE99F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "显示上传图片/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ld.RCIM.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8CD6A7A1D6EF25200BDE99F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "显示上传图片/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ld.RCIM.------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8CD6A5C1D6EF25100BDE99F /* Build configuration list for PBXProject "显示上传图片" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8CD6A761D6EF25200BDE99F /* Debug */,
+				F8CD6A771D6EF25200BDE99F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8CD6A781D6EF25200BDE99F /* Build configuration list for PBXNativeTarget "显示上传图片" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8CD6A791D6EF25200BDE99F /* Debug */,
+				F8CD6A7A1D6EF25200BDE99F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8CD6A591D6EF25100BDE99F /* Project object */;
+}
