@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LDAlterViewVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.69999999999999996" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baL-tD-4vI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="bViewClick:" destination="-1" eventType="touchUpInside" id="c5j-kj-PfN"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g8-5Q-IYE" userLabel="提示框">
+                    <rect key="frame" x="25" y="135" width="270" height="210"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人品爆棚，你已经成为高级别会员--和粉，更多优惠权益等你拿！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l7-Mn-3r1" customClass="LDLableLineSpace">
+                            <rect key="frame" x="25" y="40" width="220" height="65"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineSpace">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-VB-OkI">
+                            <rect key="frame" x="60" y="145" width="150" height="37"/>
+                            <color key="backgroundColor" red="0.0" green="0.55686274509803924" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="adH-mX-Ede"/>
+                                <constraint firstAttribute="width" constant="150" id="ksw-Es-r0x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="启动会员之旅">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="goVIPBtnClick:" destination="-1" eventType="touchUpInside" id="WUN-Ce-qvR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3l7-Mn-3r1" secondAttribute="trailing" constant="25" id="CKv-vL-xvG"/>
+                        <constraint firstItem="ja2-VB-OkI" firstAttribute="top" secondItem="3l7-Mn-3r1" secondAttribute="bottom" constant="40" id="NaL-lt-OEi"/>
+                        <constraint firstAttribute="bottom" secondItem="ja2-VB-OkI" secondAttribute="bottom" constant="28" id="b1K-yV-uH3"/>
+                        <constraint firstItem="3l7-Mn-3r1" firstAttribute="top" secondItem="7g8-5Q-IYE" secondAttribute="top" constant="40" id="h5l-I5-kuW"/>
+                        <constraint firstItem="3l7-Mn-3r1" firstAttribute="leading" secondItem="7g8-5Q-IYE" secondAttribute="leading" constant="25" id="iv1-cE-btk"/>
+                        <constraint firstItem="ja2-VB-OkI" firstAttribute="centerX" secondItem="3l7-Mn-3r1" secondAttribute="centerX" id="wwm-W5-GFD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="baL-tD-4vI" secondAttribute="trailing" id="Buj-kT-6bo"/>
+                <constraint firstItem="7g8-5Q-IYE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="QgW-ff-rBx"/>
+                <constraint firstItem="7g8-5Q-IYE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="THB-7n-Glz"/>
+                <constraint firstItem="baL-tD-4vI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="acG-od-sHO"/>
+                <constraint firstAttribute="trailing" secondItem="7g8-5Q-IYE" secondAttribute="trailing" constant="25" id="rON-dG-lNm"/>
+                <constraint firstItem="baL-tD-4vI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yeG-zD-thb"/>
+                <constraint firstAttribute="bottom" secondItem="baL-tD-4vI" secondAttribute="bottom" id="zbN-Kh-TZT"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="257" y="176"/>
+        </view>
+    </objects>
+</document>
