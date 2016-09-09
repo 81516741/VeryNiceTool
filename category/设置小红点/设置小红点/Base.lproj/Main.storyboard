@@ -14,32 +14,30 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBr-xF-fUl">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="736"/>
-                                <color key="backgroundColor" red="1" green="0.33059605069999998" blue="0.22669051109999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aNT-MI-wdQ">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="r0G-W9-OhQ"/>
+                                    <constraint firstAttribute="height" constant="128" id="cJ3-GA-WZF"/>
+                                    <constraint firstAttribute="width" constant="240" id="juH-br-0sr"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.47058823529999999" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="dBr-xF-fUl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W6z-LT-gU2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dBr-xF-fUl" secondAttribute="bottom" id="YlB-yY-z4E"/>
-                            <constraint firstItem="dBr-xF-fUl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cEh-8O-lCC"/>
+                            <constraint firstItem="aNT-MI-wdQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iQG-e5-OoC"/>
+                            <constraint firstItem="aNT-MI-wdQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vrD-bB-KqG"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="myVIew" destination="dBr-xF-fUl" id="BND-8r-LgE"/>
+                        <outlet property="imageView" destination="aNT-MI-wdQ" id="lfW-ES-hg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="267" y="172"/>
         </scene>
     </scenes>
 </document>

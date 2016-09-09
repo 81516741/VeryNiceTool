@@ -10,6 +10,7 @@
 #import "TextView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *myVIew;
 
 @end
 
@@ -17,8 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [TextView showIn:self.view models:@[@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf"]  itemH:50 col:4 startY:0 itemClick:^(NSInteger index) {
-        NSLog(@"点击了的index是%ld",index);
+    [TextView showIn:self.view models:@[@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf",@"fdsaf"]  itemH:50 col:2 startY:0 itemClick:^(NSInteger index) {
+        NSLog(@"点击了的index是%ld",(long)index);
     }];
 }
 
