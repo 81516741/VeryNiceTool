@@ -16,17 +16,12 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     if (!self.imageView.badgeNo) {
-        self.imageView.badgeNo = @"1";
+        [self.imageView show:@"311" radius:8];
     }else{
-        self.imageView.badgeNo = nil;
+        [self.imageView hideBadgeNo];
     }
 }
 

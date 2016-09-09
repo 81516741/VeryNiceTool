@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (badge)
+
 @property (nonatomic,copy) NSString * badgeNo;
+@property (nonatomic,strong) NSNumber * radius;
+
+//显示 和 隐藏badge
+-(void)show:(NSString *)badgeNo radius:(CGFloat)radius;
+-(void)hideBadgeNo;
+
 @end
 
 @interface HRBadgeView : UIView
