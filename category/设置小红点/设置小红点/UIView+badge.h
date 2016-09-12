@@ -14,8 +14,8 @@
 @property (nonatomic,strong) NSNumber * radius;
 
 //显示 和 隐藏badge
--(void)show:(NSString *)badgeNo radius:(CGFloat)radius;
--(void)hideBadgeNo;
+-(void)show:(NSInteger)badgeNo radius:(CGFloat)radius;
+
 
 @end
 

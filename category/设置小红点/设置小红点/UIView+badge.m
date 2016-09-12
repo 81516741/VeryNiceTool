@@ -14,9 +14,9 @@ static NSString * kBadgeViewKey = @"kBadgeViewKey";
 @implementation UIView (badge)
 
 
--(void)show:(NSString *)badgeNo radius:(CGFloat)radius
+-(void)show:(NSInteger)badgeNo radius:(CGFloat)radius
 {
-    self.badgeNo = badgeNo;
+    self.badgeNo = [NSString stringWithFormat:@"%ld",badgeNo];
     self.radius = @(radius);
     HRBadgeView * badgeView;
     if (!(badgeView = objc_getAssociatedObject(self, @selector(show:radius:)))) {
@@ -30,7 +30,7 @@ static NSString * kBadgeViewKey = @"kBadgeViewKey";
 
 -(void)hideBadgeNo
 {
-    [self show:nil radius:0];
+    [self show:0 radius:0];
 }
 
 -(void)setBadgeNo:(NSString *)badgeNo
@@ -62,7 +62,7 @@ static NSString * kBadgeViewKey = @"kBadgeViewKey";
 {
     CGFloat radius = [self.superview.radius floatValue];
     NSString * badgeNo = self.superview.badgeNo;
-    if (!badgeNo || badgeNo.integerValue <= 0) return;
+    if (badgeNo.integerValue <= 0) return;
     if (badgeNo.intValue < 10 && badgeNo.intValue > 0 ) {
         UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(rect.size.width * 0.5 - radius, rect.size.height * 0.5 - radius, radius * 2, radius * 2)];
         [[UIColor redColor]setFill];

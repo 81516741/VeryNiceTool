@@ -18,10 +18,10 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if (!self.imageView.badgeNo) {
-        [self.imageView show:@"311" radius:8];
+    if ((self.imageView.badgeNo.integerValue == 0) || self.imageView.badgeNo == nil) {
+        [self.imageView show:3 radius:8];
     }else{
-        [self.imageView hideBadgeNo];
+        [self.imageView show:0 radius:8];
     }
 }
 
