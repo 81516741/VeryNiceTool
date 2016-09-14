@@ -40,6 +40,9 @@
     BOOL __block eventBtnEnable = YES;
     [self.textFieldBehaviors enumerateObjectsUsingBlock:^(HRTextFieldBehavior *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         eventBtnEnable = eventBtnEnable && [obj checkTextField]&& !self.isCounting;
+        if (eventBtnEnable == NO) {
+            *stop = YES;
+        }
     }];
     self.eventBtn.enabled = eventBtnEnable;
     self.eventBtn.backgroundColor = eventBtnEnable ? self.hr_EnabledColor : self.hr_DisableColor;
