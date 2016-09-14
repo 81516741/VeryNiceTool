@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1B55B81D88E0E7008383EE /* LoginVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B55B61D88E0E7008383EE /* LoginVCViewController.m */; };
+		6B1B55BD1D88E204008383EE /* LoginVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1B55BC1D88E204008383EE /* LoginVCViewController.xib */; };
+		6B1B55C01D88E83E008383EE /* UIView+Appearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B55BF1D88E83E008383EE /* UIView+Appearance.m */; };
+		6B1B55CC1D891C8C008383EE /* HRCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B55CB1D891C8C008383EE /* HRCounting.m */; };
+		6B1B55D81D891CD6008383EE /* HRTextFieldAndButtonBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B55D51D891CD6008383EE /* HRTextFieldAndButtonBehavior.m */; };
+		6B1B55D91D891CD6008383EE /* HRTextFieldBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B55D71D891CD6008383EE /* HRTextFieldBehavior.m */; };
+		6B1B55DC1D891D0C008383EE /* HRCountingButtonBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B55DB1D891D0C008383EE /* HRCountingButtonBehavior.m */; };
 		F850D5781D6A921300D0CF92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F850D5771D6A921300D0CF92 /* main.m */; };
 		F850D57B1D6A921300D0CF92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F850D57A1D6A921300D0CF92 /* AppDelegate.m */; };
 		F850D57E1D6A921300D0CF92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F850D57D1D6A921300D0CF92 /* ViewController.m */; };
@@ -19,6 +26,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1B55B51D88E0E7008383EE /* LoginVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCViewController.h; sourceTree = "<group>"; };
+		6B1B55B61D88E0E7008383EE /* LoginVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVCViewController.m; sourceTree = "<group>"; };
+		6B1B55BC1D88E204008383EE /* LoginVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVCViewController.xib; sourceTree = "<group>"; };
+		6B1B55BE1D88E83E008383EE /* UIView+Appearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Appearance.h"; sourceTree = "<group>"; };
+		6B1B55BF1D88E83E008383EE /* UIView+Appearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Appearance.m"; sourceTree = "<group>"; };
+		6B1B55CA1D891C8C008383EE /* HRCounting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRCounting.h; path = ../HRCounting.h; sourceTree = "<group>"; };
+		6B1B55CB1D891C8C008383EE /* HRCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRCounting.m; path = ../HRCounting.m; sourceTree = "<group>"; };
+		6B1B55D41D891CD6008383EE /* HRTextFieldAndButtonBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTextFieldAndButtonBehavior.h; sourceTree = "<group>"; };
+		6B1B55D51D891CD6008383EE /* HRTextFieldAndButtonBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTextFieldAndButtonBehavior.m; sourceTree = "<group>"; };
+		6B1B55D61D891CD6008383EE /* HRTextFieldBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTextFieldBehavior.h; sourceTree = "<group>"; };
+		6B1B55D71D891CD6008383EE /* HRTextFieldBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTextFieldBehavior.m; sourceTree = "<group>"; };
+		6B1B55DA1D891D0C008383EE /* HRCountingButtonBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCountingButtonBehavior.h; sourceTree = "<group>"; };
+		6B1B55DB1D891D0C008383EE /* HRCountingButtonBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCountingButtonBehavior.m; sourceTree = "<group>"; };
 		F850D5731D6A921300D0CF92 /* xibObj的使用.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xibObj的使用.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F850D5771D6A921300D0CF92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F850D5791D6A921300D0CF92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,11 +87,16 @@
 		F850D5751D6A921300D0CF92 /* xibObj的使用 */ = {
 			isa = PBXGroup;
 			children = (
+				6B1B55BE1D88E83E008383EE /* UIView+Appearance.h */,
+				6B1B55BF1D88E83E008383EE /* UIView+Appearance.m */,
 				F850D5A81D6AAD9800D0CF92 /* Behavior */,
 				F850D5791D6A921300D0CF92 /* AppDelegate.h */,
 				F850D57A1D6A921300D0CF92 /* AppDelegate.m */,
 				F850D57C1D6A921300D0CF92 /* ViewController.h */,
 				F850D57D1D6A921300D0CF92 /* ViewController.m */,
+				6B1B55B51D88E0E7008383EE /* LoginVCViewController.h */,
+				6B1B55B61D88E0E7008383EE /* LoginVCViewController.m */,
+				6B1B55BC1D88E204008383EE /* LoginVCViewController.xib */,
 				F850D57F1D6A921300D0CF92 /* Main.storyboard */,
 				F850D5821D6A921300D0CF92 /* Assets.xcassets */,
 				F850D5841D6A921300D0CF92 /* LaunchScreen.storyboard */,
@@ -98,6 +123,14 @@
 				F850D5AC1D6AAD9800D0CF92 /* LDImagePicker.m */,
 				F850D5AF1D6AC5DF00D0CF92 /* LDAnimationView.h */,
 				F850D5B01D6AC5DF00D0CF92 /* LDAnimationView.m */,
+				6B1B55D61D891CD6008383EE /* HRTextFieldBehavior.h */,
+				6B1B55D71D891CD6008383EE /* HRTextFieldBehavior.m */,
+				6B1B55D41D891CD6008383EE /* HRTextFieldAndButtonBehavior.h */,
+				6B1B55D51D891CD6008383EE /* HRTextFieldAndButtonBehavior.m */,
+				6B1B55DA1D891D0C008383EE /* HRCountingButtonBehavior.h */,
+				6B1B55DB1D891D0C008383EE /* HRCountingButtonBehavior.m */,
+				6B1B55CA1D891C8C008383EE /* HRCounting.h */,
+				6B1B55CB1D891C8C008383EE /* HRCounting.m */,
 			);
 			path = Behavior;
 			sourceTree = "<group>";
@@ -133,6 +166,7 @@
 				TargetAttributes = {
 					F850D5721D6A921300D0CF92 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = LCYGMG7PBG;
 					};
 				};
 			};
@@ -160,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F850D5861D6A921300D0CF92 /* LaunchScreen.storyboard in Resources */,
+				6B1B55BD1D88E204008383EE /* LoginVCViewController.xib in Resources */,
 				F850D5831D6A921300D0CF92 /* Assets.xcassets in Resources */,
 				F850D5811D6A921300D0CF92 /* Main.storyboard in Resources */,
 			);
@@ -173,11 +208,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F850D57E1D6A921300D0CF92 /* ViewController.m in Sources */,
+				6B1B55D91D891CD6008383EE /* HRTextFieldBehavior.m in Sources */,
 				F850D5AE1D6AAD9800D0CF92 /* LDImagePicker.m in Sources */,
+				6B1B55C01D88E83E008383EE /* UIView+Appearance.m in Sources */,
 				F850D57B1D6A921300D0CF92 /* AppDelegate.m in Sources */,
+				6B1B55B81D88E0E7008383EE /* LoginVCViewController.m in Sources */,
+				6B1B55CC1D891C8C008383EE /* HRCounting.m in Sources */,
+				6B1B55D81D891CD6008383EE /* HRTextFieldAndButtonBehavior.m in Sources */,
 				F850D5781D6A921300D0CF92 /* main.m in Sources */,
 				F850D5AD1D6AAD9800D0CF92 /* LDBehavior.m in Sources */,
 				F850D5B11D6AC5DF00D0CF92 /* LDAnimationView.m in Sources */,
+				6B1B55DC1D891D0C008383EE /* HRCountingButtonBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,11 +332,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "xibObj的使用/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ld.RCIM.xibObj---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -303,11 +347,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "xibObj的使用/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ld.RCIM.xibObj---";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

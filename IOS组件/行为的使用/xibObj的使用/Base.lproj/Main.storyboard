@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,12 +45,21 @@
                                     <constraint firstAttribute="trailing" secondItem="AOD-gu-aHz" secondAttribute="trailing" id="tcp-nD-znp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZF-w8-3GX">
+                                <rect key="frame" x="270" y="470" width="60" height="30"/>
+                                <state key="normal" title="登录界面"/>
+                                <connections>
+                                    <action selector="loginUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMW-DJ-AAs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="SZF-w8-3GX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0jl-0w-HDx"/>
                             <constraint firstItem="NG3-Cd-Sl0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="648-5V-356"/>
                             <constraint firstItem="NG3-Cd-Sl0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ejg-Is-y4I"/>
                             <constraint firstItem="od8-cU-e51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="edb-dO-IVp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SZF-w8-3GX" secondAttribute="bottom" constant="100" id="phQ-qY-5sa"/>
                             <constraint firstItem="NG3-Cd-Sl0" firstAttribute="top" secondItem="od8-cU-e51" secondAttribute="bottom" constant="22" id="s4k-Id-1r4"/>
                         </constraints>
                     </view>

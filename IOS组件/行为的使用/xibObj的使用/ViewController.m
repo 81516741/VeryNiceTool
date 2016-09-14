@@ -7,11 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "LoginVCViewController.h"
+#import "HRCounting.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
+}
+
+- (IBAction)loginUI:(id)sender
+{
+    [self presentViewController:[LoginVCViewController new] animated:true completion:nil];
 }
 
 
