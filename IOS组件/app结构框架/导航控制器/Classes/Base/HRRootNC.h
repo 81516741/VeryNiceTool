@@ -6,7 +6,6 @@
 //  Copyright © 2016年 ld. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "KKNavigationController.h"
 
 @interface HRRootNC : KKNavigationController

@@ -7,12 +7,12 @@
 //
 
 #import "HRRootNC.h"
-#import "HRSideMenuVC.h"
 #import "HRItemNC.h"
 #import "HRTabVC.h"
-#import "HRTool.h"
+#import "HRSideMenuVC.h"
+#import "HRObject.h"
+#import "HRFunctionTool.h"
 
-#import "PushedVC.h"
 
 @interface HRRootNC ()<UITabBarControllerDelegate,RESideMenuDelegate>
 @property (nonatomic,weak) HRTabVC * tabVC;
@@ -39,33 +39,23 @@
     HRSideMenuVC * sideMenuVC = [[HRSideMenuVC alloc]initWithContentViewController:centerNC leftMenuViewController:[[leftVCClass alloc]init] rightMenuViewController:nil];
     HRRootNC * rootNC = [[HRRootNC alloc]initWithRootViewController:sideMenuVC];
     sideMenuVC.delegate = rootNC;
+    
     //给属性赋值
     tabVC.delegate = rootNC;
+    rootNC.tabVC = tabVC;
     rootNC.selectedIndex = 0;
     rootNC.menuVC = sideMenuVC;
-    [HRTool share].rootNC = rootNC;
+    [HRObject share].rootNC = rootNC;
+    
+    //配置导航条的UI
+    [rootNC configNaviLeftItems];
+    [rootNC configNaviRightItems];
     
     return rootNC;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
--(instancetype)initWithRootViewController:(UIViewController *)rootViewController
-{
-    self = [super initWithRootViewController:rootViewController];
-    /*为什么在这里赋值tabVC，因为HRRootNC 一调用
-    initWithRootViewController就会去调用
-     viewDidLoad，而此时我需要配置导航条
-     左右的items，所以选择在这里保存tabVC
-     */
-    HRSideMenuVC * menuVC = (HRSideMenuVC *)rootViewController;
-    HRItemNC * centerNC = (HRItemNC *)menuVC.contentViewController;
-    self.tabVC = (HRTabVC *)centerNC.visibleViewController;
-    [self configNaviLeftItems];
-    [self configNaviRightItems];
-   return self;
 }
 
 #pragma mark - tabbarVC的代理
@@ -90,7 +80,6 @@
     UIView * item1View = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 110, 25)];
     [item1View addSubview:button];
     UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithCustomView:item1View];
-
     self.tabVC.navigationItem.leftBarButtonItem = item1;
 }
 -(void)configNaviRightItems
@@ -114,8 +103,7 @@
 
 -(void)jumpTpNextVC
 {
-    PushedVC * vc = [[PushedVC alloc]init];
-    [HRTool pushViewController:vc animated:true];
+    [HRFunctionTool gotoPushVC];
 }
 
 #pragma mark - pop  push

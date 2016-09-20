@@ -6,30 +6,30 @@
 //  Copyright © 2016年 ld. All rights reserved.
 //
 
-#import "HRTool.h"
+#import "HRObject.h"
 
-@implementation HRTool
+@implementation HRObject
 
 +(instancetype)share
 {
-    static HRTool * _instance = nil;
+    static HRObject * _instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _instance = [[HRTool alloc]init];
+        _instance = [[HRObject alloc]init];
     });
     return _instance;
 }
 
 +(UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-  return [[HRTool share].rootNC popViewControllerAnimated:animated];
+  return [[HRObject share].rootNC popViewControllerAnimated:animated];
 }
 +(NSArray *)popToRootViewControllerAnimated:(BOOL)animated
 {
-   return [[HRTool share].rootNC popToRootViewControllerAnimated:animated];
+   return [[HRObject share].rootNC popToRootViewControllerAnimated:animated];
 }
 +(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    [[HRTool share].rootNC pushViewController:viewController  animated:animated];
+    [[HRObject share].rootNC pushViewController:viewController  animated:animated];
 }
 @end

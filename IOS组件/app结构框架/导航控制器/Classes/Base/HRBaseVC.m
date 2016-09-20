@@ -7,7 +7,6 @@
 //
 
 #import "HRBaseVC.h"
-#import "PushedVC.h"
 
 @interface HRBaseVC ()
 
@@ -49,13 +48,12 @@
 
 -(void)jumpTpNextVC
 {
-    PushedVC * vc = [[PushedVC alloc]init];
-    [HRTool pushViewController:vc animated:true];
+    [HRFunctionTool gotoPushVC];
 }
 
 -(void)back
 {
-    [HRTool popViewControllerAnimated:true];
+    [HRObject popViewControllerAnimated:true];
 }
 
 @end

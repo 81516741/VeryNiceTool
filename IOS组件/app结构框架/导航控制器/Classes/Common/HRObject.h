@@ -1,5 +1,5 @@
 //
-//  HRTool.h
+//  HRObject.h
 //  导航控制器
 //
 //  Created by ld on 16/9/19.
@@ -11,7 +11,7 @@
 #import "HRItemNC.h"
 #import "HRSideMenuVC.h"
 
-@interface HRTool : NSObject
+@interface HRObject : NSObject
 /**
  *  window的根控制器的导航控制器
  */

@@ -7,7 +7,7 @@
 //
 
 #import "PushedVC.h"
-#import "HRTool.h"
+#import "HRObject.h"
 
 @interface PushedVC ()
 

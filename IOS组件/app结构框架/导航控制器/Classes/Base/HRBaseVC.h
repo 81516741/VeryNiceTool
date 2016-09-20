@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HRTool.h"
+#import "HRObject.h"
+#import "HRFunctionTool.h"
 
 @interface HRBaseVC : UIViewController
 

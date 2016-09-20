@@ -7,6 +7,8 @@
 //
 
 #import "HRItemNC.h"
+#import "HRObject.h"
+#import "HRFunctionTool.h"
 
 @interface HRItemNC ()
 
