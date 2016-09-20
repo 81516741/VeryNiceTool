@@ -12,5 +12,5 @@
 @interface HRRootNC : KKNavigationController
 
 +(instancetype)rootNC;
-
++(instancetype)rootNC:(NSArray<NSString *> *)centerVCNames centerVCTitles:(NSArray<NSString *> *)titles centerVCImagePres:(NSArray<NSString *> *)imagePres leftVCName:(NSString *)name
 @end

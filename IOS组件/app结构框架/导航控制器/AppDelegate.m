@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     HRRootNC * rootNC = [HRRootNC rootNC];
+    HRRootNC * rootNC1 = [HRRootNC rootNC:@[@"Item1",@"Item2",@"Item3"] centerVCTitles:@[@"Item1",@"Item2",@"Item3"] centerVCImagePres:@[@"first",@"second",@"third"] leftVCName:@"Left"];
     self.window.rootViewController = rootNC;
     [self.window makeKeyAndVisible];
     return YES;

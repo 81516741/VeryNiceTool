@@ -24,6 +24,11 @@
 
 @implementation HRRootNC
 
++(instancetype)rootNC:(NSArray<NSString *> *)centerVCNames centerVCTitles:(NSArray<NSString *> *)titles centerVCImagePres:(NSArray<NSString *> *)imagePres leftVCName:(NSString *)name
+{
+    return nil;
+}
+
 +(instancetype)rootNC
 {
     //创建menu中间的控制器
