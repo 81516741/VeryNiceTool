@@ -13,7 +13,6 @@
 #import "HRTool.h"
 
 #import "PushedVC.h"
-#import "LeftVC.h"
 
 @interface HRRootNC ()<UITabBarControllerDelegate,RESideMenuDelegate>
 @property (nonatomic,weak) HRTabVC * tabVC;
@@ -24,22 +23,20 @@
 
 @implementation HRRootNC
 
-+(instancetype)rootNC:(NSArray<NSString *> *)centerVCNames centerVCTitles:(NSArray<NSString *> *)titles centerVCImagePres:(NSArray<NSString *> *)imagePres leftVCName:(NSString *)name
++(instancetype)rootNC:(NSArray<NSString *> *)centerVCNames centerVCTitles:(NSArray<NSString *> *)titles centerVCImagePres:(NSArray<NSString *> *)imagePres leftVCName:(NSString *)leftVCName
 {
-    return nil;
-}
-
-+(instancetype)rootNC
-{
+    BOOL isReasonable = (centerVCNames.count == titles.count) && (centerVCNames.count == imagePres.count);
+    NSAssert(isReasonable, @"centerVCNames & centerVCTitles & centerVCImagePres 数组的元素需相等");
     //创建menu中间的控制器
-    HRTabVC * tabVC = [HRTabVC tabVC];
+    HRTabVC * tabVC = [HRTabVC tabVC:centerVCNames titles:titles imagePres:imagePres];
     HRItemNC * centerNC = [[HRItemNC alloc]initWithRootViewController:tabVC];
     
     //创建menu左边的控制器
-    LeftVC * leftVC = [[LeftVC alloc]init];
+    Class leftVCClass = NSClassFromString(leftVCName);
+    NSAssert(leftVCClass!=nil, @"左边控制器(%@)不存在",leftVCName);
     
     //创建带导航条的menu控制器
-    HRSideMenuVC * sideMenuVC = [[HRSideMenuVC alloc]initWithContentViewController:centerNC leftMenuViewController:leftVC rightMenuViewController:nil];
+    HRSideMenuVC * sideMenuVC = [[HRSideMenuVC alloc]initWithContentViewController:centerNC leftMenuViewController:[[leftVCClass alloc]init] rightMenuViewController:nil];
     HRRootNC * rootNC = [[HRRootNC alloc]initWithRootViewController:sideMenuVC];
     sideMenuVC.delegate = rootNC;
     //给属性赋值

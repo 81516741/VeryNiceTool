@@ -7,9 +7,6 @@
 //
 
 #import "HRTabVC.h"
-#import "Item1.h"
-#import "Item2.h"
-#import "Item3.h"
 
 @interface HRTabVC ()
 
@@ -17,13 +14,17 @@
 
 @implementation HRTabVC
 
-+(instancetype)tabVC
++(instancetype)tabVC:(NSArray<NSString *> *)names titles:(NSArray<NSString *> *)titles imagePres:(NSArray<NSString *> *)imagePres
 {
     HRTabVC * tabVC = [[HRTabVC alloc]init];
-    UIViewController * item1 = [self vc:[[Item1 alloc]init] title:@"item1" imagePre:@"first"];
-    UIViewController * item2 = [self vc:[[Item2 alloc]init] title:@"item2" imagePre:@"second"];
-    UIViewController * item3 = [self vc:[[Item3 alloc]init] title:@"item3" imagePre:@"third"];
-    [tabVC setViewControllers:@[item1,item2,item3]];
+    for (int i = 0; i < names.count; i ++) {
+        Class itemClass = NSClassFromString(names[i]);
+        NSAssert(itemClass!=nil, @"中间控制器(%@)不存在",names[i]);
+        NSString * title = titles[i];
+        NSString * imagePre = imagePres[i];
+        UIViewController * vc = [self vc:[[itemClass alloc]init] title:title imagePre:imagePre];
+        [tabVC addChildViewController:vc];
+    }
     return tabVC;
 }
 
