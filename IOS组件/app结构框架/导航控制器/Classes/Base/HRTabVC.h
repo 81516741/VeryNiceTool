@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HRItemNC.h"
+
 
 @interface HRTabVC : UITabBarController
 

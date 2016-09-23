@@ -17,12 +17,12 @@
  */
 @property (nonatomic,strong) HRRootNC * rootNC;
 /**
+ *  window的根控制器(抽屉)
+ */
+@property (nonatomic,strong) HRSideMenuVC * menuVC;
+/**
  *  单例
  */
 +(instancetype)share;
 
-//导航控制器的 push 和 pop
-+(UIViewController *)popViewControllerAnimated:(BOOL)animated;
-+(NSArray *)popToRootViewControllerAnimated:(BOOL)animated;
-+(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 @end

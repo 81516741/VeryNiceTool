@@ -7,6 +7,9 @@
 //
 
 #import "HRTabVC.h"
+#import "HRItemNC.h"
+#import "HRObject.h"
+#import "HRFunctionTool.h"
 
 @interface HRTabVC ()
 
@@ -36,5 +39,50 @@
     return vc;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self configNaviLeftItems];
+    [self configNaviRightItems];
+}
+
+#pragma mark - 导航条的UI配置
+-(void)configNaviLeftItems
+{
+    UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(-20, 0, 110, 25)];
+    [button setImage:[UIImage imageNamed:@"second_selected"] forState:UIControlStateNormal];
+    [button setContentMode:UIViewContentModeScaleAspectFit];
+    [button setTitle:@"左边抽屉" forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:15.f];
+    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(showLeftVC) forControlEvents:UIControlEventTouchUpInside];
+    //为了使图片可以更靠左边
+    UIView * item1View = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 110, 25)];
+    [item1View addSubview:button];
+    UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithCustomView:item1View];
+    self.navigationItem.leftBarButtonItem = item1;
+}
+-(void)configNaviRightItems
+{
+    
+    UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithTitle:@"蓉达" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item2 = [[UIBarButtonItem alloc]initWithTitle:@"show" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item3 = [[UIBarButtonItem alloc]initWithTitle:@"time" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    self.navigationItem.rightBarButtonItems = @[item2,item1];
+    if (self.selectedIndex == 1) {
+        self.navigationItem.rightBarButtonItems = @[item3,item2,item1];
+    }
+}
+
+#pragma mark - 点击事件
+-(void)showLeftVC
+{
+    [[HRObject share].menuVC presentLeftMenuViewController];
+}
+
+-(void)jumpTpNextVC
+{
+    [HRFunctionTool gotoPushVC];
+}
 
 @end

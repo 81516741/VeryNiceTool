@@ -20,16 +20,4 @@
     return _instance;
 }
 
-+(UIViewController *)popViewControllerAnimated:(BOOL)animated
-{
-  return [[HRObject share].rootNC popViewControllerAnimated:animated];
-}
-+(NSArray *)popToRootViewControllerAnimated:(BOOL)animated
-{
-   return [[HRObject share].rootNC popToRootViewControllerAnimated:animated];
-}
-+(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    [[HRObject share].rootNC pushViewController:viewController  animated:animated];
-}
 @end

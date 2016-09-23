@@ -53,7 +53,7 @@
 
 -(void)back
 {
-    [HRObject popViewControllerAnimated:true];
+    [HRFunctionTool popViewControllerAnimated:true];
 }
 
 @end

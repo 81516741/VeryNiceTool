@@ -27,7 +27,7 @@
 - (IBAction)jump:(id)sender
 {
     PushedVC * vc = [[PushedVC alloc]init];
-    [HRObject pushViewController:vc animated:true];
+    [HRFunctionTool pushViewController:vc animated:true];
 }
 
 @end
