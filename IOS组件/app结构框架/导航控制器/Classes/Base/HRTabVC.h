@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface HRTabVC : UITabBarController
 
 +(instancetype)tabVC:(NSArray<NSString *> *)names titles:(NSArray<NSString *> *)titles imagePres:(NSArray<NSString *> *)imagePres;

@@ -1,6 +1,5 @@
 //
 //  HRObject.h
-//  导航控制器
 //
 //  Created by ld on 16/9/19.
 //  Copyright © 2016年 ld. All rights reserved.
@@ -10,6 +9,7 @@
 #import "HRRootNC.h"
 #import "HRItemNC.h"
 #import "HRSideMenuVC.h"
+#import "HRTabVC.h"
 
 @interface HRObject : NSObject
 /**
@@ -20,6 +20,11 @@
  *  window的根控制器(抽屉)
  */
 @property (nonatomic,strong) HRSideMenuVC * menuVC;
+/**
+ *  window的根控制器(抽屉)
+ */
+@property (nonatomic,strong) HRTabVC * tabVC;
+
 /**
  *  单例
  */

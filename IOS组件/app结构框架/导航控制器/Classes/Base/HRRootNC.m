@@ -23,7 +23,7 @@
 +(instancetype)rootNC:(NSArray<NSString *> *)centerVCNames centerVCTitles:(NSArray<NSString *> *)titles centerVCImagePres:(NSArray<NSString *> *)imagePres leftVCName:(NSString *)leftVCName
 {
     BOOL isReasonable = (centerVCNames.count == titles.count) && (centerVCNames.count == imagePres.count);
-    NSAssert(isReasonable, @"centerVCNames & centerVCTitles & centerVCImagePres 数组的元素需相等");
+    NSAssert(isReasonable, @"centerVCNames & centerVCTitles & centerVCImagePres 数组的元素个数需相等");
     //创建menu中间的控制器
     HRTabVC * tabVC = [HRTabVC tabVC:centerVCNames titles:titles imagePres:imagePres];
     HRItemNC * centerNC = [[HRItemNC alloc]initWithRootViewController:tabVC];
@@ -40,7 +40,7 @@
     //给属性赋值
     [HRObject share].menuVC = sideMenuVC;
     [HRObject share].rootNC = rootNC;
-    
+    [HRObject share].tabVC = tabVC;
     return rootNC;
 }
 

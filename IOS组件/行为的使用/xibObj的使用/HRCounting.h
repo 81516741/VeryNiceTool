@@ -17,11 +17,15 @@
  *  @param progress 进度回调
  *  @param complete 计时器完成的回调
  */
-+ (void)counting:(NSInteger)count owner:(id)owner progress:(void(^)(NSInteger count,id obj))progress complete:(void(^)(id obj))complete;
++ (void)counting:(NSInteger)count owner:(id)owner progress:(void(^)(NSInteger count,HRCounting * counting))progress complete:(void(^)(HRCounting * counting))complete;
 /**
  *  取消倒计时
- *  注意同一个持有者只可以有一个可以调用此方法取消的定时器
+ *  注意同一个持有者只有最后一个创建的timer可以调用此方法取消
  *  @param owner 持有者
  */
 +(void)cancelInOwner:(id)owner;
+/**
+ *  取消倒计时
+ */
+-(void)cancel;
 @end
