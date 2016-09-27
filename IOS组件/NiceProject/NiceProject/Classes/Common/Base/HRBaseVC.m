@@ -48,7 +48,7 @@
 
 -(void)jumpTpNextVC
 {
-    [HRFunctionTool gotoPushVC];
+    [HRFunctionTool gotoFunction:kFunctionText];
 }
 
 -(void)back

@@ -19,9 +19,6 @@
 #define HRLog(...)
 #endif
 
-
-#define kIntString(num) [NSString stringWithFormat:@"%d",num]
-
 /**
  *  类型（属性类型）
  */

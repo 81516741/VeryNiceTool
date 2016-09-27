@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kFunctionText @"kFunctionText"
+
 @interface HRFunctionTool : NSObject
 
 //********导航控制器的 push 和 pop *******
@@ -15,7 +17,6 @@
 +(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 //*******************************************
 
-+(void)gotoPushVC;
-
++(BOOL)gotoFunction:(NSString *)function;
 
 @end

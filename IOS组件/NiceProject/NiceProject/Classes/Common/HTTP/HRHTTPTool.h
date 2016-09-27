@@ -6,11 +6,18 @@
 //
 
 #import <Foundation/Foundation.h>
-@class HRHTTPModel;
 
+@class HRHTTPModel;
 @interface HRHTTPTool : NSObject
+
+#define kTextTaskDescription @"kTexttaskDescription"
+
+/**
+ * 取消请求
+ */
+-(void)cancelHTTPTask:(NSString *)taskDescription;
 /**
  * 示例
  */
-+(void)textTagTask:(int32_t)tagTask dataClass:(Class)dataClass success:(void (^)(HRHTTPModel * responseObject))success failure:(void (^)(HRHTTPModel * responseObject))failure;
++(void)text:(NSString *)taskDescription dataClass:(Class)dataClass success:(void (^)(HRHTTPModel * responseObject))success failure:(void (^)(HRHTTPModel * responseObject))failure;
 @end

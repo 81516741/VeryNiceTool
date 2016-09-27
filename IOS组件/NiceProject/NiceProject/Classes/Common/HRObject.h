@@ -25,6 +25,9 @@
  */
 @property (nonatomic,strong) HRTabVC * tabVC;
 
+@property (assign ,nonatomic,getter = isLogin) BOOL login;
+
+
 /**
  *  单例
  */

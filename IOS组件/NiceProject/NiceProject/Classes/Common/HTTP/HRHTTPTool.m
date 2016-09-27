@@ -12,12 +12,15 @@
 #import "YYModel.h"
 
 @implementation HRHTTPTool
-
-+(void)textTagTask:(int32_t)tagTask dataClass:(Class)dataClass success:(void (^)(HRHTTPModel *))success failure:(void (^)(HRHTTPModel *))failure{
+-(void)cancelHTTPTask:(NSString *)taskDescription
+{
+    [[HRHTTPManager shared] cancelHTTPTask:taskDescription];
+}
++(void)text:(NSString *)taskDescription dataClass:(Class)dataClass success:(void (^)(HRHTTPModel *))success failure:(void (^)(HRHTTPModel *))failure{
     
     HRHTTPModel * message = [HRHTTPModel new];
     message.httpType = HRHTTPTypeGet;
-    message.tagTask = tagTask;
+    message.taskDescription = taskDescription;
     message.url = @"url";
     message.dataClass = dataClass;
     NSMutableDictionary * paramasDic = [NSMutableDictionary dictionary];

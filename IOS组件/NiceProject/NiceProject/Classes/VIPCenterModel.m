@@ -19,9 +19,10 @@
 
 @implementation VIPCenterMenberObj
 
-//替换变量名字
+//替换变量名字，返回的字段 name 和 levelName都可以赋值给LevelName，
+//都可以赋值好像没什么用
 + (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"LevelName"  : @[@"LevelName",@"levelName"]};
+    return @{@"LevelName"  : @[@"name",@"levelName"]};
 }
 //数组里面装是什么类型的对象
 -(void)setPrivilege:(NSArray *)privilege

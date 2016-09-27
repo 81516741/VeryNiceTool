@@ -50,6 +50,6 @@ typedef void(^ _Nonnull Block)( HRHTTPModel * _Nonnull );
 /**
  * 用于取消HTTP请求的标记
  */
-@property(nonatomic ,assign) int32_t tagTask;
+@property(nonatomic ,copy, nullable) NSString * taskDescription;
 
 @end

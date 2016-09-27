@@ -19,8 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
-    [HRHTTPTool textTagTask:100 dataClass:[VIPCenterModel class] success:^(HRHTTPModel *responseObject) {
-        HRLog(@"我成功了");
+    [HRHTTPTool text:kTextTaskDescription dataClass:[VIPCenterModel class] success:^(HRHTTPModel *responseObject) {
+        HRLog(@"成功");
     } failure:^(HRHTTPModel *responseObject) {
         
     }];

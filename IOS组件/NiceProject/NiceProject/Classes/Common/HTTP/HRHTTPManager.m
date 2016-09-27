@@ -17,10 +17,6 @@
 
 @implementation HRHTTPManager
 
-static void setTaskTag(NSURLSessionDataTask *task,int32_t taskTag){
-    task.taskDescription = kIntString(taskTag);
-}
-
 -(void)sendMessage:(HRHTTPModel *)message success:(void (^)(HRHTTPModel *))success failure:(void (^)(HRHTTPModel *))failure
 {
     switch (message.httpType) {
@@ -39,7 +35,7 @@ static void setTaskTag(NSURLSessionDataTask *task,int32_t taskTag){
 
 -(void)getMessage:(HRHTTPModel *)message success:(void (^)(HRHTTPModel *))success failure:(void (^)(HRHTTPModel *))failure
 {
-    setTaskTag([self.HTTPManager GET:message.url parameters:message.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionDataTask * task = [self.HTTPManager GET:message.url parameters:message.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         message.data = responseObject;
         @try {
@@ -52,12 +48,14 @@ static void setTaskTag(NSURLSessionDataTask *task,int32_t taskTag){
             failure(message);
         } @catch (NSException *exception) {
         }
-    }], message.tagTask);
+    }];
+    task.taskDescription = message.taskDescription;
+
 }
 
 -(void)postMessage:(HRHTTPModel *)message success:(void (^)(HRHTTPModel *))success failure:(void (^)(HRHTTPModel *))failure
 {
-    setTaskTag([self.HTTPManager POST:message.url parameters:message.parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSURLSessionDataTask * task = [self.HTTPManager POST:message.url parameters:message.parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         message.data = responseObject;
         @try {
@@ -70,14 +68,15 @@ static void setTaskTag(NSURLSessionDataTask *task,int32_t taskTag){
             failure(message);
         } @catch (NSException *exception) {
         }
-    }], message.tagTask);
+    }];
+    task.taskDescription = message.taskDescription;
 }
 
 
--(void)cancelTaskByTaskTag:(int32_t)tagTask
+-(void)cancelHTTPTask:(NSString *)taskDescription
 {
     for (NSURLSessionDataTask * task in self.HTTPManager.tasks) {
-        if ([task.taskDescription isEqualToString:kIntString(tagTask)]) {
+        if ([task.taskDescription isEqualToString:taskDescription]) {
             [task cancel];
         }
     }
