@@ -37,12 +37,14 @@
 {
     NSURLSessionDataTask * task = [self.HTTPManager GET:message.url parameters:message.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         message.data = responseObject;
         @try {
             success(message);
         } @catch (NSException *exception) {
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         message.errorOfAFN = error;
         @try {
             failure(message);
@@ -50,6 +52,7 @@
         }
     }];
     task.taskDescription = message.taskDescription;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
 
 }
 
@@ -57,12 +60,14 @@
 {
     NSURLSessionDataTask * task = [self.HTTPManager POST:message.url parameters:message.parameters progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         message.data = responseObject;
         @try {
             success(message);
         } @catch (NSException *exception) {
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = false;
         message.errorOfAFN = error;
         @try {
             failure(message);
@@ -70,6 +75,7 @@
         }
     }];
     task.taskDescription = message.taskDescription;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = true;
 }
 
 
