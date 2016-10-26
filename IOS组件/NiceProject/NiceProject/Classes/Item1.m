@@ -8,6 +8,8 @@
 
 #import "Item1.h"
 #import "VIPCenterModel.h"
+#import "AFNetworkReachabilityManager.h"
+
 @interface Item1 ()
 
 @end
@@ -26,6 +28,11 @@
     }];
     
 }
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
 
 
 @end

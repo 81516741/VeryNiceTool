@@ -10,8 +10,10 @@
 #import "HRItemNC.h"
 #import "HRFunctionTool.h"
 #import "HRObject.h"
+#import "HRThirdLoginTool.h"
+#import "HRConst.h"
 
-@interface HRTabVC ()
+@interface HRTabVC ()<UITabBarControllerDelegate>
 
 @end
 
@@ -20,6 +22,7 @@
 +(instancetype)tabVC:(NSArray<NSString *> *)names titles:(NSArray<NSString *> *)titles imagePres:(NSArray<NSString *> *)imagePres
 {
     HRTabVC * tabVC = [[HRTabVC alloc]init];
+    tabVC.delegate = tabVC;
     for (int i = 0; i < names.count; i ++) {
         Class itemClass = NSClassFromString(names[i]);
         NSAssert(itemClass!=nil, @"中间控制器(%@)不存在",names[i]);
@@ -65,9 +68,9 @@
 -(void)configNaviRightItems
 {
     
-    UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithTitle:@"蓉达" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
-    UIBarButtonItem * item2 = [[UIBarButtonItem alloc]initWithTitle:@"show" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
-    UIBarButtonItem * item3 = [[UIBarButtonItem alloc]initWithTitle:@"time" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item2 = [[UIBarButtonItem alloc]initWithTitle:@"三方登录" style:UIBarButtonItemStylePlain target:self action:@selector(thirdLogin)];
+    UIBarButtonItem * item3 = [[UIBarButtonItem alloc]initWithTitle:@"❤️蓉" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
     self.navigationItem.rightBarButtonItems = @[item2,item1];
     if (self.selectedIndex == 1) {
         self.navigationItem.rightBarButtonItems = @[item3,item2,item1];
@@ -82,7 +85,23 @@
 
 -(void)jumpTpNextVC
 {
-    [HRFunctionTool gotoFunction:kFunctionText];
+    [HRFunctionTool gotoFunction:kFunctionText needLogin:false];
 }
 
+-(void)thirdLogin
+{
+    [HRThirdLoginTool QQLoginSuccess:^{
+        HRLog(@"qq登录成功");
+    } failure:^(QQLoginFailure failure) {
+        HRLog(@"qq登录失败");
+    } userInfo:^(APIResponse *userInfo) {
+        HRLog(@"qq用户信息-->%@",userInfo);
+    }];
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    self.selectedIndex = tabBarController.selectedIndex;
+    [self configNaviRightItems];
+}
 @end

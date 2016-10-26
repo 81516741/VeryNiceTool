@@ -22,6 +22,6 @@
 /**
  *  类型（属性类型）
  */
-extern NSString *const HRTypeInt;
+extern NSString *const kHRTypeInt;
 
 #endif

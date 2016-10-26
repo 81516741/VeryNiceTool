@@ -17,6 +17,11 @@
 +(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated;
 //*******************************************
 
-+(BOOL)gotoFunction:(NSString *)function;
+/**
+ * 跳转功能
+ * function 功能标示
+ * needLogin 是否需要登陆
+ */
++(BOOL)gotoFunction:(NSString *)function needLogin:(BOOL)needLogin;
 
 @end

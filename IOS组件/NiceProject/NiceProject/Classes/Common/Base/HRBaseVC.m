@@ -48,7 +48,7 @@
 
 -(void)jumpTpNextVC
 {
-    [HRFunctionTool gotoFunction:kFunctionText];
+    [HRFunctionTool gotoFunction:kFunctionText needLogin:false];
 }
 
 -(void)back

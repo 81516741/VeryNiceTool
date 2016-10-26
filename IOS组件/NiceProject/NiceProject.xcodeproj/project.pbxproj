@@ -18,6 +18,10 @@
 		6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */; };
 		6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */; };
 		6B178E101D9A045500257D97 /* Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E051D9A045500257D97 /* Stars@2x.png */; };
+		6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40EA1DBE08010017B00A /* libc++.tbd */; };
+		6B5F40EF1DBE08370017B00A /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40ED1DBE08370017B00A /* TencentOpenAPI.framework */; };
+		6B5F40F01DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F40EE1DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle */; };
+		6B6E19F31DBEEBD700306D69 /* HRThirdLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E19F21DBEEBD700306D69 /* HRThirdLoginTool.m */; };
 		6BF3A10A1D9913EA00583D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A1091D9913EA00583D4D /* main.m */; };
 		6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10C1D9913EA00583D4D /* AppDelegate.m */; };
 		6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10F1D9913EA00583D4D /* ViewController.m */; };
@@ -61,6 +65,19 @@
 		6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_backBarButton_normal.png; sourceTree = "<group>"; };
 		6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_backBarButton_normal@2x.png"; sourceTree = "<group>"; };
 		6B178E051D9A045500257D97 /* Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@2x.png"; sourceTree = "<group>"; };
+		6B5F40CB1DBDEDE60017B00A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6B5F40CD1DBDEDFA0017B00A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		6B5F40CF1DBDEE060017B00A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6B5F40D11DBDEE130017B00A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B5F40D31DBDEE230017B00A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6B5F40D51DBDEE320017B00A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		6B5F40D91DBDEE440017B00A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6B5F40EA1DBE08010017B00A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6B5F40ED1DBE08370017B00A /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		6B5F40EE1DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		6B6E19F11DBEEBD700306D69 /* HRThirdLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRThirdLoginTool.h; sourceTree = "<group>"; };
+		6B6E19F21DBEEBD700306D69 /* HRThirdLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRThirdLoginTool.m; sourceTree = "<group>"; };
 		6BF3A1051D9913EA00583D4D /* NiceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF3A1091D9913EA00583D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BF3A10B1D9913EA00583D4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */,
+				6B5F40EF1DBE08370017B00A /* TencentOpenAPI.framework in Frameworks */,
 				A29DC417CE148A5DE0092CB0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +175,39 @@
 			path = source;
 			sourceTree = "<group>";
 		};
+		6B5F40BE1DBDEA290017B00A /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				6B5F40EC1DBE08370017B00A /* TencentOpenApi */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		6B5F40EC1DBE08370017B00A /* TencentOpenApi */ = {
+			isa = PBXGroup;
+			children = (
+				6B5F40ED1DBE08370017B00A /* TencentOpenAPI.framework */,
+				6B5F40EE1DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = TencentOpenApi;
+			sourceTree = "<group>";
+		};
+		6B6E19F01DBEEB8500306D69 /* ThirdLogin */ = {
+			isa = PBXGroup;
+			children = (
+				6B6E19F11DBEEBD700306D69 /* HRThirdLoginTool.h */,
+				6B6E19F21DBEEBD700306D69 /* HRThirdLoginTool.m */,
+			);
+			path = ThirdLogin;
+			sourceTree = "<group>";
+		};
+		6B6E19F41DBEFA6700306D69 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		6BF3A0FC1D9913EA00583D4D = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +229,7 @@
 		6BF3A1071D9913EA00583D4D /* NiceProject */ = {
 			isa = PBXGroup;
 			children = (
+				6B5F40BE1DBDEA290017B00A /* Lib */,
 				6BF3A11F1D99141B00583D4D /* Classes */,
 				6BF3A10B1D9913EA00583D4D /* AppDelegate.h */,
 				6BF3A10C1D9913EA00583D4D /* AppDelegate.m */,
@@ -226,6 +279,8 @@
 		6BF3A1341D99141B00583D4D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6B6E19F41DBEFA6700306D69 /* Share */,
+				6B6E19F01DBEEB8500306D69 /* ThirdLogin */,
 				6B178DF21D9A045500257D97 /* Base */,
 				6BF3A13B1D99141B00583D4D /* HTTP */,
 				6BF3A1351D99141B00583D4D /* HRConst.h */,
@@ -263,6 +318,15 @@
 		EB8DEA6E8BB14DD7E1BB90C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B5F40EA1DBE08010017B00A /* libc++.tbd */,
+				6B5F40D91DBDEE440017B00A /* libz.tbd */,
+				6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */,
+				6B5F40D51DBDEE320017B00A /* CoreTelephony.framework */,
+				6B5F40D31DBDEE230017B00A /* libsqlite3.tbd */,
+				6B5F40D11DBDEE130017B00A /* CoreGraphics.framework */,
+				6B5F40CF1DBDEE060017B00A /* SystemConfiguration.framework */,
+				6B5F40CD1DBDEDFA0017B00A /* libiconv.tbd */,
+				6B5F40CB1DBDEDE60017B00A /* Security.framework */,
 				F096903BDC4B84835F83EAB1 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -302,7 +366,8 @@
 				TargetAttributes = {
 					6BF3A1041D9913EA00583D4D = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 555MSEDP84;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -333,6 +398,7 @@
 				6BF3A1181D9913EA00583D4D /* LaunchScreen.storyboard in Resources */,
 				6B178E101D9A045500257D97 /* Stars@2x.png in Resources */,
 				6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */,
+				6B5F40F01DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6BF3A16C1D99167D00583D4D /* text.json in Resources */,
 				6B178E0C1D9A045500257D97 /* bg_backBarButton_hight.png in Resources */,
 				6BF3A1151D9913EA00583D4D /* Assets.xcassets in Resources */,
@@ -404,6 +470,7 @@
 				6BF3A1641D99141B00583D4D /* LeftVC.m in Sources */,
 				6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */,
 				6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */,
+				6B6E19F31DBEEBD700306D69 /* HRThirdLoginTool.m in Sources */,
 				6BF3A1601D99141B00583D4D /* Item1.m in Sources */,
 				6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */,
 				6B178E0B1D9A045500257D97 /* KKNavigationController.m in Sources */,
@@ -540,10 +607,42 @@
 			baseConfigurationReference = BADD2FC4A99C5F74117BBAEB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 555MSEDP84;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NiceProject/Lib/TencentOpenApi",
+					"$(PROJECT_DIR)/NiceProject/Lib/qq",
+				);
 				INFOPLIST_FILE = NiceProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zeng.NiceProject;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"RESideMenu\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-fobjc-arc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KingPoint.gmcchh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21334945-9d55-41b7-ad0f-9c517d13dca6";
+				PROVISIONING_PROFILE_SPECIFIER = devProfileGmcchh;
 			};
 			name = Debug;
 		};
@@ -552,10 +651,42 @@
 			baseConfigurationReference = 84BFBFDEE8AD871EDCC6BADC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 555MSEDP84;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NiceProject/Lib/TencentOpenApi",
+					"$(PROJECT_DIR)/NiceProject/Lib/qq",
+				);
 				INFOPLIST_FILE = NiceProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zeng.NiceProject;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"RESideMenu\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-fobjc-arc",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.KingPoint.gmcchh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "21334945-9d55-41b7-ad0f-9c517d13dca6";
+				PROVISIONING_PROFILE_SPECIFIER = devProfileGmcchh;
 			};
 			name = Release;
 		};

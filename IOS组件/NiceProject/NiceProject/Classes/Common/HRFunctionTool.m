@@ -27,15 +27,30 @@
 }
 
 #pragma mark - ************功能跳转**********
-+(void)loginComplete:(void(^)())complete
++(BOOL)loginComplete:(BOOL(^)())complete
 {
     if ([HRObject share].isLogin) {
         if (complete) {
-            complete();
+           return complete();
         }
     }else{
         //把complete赋值给登录控制器，并跳转到登录控制器
     }
+    return false;
+}
+
++(BOOL)gotoFunction:(NSString *)function needLogin:(BOOL)needLogin
+{
+    //如果需要登陆
+    if (needLogin) {
+        [HRFunctionTool loginComplete:^{
+            return [HRFunctionTool gotoFunction:function];
+        }];
+    }else{
+       return [HRFunctionTool gotoFunction:function];
+    }
+    
+    return false;
 }
 
 +(BOOL)gotoFunction:(NSString *)function

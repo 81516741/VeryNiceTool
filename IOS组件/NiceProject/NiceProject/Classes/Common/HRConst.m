@@ -13,6 +13,6 @@
 /**
  *  成员变量类型（属性类型）
  */
-NSString *const HRTypeInt = @"i";
+NSString *const kHRTypeInt = @"i";
 
 #endif

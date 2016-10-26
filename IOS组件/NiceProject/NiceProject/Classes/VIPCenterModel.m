@@ -25,9 +25,9 @@
     return @{@"LevelName"  : @[@"name",@"levelName"]};
 }
 //数组里面装是什么类型的对象
--(void)setPrivilege:(NSArray *)privilege
++ (NSDictionary *)modelContainerPropertyGenericClass
 {
-    _privilege = [NSArray yy_modelArrayWithClass:[VIPCenterPrivilege class] json:privilege];
+    return @{@"privilege" : [VIPCenterPrivilege class]};
 }
 
 @end
