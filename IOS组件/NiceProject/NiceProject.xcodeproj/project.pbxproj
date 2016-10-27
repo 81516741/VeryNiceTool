@@ -18,10 +18,27 @@
 		6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */; };
 		6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */; };
 		6B178E101D9A045500257D97 /* Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E051D9A045500257D97 /* Stars@2x.png */; };
+		6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */; };
+		6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */; };
+		6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */; };
 		6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40EA1DBE08010017B00A /* libc++.tbd */; };
-		6B5F40EF1DBE08370017B00A /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40ED1DBE08370017B00A /* TencentOpenAPI.framework */; };
-		6B5F40F01DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F40EE1DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle */; };
 		6B6E19F31DBEEBD700306D69 /* HRThirdLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E19F21DBEEBD700306D69 /* HRThirdLoginTool.m */; };
+		6BBE598A1DC0796C000511DC /* weibo_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597D1DC0796C000511DC /* weibo_0.json */; };
+		6BBE598B1DC0796C000511DC /* weibo_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597E1DC0796C000511DC /* weibo_1.json */; };
+		6BBE598C1DC0796C000511DC /* weibo_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597F1DC0796C000511DC /* weibo_2.json */; };
+		6BBE598D1DC0796C000511DC /* weibo_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59801DC0796C000511DC /* weibo_3.json */; };
+		6BBE598E1DC0796C000511DC /* weibo_4.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59811DC0796C000511DC /* weibo_4.json */; };
+		6BBE598F1DC0796C000511DC /* weibo_5.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59821DC0796C000511DC /* weibo_5.json */; };
+		6BBE59901DC0796C000511DC /* weibo_6.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59831DC0796C000511DC /* weibo_6.json */; };
+		6BBE59911DC0796C000511DC /* weibo_7.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59841DC0796C000511DC /* weibo_7.json */; };
+		6BBE59941DC0796C000511DC /* WeiBoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59891DC0796C000511DC /* WeiBoVC.xib */; };
+		6BBE599A1DC07A62000511DC /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE59981DC07A61000511DC /* TencentOpenAPI.framework */; };
+		6BBE599B1DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59991DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle */; };
+		6BBE59A21DC081D2000511DC /* HRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A11DC081D2000511DC /* HRButton.m */; };
+		6BBE59A51DC08548000511DC /* WBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A41DC08548000511DC /* WBModel.m */; };
+		6BBE59A91DC089D8000511DC /* WBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A71DC089D8000511DC /* WBCell.m */; };
+		6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59B11DC09923000511DC /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6BBE59B41DC0998B000511DC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE59B31DC0998B000511DC /* libicucore.tbd */; };
 		6BF3A10A1D9913EA00583D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A1091D9913EA00583D4D /* main.m */; };
 		6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10C1D9913EA00583D4D /* AppDelegate.m */; };
 		6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10F1D9913EA00583D4D /* ViewController.m */; };
@@ -65,6 +82,11 @@
 		6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_backBarButton_normal.png; sourceTree = "<group>"; };
 		6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_backBarButton_normal@2x.png"; sourceTree = "<group>"; };
 		6B178E051D9A045500257D97 /* Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@2x.png"; sourceTree = "<group>"; };
+		6B5E404F1DC1ADD1006E57D3 /* HRLayoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLayoutModel.h; sourceTree = "<group>"; };
+		6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLayoutModel.m; sourceTree = "<group>"; };
+		6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiBoVC.m; sourceTree = "<group>"; };
+		6B5E40581DC1BA22006E57D3 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		6B5F40CB1DBDEDE60017B00A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6B5F40CD1DBDEDFA0017B00A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		6B5F40CF1DBDEE060017B00A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -74,10 +96,29 @@
 		6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6B5F40D91DBDEE440017B00A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B5F40EA1DBE08010017B00A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		6B5F40ED1DBE08370017B00A /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
-		6B5F40EE1DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		6B6E19F11DBEEBD700306D69 /* HRThirdLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRThirdLoginTool.h; sourceTree = "<group>"; };
 		6B6E19F21DBEEBD700306D69 /* HRThirdLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRThirdLoginTool.m; sourceTree = "<group>"; };
+		6BBE597D1DC0796C000511DC /* weibo_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_0.json; sourceTree = "<group>"; };
+		6BBE597E1DC0796C000511DC /* weibo_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_1.json; sourceTree = "<group>"; };
+		6BBE597F1DC0796C000511DC /* weibo_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_2.json; sourceTree = "<group>"; };
+		6BBE59801DC0796C000511DC /* weibo_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_3.json; sourceTree = "<group>"; };
+		6BBE59811DC0796C000511DC /* weibo_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_4.json; sourceTree = "<group>"; };
+		6BBE59821DC0796C000511DC /* weibo_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_5.json; sourceTree = "<group>"; };
+		6BBE59831DC0796C000511DC /* weibo_6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_6.json; sourceTree = "<group>"; };
+		6BBE59841DC0796C000511DC /* weibo_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_7.json; sourceTree = "<group>"; };
+		6BBE59871DC0796C000511DC /* WeiBoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiBoVC.h; sourceTree = "<group>"; };
+		6BBE59891DC0796C000511DC /* WeiBoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiBoVC.xib; sourceTree = "<group>"; };
+		6BBE59981DC07A61000511DC /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		6BBE59991DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		6BBE59A01DC081D2000511DC /* HRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRButton.h; sourceTree = "<group>"; };
+		6BBE59A11DC081D2000511DC /* HRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRButton.m; sourceTree = "<group>"; };
+		6BBE59A31DC08548000511DC /* WBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBModel.h; sourceTree = "<group>"; };
+		6BBE59A41DC08548000511DC /* WBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBModel.m; sourceTree = "<group>"; };
+		6BBE59A61DC089D8000511DC /* WBCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCell.h; sourceTree = "<group>"; };
+		6BBE59A71DC089D8000511DC /* WBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCell.m; sourceTree = "<group>"; };
+		6BBE59B01DC09923000511DC /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		6BBE59B11DC09923000511DC /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		6BBE59B31DC0998B000511DC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		6BF3A1051D9913EA00583D4D /* NiceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF3A1091D9913EA00583D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BF3A10B1D9913EA00583D4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,8 +167,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBE59B41DC0998B000511DC /* libicucore.tbd in Frameworks */,
 				6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */,
-				6B5F40EF1DBE08370017B00A /* TencentOpenAPI.framework in Frameworks */,
+				6BBE599A1DC07A62000511DC /* TencentOpenAPI.framework in Frameworks */,
 				A29DC417CE148A5DE0092CB0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,23 +217,6 @@
 			path = source;
 			sourceTree = "<group>";
 		};
-		6B5F40BE1DBDEA290017B00A /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				6B5F40EC1DBE08370017B00A /* TencentOpenApi */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		6B5F40EC1DBE08370017B00A /* TencentOpenApi */ = {
-			isa = PBXGroup;
-			children = (
-				6B5F40ED1DBE08370017B00A /* TencentOpenAPI.framework */,
-				6B5F40EE1DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle */,
-			);
-			path = TencentOpenApi;
-			sourceTree = "<group>";
-		};
 		6B6E19F01DBEEB8500306D69 /* ThirdLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +231,76 @@
 			children = (
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		6BBE597B1DC0796C000511DC /* weibo */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE597C1DC0796C000511DC /* JsonDada */,
+				6BBE59A31DC08548000511DC /* WBModel.h */,
+				6BBE59A41DC08548000511DC /* WBModel.m */,
+				6B5E404F1DC1ADD1006E57D3 /* HRLayoutModel.h */,
+				6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */,
+				6BBE59A61DC089D8000511DC /* WBCell.h */,
+				6BBE59A71DC089D8000511DC /* WBCell.m */,
+				6BBE59871DC0796C000511DC /* WeiBoVC.h */,
+				6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */,
+				6BBE59891DC0796C000511DC /* WeiBoVC.xib */,
+			);
+			path = weibo;
+			sourceTree = "<group>";
+		};
+		6BBE597C1DC0796C000511DC /* JsonDada */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE597D1DC0796C000511DC /* weibo_0.json */,
+				6BBE597E1DC0796C000511DC /* weibo_1.json */,
+				6BBE597F1DC0796C000511DC /* weibo_2.json */,
+				6BBE59801DC0796C000511DC /* weibo_3.json */,
+				6BBE59811DC0796C000511DC /* weibo_4.json */,
+				6BBE59821DC0796C000511DC /* weibo_5.json */,
+				6BBE59831DC0796C000511DC /* weibo_6.json */,
+				6BBE59841DC0796C000511DC /* weibo_7.json */,
+			);
+			path = JsonDada;
+			sourceTree = "<group>";
+		};
+		6BBE59951DC07A61000511DC /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE59AF1DC09923000511DC /* RegexKitLite */,
+				6BBE59971DC07A61000511DC /* TencentOpenApi */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		6BBE59971DC07A61000511DC /* TencentOpenApi */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE59981DC07A61000511DC /* TencentOpenAPI.framework */,
+				6BBE59991DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = TencentOpenApi;
+			sourceTree = "<group>";
+		};
+		6BBE599F1DC081D2000511DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE59A01DC081D2000511DC /* HRButton.h */,
+				6BBE59A11DC081D2000511DC /* HRButton.m */,
+				6B5E40581DC1BA22006E57D3 /* YYFPSLabel.h */,
+				6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BBE59AF1DC09923000511DC /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE59B01DC09923000511DC /* RegexKitLite.h */,
+				6BBE59B11DC09923000511DC /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
 		6BF3A0FC1D9913EA00583D4D = {
@@ -229,7 +324,6 @@
 		6BF3A1071D9913EA00583D4D /* NiceProject */ = {
 			isa = PBXGroup;
 			children = (
-				6B5F40BE1DBDEA290017B00A /* Lib */,
 				6BF3A11F1D99141B00583D4D /* Classes */,
 				6BF3A10B1D9913EA00583D4D /* AppDelegate.h */,
 				6BF3A10C1D9913EA00583D4D /* AppDelegate.m */,
@@ -256,7 +350,9 @@
 		6BF3A11F1D99141B00583D4D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6BBE59951DC07A61000511DC /* Lib */,
 				6BF3A1341D99141B00583D4D /* Common */,
+				6BBE597B1DC0796C000511DC /* weibo */,
 				6BF3A1421D99141B00583D4D /* Item1.h */,
 				6BF3A1431D99141B00583D4D /* Item1.m */,
 				6BF3A1441D99141B00583D4D /* Item2.h */,
@@ -279,6 +375,7 @@
 		6BF3A1341D99141B00583D4D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6BBE599F1DC081D2000511DC /* View */,
 				6B6E19F41DBEFA6700306D69 /* Share */,
 				6B6E19F01DBEEB8500306D69 /* ThirdLogin */,
 				6B178DF21D9A045500257D97 /* Base */,
@@ -318,6 +415,7 @@
 		EB8DEA6E8BB14DD7E1BB90C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6BBE59B31DC0998B000511DC /* libicucore.tbd */,
 				6B5F40EA1DBE08010017B00A /* libc++.tbd */,
 				6B5F40D91DBDEE440017B00A /* libz.tbd */,
 				6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */,
@@ -396,17 +494,26 @@
 			files = (
 				6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */,
 				6BF3A1181D9913EA00583D4D /* LaunchScreen.storyboard in Resources */,
+				6BBE598F1DC0796C000511DC /* weibo_5.json in Resources */,
 				6B178E101D9A045500257D97 /* Stars@2x.png in Resources */,
+				6BBE598D1DC0796C000511DC /* weibo_3.json in Resources */,
 				6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */,
-				6B5F40F01DBE08370017B00A /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				6BBE59911DC0796C000511DC /* weibo_7.json in Resources */,
 				6BF3A16C1D99167D00583D4D /* text.json in Resources */,
+				6BBE598E1DC0796C000511DC /* weibo_4.json in Resources */,
 				6B178E0C1D9A045500257D97 /* bg_backBarButton_hight.png in Resources */,
+				6BBE598A1DC0796C000511DC /* weibo_0.json in Resources */,
 				6BF3A1151D9913EA00583D4D /* Assets.xcassets in Resources */,
 				6BF3A1651D99141B00583D4D /* LeftVC.xib in Resources */,
+				6BBE598B1DC0796C000511DC /* weibo_1.json in Resources */,
+				6BBE598C1DC0796C000511DC /* weibo_2.json in Resources */,
+				6BBE59901DC0796C000511DC /* weibo_6.json in Resources */,
 				6BF3A1131D9913EA00583D4D /* Main.storyboard in Resources */,
 				6B178E0D1D9A045500257D97 /* bg_backBarButton_hight@2x.png in Resources */,
+				6BBE599B1DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6BF3A1631D99141B00583D4D /* Item3.xib in Resources */,
 				6BF3A1671D99141B00583D4D /* PushedVC.xib in Resources */,
+				6BBE59941DC0796C000511DC /* WeiBoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +574,12 @@
 			files = (
 				6BF3A1621D99141B00583D4D /* Item3.m in Sources */,
 				6B178E091D9A045500257D97 /* HRSideMenuVC.m in Sources */,
+				6BBE59A91DC089D8000511DC /* WBCell.m in Sources */,
+				6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */,
+				6BBE59A51DC08548000511DC /* WBModel.m in Sources */,
 				6BF3A1641D99141B00583D4D /* LeftVC.m in Sources */,
+				6BBE59A21DC081D2000511DC /* HRButton.m in Sources */,
+				6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */,
 				6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */,
 				6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */,
 				6B6E19F31DBEEBD700306D69 /* HRThirdLoginTool.m in Sources */,
@@ -475,10 +587,12 @@
 				6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */,
 				6B178E0B1D9A045500257D97 /* KKNavigationController.m in Sources */,
 				6B178E081D9A045500257D97 /* HRRootNC.m in Sources */,
+				6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */,
 				6BF3A10A1D9913EA00583D4D /* main.m in Sources */,
 				6BF3A1611D99141B00583D4D /* Item2.m in Sources */,
 				6B178E0A1D9A045500257D97 /* HRTabVC.m in Sources */,
 				6BF3A15F1D99141B00583D4D /* HRHTTPTool.m in Sources */,
+				6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */,
 				6BF3A15D1D99141B00583D4D /* HRHTTPManager.m in Sources */,
 				6BF3A1661D99141B00583D4D /* PushedVC.m in Sources */,
 				6B178E071D9A045500257D97 /* HRItemNC.m in Sources */,
@@ -613,6 +727,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NiceProject/Lib/TencentOpenApi",
 					"$(PROJECT_DIR)/NiceProject/Lib/qq",
+					"$(PROJECT_DIR)/NiceProject/Classes/Lib/TencentOpenApi",
 				);
 				INFOPLIST_FILE = NiceProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -657,6 +772,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/NiceProject/Lib/TencentOpenApi",
 					"$(PROJECT_DIR)/NiceProject/Lib/qq",
+					"$(PROJECT_DIR)/NiceProject/Classes/Lib/TencentOpenApi",
 				);
 				INFOPLIST_FILE = NiceProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;

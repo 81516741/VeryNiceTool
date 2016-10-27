@@ -15,5 +15,8 @@
 
 @interface HRBaseVC : UIViewController
 
+@property (nonatomic,strong) UIView * progressView;
+
+-(void)click;
 @end
 

@@ -40,13 +40,13 @@
 -(void)configNaviRightItems
 {
     UISwitch * customSwitch = [[UISwitch alloc]initWithFrame:CGRectMake(100, 100, 0, 0)];
-    [customSwitch addTarget:self action:@selector(jumpTpNextVC) forControlEvents:UIControlEventValueChanged];
+    [customSwitch addTarget:self action:@selector(click) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:customSwitch];
 }
 
 #pragma mark - 点击事件
 
--(void)jumpTpNextVC
+-(void)click
 {
     [HRFunctionTool gotoFunction:kFunctionText needLogin:false];
 }
@@ -54,6 +54,28 @@
 -(void)back
 {
     [HRFunctionTool popViewControllerAnimated:true];
+}
+
+#pragma  mark - 提示页面
+-(UIView *)progressView
+{
+    if (_progressView == nil) {
+        _progressView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        UIActivityIndicatorView * activity = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        activity.center = CGPointMake(kScreenWidth * 0.5, kScreenHeight * 0.5);
+        [activity startAnimating];
+        [_progressView addSubview:activity];
+        _progressView.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:_progressView];
+        
+    }
+    return _progressView;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    HRLog(@"\n控制器 (%@) ------- 被销毁😭😭😭",NSStringFromClass(self.class));
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "HRObject.h"
 #import "HRThirdLoginTool.h"
 #import "HRConst.h"
+#import "HRButton.h"
 
 @interface HRTabVC ()<UITabBarControllerDelegate>
 
@@ -52,13 +53,14 @@
 #pragma mark - 导航条的UI配置
 -(void)configNaviLeftItems
 {
-    UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(-20, 0, 110, 25)];
-    [button setImage:[UIImage imageNamed:@"second_selected"] forState:UIControlStateNormal];
+    HRButton * button = [[HRButton alloc]initWithFrame:CGRectMake(-10, 0, 110, 25)];
+    [button setImage:[UIImage imageNamed:@"Exclusive_ Circle"] forState:UIControlStateNormal];
     [button setContentMode:UIViewContentModeScaleAspectFit];
     [button setTitle:@"左边抽屉" forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:15.f];
-    [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:17.f];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(showLeftVC) forControlEvents:UIControlEventTouchUpInside];
+    
     //为了使图片可以更靠左边
     UIView * item1View = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 110, 25)];
     [item1View addSubview:button];
