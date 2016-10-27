@@ -32,7 +32,12 @@
  */
 @property (nonatomic, assign) CGFloat paddingBottom;
 /**
- * 调整都文本的高度
+ * 行间距
+ */
+@property (assign ,nonatomic) CGFloat lineSpace;
+
+/**
+ * 文本的高度
  */
 - (CGFloat)heightForLineCount:(NSUInteger)lineCount;
 /**

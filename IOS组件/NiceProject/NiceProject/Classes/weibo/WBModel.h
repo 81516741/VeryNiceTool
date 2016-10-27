@@ -295,7 +295,6 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
 
 
 @property (assign ,nonatomic) CGFloat textHeight;//内容高度
-
 @property (nonatomic,strong) NSArray * parts;//内容碎片集合
 @property (nonatomic,copy) NSMutableAttributedString * attText;//属性文字
 @property (nonatomic,strong) YYTextLayout * textLayout;

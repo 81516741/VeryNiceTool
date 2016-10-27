@@ -49,6 +49,7 @@
     } else {
         _lineHeightMultiple = 1.3125; // for Heiti SC
     }
+    _lineSpace = 0; //想要调整行距，改这个数字就可以了
     
     return self;
 }
@@ -57,7 +58,7 @@
     
     CGFloat ascent = _font.pointSize * 0.86;
     
-    CGFloat lineHeight = _font.pointSize * _lineHeightMultiple;
+    CGFloat lineHeight = _lineSpace + _font.pointSize * _lineHeightMultiple ;
     for (YYTextLine *line in lines) {
         CGPoint position = line.position;
         position.y = _paddingTop + ascent + line.row  * lineHeight;
@@ -79,7 +80,7 @@
     if (lineCount == 0) return 0;
     CGFloat ascent = _font.pointSize * 0.86;
     CGFloat descent = _font.pointSize * 0.14;
-    CGFloat lineHeight = _font.pointSize * _lineHeightMultiple;
+    CGFloat lineHeight = _font.pointSize * _lineHeightMultiple + _lineSpace;
     return _paddingTop + _paddingBottom + ascent + descent + (lineCount - 1) * lineHeight;
 }
 @end
