@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HRRootNC.h"
+#import "SDWebImageManager.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
@@ -62,6 +63,13 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return [TencentOAuth HandleOpenURL:url];
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+    
+    SDWebImageManager * mag = [SDWebImageManager sharedManager];
+    [mag cancelAll];
+    [mag.imageCache clearMemory];
 }
 
 

@@ -44,6 +44,8 @@
     self.retweetContentView.hidden = false;
     self.retweetContentView.status = status.retweetedStatus;
     self.retweetContentView.y = self.myContentView.height;
+    
+
 
 }
 
@@ -134,7 +136,7 @@
 -(void)setStatus:(WBStatus *)status
 {
     _status = status;
-    NSArray * pics = status.urlStruct;
+    NSArray * pics = status.pics;
     [_gridView removeFromSuperview];
     if (pics.count <= 0) {
         self.contentHeight = 0;
@@ -143,8 +145,9 @@
     NSInteger col = status.imageContainerCol(pics.count);
     self.frame = CGRectMake(0, 0, kContentWidth, 0);
     _gridView = [LDGridView configSubItemsIn:self count:pics.count col:col itemH:0 margin:kImageViewMargin startY:0 fetchItemAtIndex:^UIView *(NSInteger index) {
-        UIImageView * imageView = [[UIImageView alloc]init];
-        [imageView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"Exclusive_ Circle"]];
+        WBPicture * picture = status.pics[index];
+        UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_placeholder"]];
+        [imageView sd_setImageWithURL:picture.large.url placeholderImage:[UIImage imageNamed:@"ic_placeholder"]];
         return imageView;
     }];
     _gridView.backgroundColor = RGBAlpha(10, 10, 10, 0.1);

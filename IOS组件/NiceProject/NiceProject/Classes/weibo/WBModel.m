@@ -350,11 +350,11 @@
     if (_imageContainerHeight > 0) {
         return  _imageContainerHeight;
     }
-    if (self.urlStruct.count <= 0) {
+    if (self.pics.count <= 0) {
         return 0;
     }
-    NSInteger col = self.imageContainerCol(self.urlStruct.count);
-    NSInteger row = (self.urlStruct.count - 1)/col + 1;
+    NSInteger col = self.imageContainerCol(self.pics.count);
+    NSInteger row = (self.pics.count - 1)/col + 1;
     _imageContainerHeight = row * (kContentWidth/col + kImageViewMargin) - kImageViewMargin;
     return _imageContainerHeight;
 }
@@ -381,7 +381,7 @@
 -(NSInteger (^)(NSInteger))imageContainerCol
 {
    return  ^(NSInteger count){
-       NSInteger col = ((count % 4) == 0 || (count % 2) == 0) ? 2 : 3;
+       NSInteger col = (2 == count|| 4 == count) ? 2 : 3;
        if (count == 1) {
            col = 1;
        }

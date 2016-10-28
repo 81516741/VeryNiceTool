@@ -307,6 +307,7 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
 @property (nonatomic,strong) YYTextLayout * textLayout;
 @property (nonatomic,strong) NSInteger (^imageContainerCol) (NSInteger);
 
+
 @end
 
 

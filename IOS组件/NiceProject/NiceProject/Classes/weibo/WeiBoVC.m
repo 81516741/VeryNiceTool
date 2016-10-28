@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) NSArray * datas;
 @property (assign ,nonatomic,getter=isReady) BOOL ready;
+@property (nonatomic,strong) YYFPSLabel * FPSlabel;
 @end
 
 @implementation WeiBoVC
@@ -27,8 +28,8 @@
 
 -(void)configUI
 {
-    YYFPSLabel * label = [[YYFPSLabel alloc]init];
-    self.navigationItem.titleView = label;
+    _FPSlabel = [[YYFPSLabel alloc]init];
+    self.navigationItem.titleView = _FPSlabel;
 }
 
 -(void)readyForData
@@ -66,6 +67,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WBCell * cell = [WBCell cell:tableView];
+    WBStatus * status = _datas[indexPath.row];
     cell.status = _datas[indexPath.row];
     return cell;
 }
@@ -75,6 +77,7 @@
 -(void)click
 {
     HRLog(@"点击了switch点击");
+    _FPSlabel.hidden  = !_FPSlabel.hidden;
 }
 
 @end
