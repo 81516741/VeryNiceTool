@@ -37,6 +37,15 @@
     return self.frame.origin.y;
 }
 
+-(CGFloat)trail
+{
+    return self.x + self.width;
+}
+
+-(CGFloat)bottom
+{
+    return self.y + self.height;
+}
 - (void)setCenterX:(CGFloat)centerX
 {
     CGPoint center = self.center;

@@ -12,6 +12,8 @@
 //------------------修改获取view尺寸的----------------------
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
+@property (assign ,nonatomic) CGFloat trail;//尾部
+@property (assign ,nonatomic) CGFloat bottom;
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 @property (nonatomic, assign) CGFloat width;
