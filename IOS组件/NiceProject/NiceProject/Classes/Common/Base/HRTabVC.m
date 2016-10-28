@@ -10,7 +10,6 @@
 #import "HRItemNC.h"
 #import "HRFunctionTool.h"
 #import "HRObject.h"
-#import "HRThirdLoginTool.h"
 #import "HRConst.h"
 #import "HRButton.h"
 
@@ -70,9 +69,9 @@
 -(void)configNaviRightItems
 {
     
-    UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
-    UIBarButtonItem * item2 = [[UIBarButtonItem alloc]initWithTitle:@"三方登录" style:UIBarButtonItemStylePlain target:self action:@selector(thirdLogin)];
-    UIBarButtonItem * item3 = [[UIBarButtonItem alloc]initWithTitle:@"❤️蓉" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithTitle:@"🤗抱抱" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item2 = [[UIBarButtonItem alloc]initWithTitle:@"😘亲亲" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
+    UIBarButtonItem * item3 = [[UIBarButtonItem alloc]initWithTitle:@"😍花痴" style:UIBarButtonItemStylePlain target:self action:@selector(jumpTpNextVC)];
     self.navigationItem.rightBarButtonItems = @[item2,item1];
     if (self.selectedIndex == 1) {
         self.navigationItem.rightBarButtonItems = @[item3,item2,item1];
@@ -88,17 +87,6 @@
 -(void)jumpTpNextVC
 {
     [HRFunctionTool gotoFunction:kFunctionText needLogin:false];
-}
-
--(void)thirdLogin
-{
-    [HRThirdLoginTool QQLoginSuccess:^{
-        HRLog(@"qq登录成功");
-    } failure:^(QQLoginFailure failure) {
-        HRLog(@"qq登录失败");
-    } userInfo:^(APIResponse *userInfo) {
-        HRLog(@"qq用户信息-->%@",userInfo);
-    }];
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
