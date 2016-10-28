@@ -147,10 +147,11 @@
     _gridView = [LDGridView configSubItemsIn:self count:pics.count col:col itemH:0 margin:kImageViewMargin startY:0 fetchItemAtIndex:^UIView *(NSInteger index) {
         WBPicture * picture = status.pics[index];
         UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_placeholder"]];
-        [imageView sd_setImageWithURL:picture.large.url placeholderImage:[UIImage imageNamed:@"ic_placeholder"]];
+        [imageView performSelectorOnMainThread:@selector(sd_setImageWithURL:) withObject:picture.large.url waitUntilDone:false modes:@[NSDefaultRunLoopMode]];
         return imageView;
     }];
     _gridView.backgroundColor = RGBAlpha(10, 10, 10, 0.1);
 }
+
 
 @end
