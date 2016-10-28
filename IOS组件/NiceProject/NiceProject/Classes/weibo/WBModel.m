@@ -311,12 +311,12 @@
                 {
                     UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"aixin"]];
                     imageView.frame = CGRectMake(0, 0, 20, 20);
-                    NSMutableAttributedString * attachment = [NSMutableAttributedString yy_attachmentStringWithContent:imageView contentMode:UIViewContentModeCenter attachmentSize:imageView.bounds.size alignToFont:[UIFont systemFontOfSize:16] alignment:YYTextVerticalAlignmentCenter];
+                    NSMutableAttributedString * attachment = [NSMutableAttributedString yy_attachmentStringWithContent:imageView contentMode:UIViewContentModeCenter attachmentSize:imageView.bounds.size alignToFont:[UIFont systemFontOfSize:kContentFontSize] alignment:YYTextVerticalAlignmentCenter];
                     [attString appendAttributedString:attachment];
                     model.range = NSMakeRange(attString.length - 1, 1);
                 }
             }else{
-                NSMutableAttributedString * string = [[NSMutableAttributedString alloc]initWithString:model.content attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16]}];
+                NSMutableAttributedString * string = [[NSMutableAttributedString alloc]initWithString:model.content attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:kContentFontSize]}];
                 string.yy_color = HexRGB(333333);
                 [attString appendAttributedString:string];
                 model.range = NSMakeRange(attString.length - model.range.length, model.range.length);
@@ -338,11 +338,55 @@
     }
     HRTextLinePositionModifier *modifier = [HRTextLinePositionModifier defaultModifier];
     YYTextContainer *container = [YYTextContainer new];
-    container.size = CGSizeMake(kScreenWidth - 40, HUGE);
+    container.size = CGSizeMake(kContentWidth, HUGE);
     container.linePositionModifier = modifier;
     _textLayout = [YYTextLayout layoutWithContainer:container text:self.attText];
     _textHeight = [modifier heightForLineCount:_textLayout.lines.count];
     return _textHeight;
+}
+
+-(CGFloat)imageContainerHeight
+{
+    if (_imageContainerHeight > 0) {
+        return  _imageContainerHeight;
+    }
+    if (self.urlStruct.count <= 0) {
+        return 0;
+    }
+    NSInteger col = self.imageContainerCol(self.urlStruct.count);
+    NSInteger row = (self.urlStruct.count - 1)/col + 1;
+    _imageContainerHeight = row * (kContentWidth/col + kImageViewMargin) - kImageViewMargin;
+    return _imageContainerHeight;
+}
+
+-(CGFloat)contentHeight
+{
+    if (_contentHeight > 0) {
+        return _contentHeight;
+    }
+    _contentHeight = self.textHeight + self.imageContainerHeight;
+    return _contentHeight;
+}
+
+-(WBStatus *)retweetedStatus
+{
+    if (_retweetedStatus == nil) {
+        return nil;
+    }
+    NSString * newString = [@"转发:" stringByAppendingString:_retweetedStatus.text];
+    _retweetedStatus.text = newString;
+    return _retweetedStatus;
+}
+
+-(NSInteger (^)(NSInteger))imageContainerCol
+{
+   return  ^(NSInteger count){
+       NSInteger col = ((count % 4) == 0 || (count % 2) == 0) ? 2 : 3;
+       if (count == 1) {
+           col = 1;
+       }
+       return col;
+   };
 }
 
 @end

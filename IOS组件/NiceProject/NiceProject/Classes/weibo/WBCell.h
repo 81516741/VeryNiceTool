@@ -17,3 +17,18 @@
 
 @end
 
+/**
+ * 微博文字内容 和 图片内容的容器
+ */
+@interface WBContentView : UIView
+@property (nonatomic,strong) WBStatus * status;
+@end
+
+/**
+ * 显示图片的容器
+ */
+@interface WBImageContainerView : UIView
+@property (nonatomic,strong) WBStatus * status;
+@property (assign ,nonatomic) CGFloat contentHeight;
+@end
+

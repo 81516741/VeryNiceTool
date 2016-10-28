@@ -239,6 +239,10 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
 /**
  微博
  */
+#define kContentFontSize 16
+#define kImageViewMargin 10
+#define kContentXOffsetX 20
+#define kContentWidth  (kScreenWidth - 2 * kContentXOffsetX)
 @interface WBStatus : NSObject
 @property (nonatomic, assign) uint64_t statusID; ///< id (number)
 @property (nonatomic, strong) NSString *idstr; ///< id (string)
@@ -294,10 +298,14 @@ typedef NS_ENUM(NSUInteger, WBPictureBadgeType) {
 @property (nonatomic, strong) NSArray *darwinTags;
 
 
-@property (assign ,nonatomic) CGFloat textHeight;//内容高度
+#pragma mark -  *********   自己写的属性  *********
+@property (assign ,nonatomic) CGFloat textHeight;//文字内容高度
+@property (assign ,nonatomic) CGFloat imageContainerHeight;//图片高度
+@property (assign ,nonatomic) CGFloat contentHeight;//文字 + 图片内容总高度
 @property (nonatomic,strong) NSArray * parts;//内容碎片集合
 @property (nonatomic,copy) NSMutableAttributedString * attText;//属性文字
 @property (nonatomic,strong) YYTextLayout * textLayout;
+@property (nonatomic,strong) NSInteger (^imageContainerCol) (NSInteger);
 
 @end
 

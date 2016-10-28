@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1219671DC3236100CE9CBB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1219661DC3236100CE9CBB /* UIView+Extension.m */; };
 		6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF41D9A045500257D97 /* HRBaseVC.m */; };
 		6B178E071D9A045500257D97 /* HRItemNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF61D9A045500257D97 /* HRItemNC.m */; };
 		6B178E081D9A045500257D97 /* HRRootNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF81D9A045500257D97 /* HRRootNC.m */; };
@@ -18,6 +19,7 @@
 		6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */; };
 		6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */; };
 		6B178E101D9A045500257D97 /* Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E051D9A045500257D97 /* Stars@2x.png */; };
+		6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B497EA01DC2357A00EC74E1 /* LDGridView.m */; };
 		6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */; };
 		6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */; };
 		6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */; };
@@ -65,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1219651DC3236100CE9CBB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		6B1219661DC3236100CE9CBB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		6B178DF31D9A045500257D97 /* HRBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBaseVC.h; sourceTree = "<group>"; };
 		6B178DF41D9A045500257D97 /* HRBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBaseVC.m; sourceTree = "<group>"; };
 		6B178DF51D9A045500257D97 /* HRItemNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRItemNC.h; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_backBarButton_normal.png; sourceTree = "<group>"; };
 		6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_backBarButton_normal@2x.png"; sourceTree = "<group>"; };
 		6B178E051D9A045500257D97 /* Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@2x.png"; sourceTree = "<group>"; };
+		6B497E9F1DC2357A00EC74E1 /* LDGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGridView.h; sourceTree = "<group>"; };
+		6B497EA01DC2357A00EC74E1 /* LDGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGridView.m; sourceTree = "<group>"; };
 		6B5E404F1DC1ADD1006E57D3 /* HRLayoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLayoutModel.h; sourceTree = "<group>"; };
 		6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRLayoutModel.m; sourceTree = "<group>"; };
 		6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiBoVC.m; sourceTree = "<group>"; };
@@ -177,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1219611DC3231D00CE9CBB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6B1219651DC3236100CE9CBB /* UIView+Extension.h */,
+				6B1219661DC3236100CE9CBB /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		6B178DF21D9A045500257D97 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +301,8 @@
 		6BBE599F1DC081D2000511DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B497E9F1DC2357A00EC74E1 /* LDGridView.h */,
+				6B497EA01DC2357A00EC74E1 /* LDGridView.m */,
 				6BBE59A01DC081D2000511DC /* HRButton.h */,
 				6BBE59A11DC081D2000511DC /* HRButton.m */,
 				6B5E40581DC1BA22006E57D3 /* YYFPSLabel.h */,
@@ -375,6 +392,7 @@
 		6BF3A1341D99141B00583D4D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6B1219611DC3231D00CE9CBB /* Category */,
 				6BBE599F1DC081D2000511DC /* View */,
 				6B6E19F41DBEFA6700306D69 /* Share */,
 				6B6E19F01DBEEB8500306D69 /* ThirdLogin */,
@@ -580,11 +598,13 @@
 				6BF3A1641D99141B00583D4D /* LeftVC.m in Sources */,
 				6BBE59A21DC081D2000511DC /* HRButton.m in Sources */,
 				6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */,
+				6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */,
 				6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */,
 				6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */,
 				6B6E19F31DBEEBD700306D69 /* HRThirdLoginTool.m in Sources */,
 				6BF3A1601D99141B00583D4D /* Item1.m in Sources */,
 				6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */,
+				6B1219671DC3236100CE9CBB /* UIView+Extension.m in Sources */,
 				6B178E0B1D9A045500257D97 /* KKNavigationController.m in Sources */,
 				6B178E081D9A045500257D97 /* HRRootNC.m in Sources */,
 				6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */,

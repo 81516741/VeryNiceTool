@@ -12,12 +12,9 @@
 #import "YYFPSLabel.h"
 
 @interface WeiBoVC ()<UITableViewDelegate,UITableViewDataSource>
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) NSArray * datas;
 @property (assign ,nonatomic,getter=isReady) BOOL ready;
-
-
 @end
 
 @implementation WeiBoVC
@@ -40,6 +37,7 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         self.datas = [WBTimelineItem localData];
         for (WBStatus * status in _datas) {
+            //计算内容的高度
             [status textHeight];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -53,7 +51,8 @@
 #pragma mark - tableview delegate 代理方法
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [_datas[indexPath.row] textHeight];
+    WBStatus * status = _datas[indexPath.row];
+    return status.contentHeight + status.retweetedStatus.contentHeight + 10;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

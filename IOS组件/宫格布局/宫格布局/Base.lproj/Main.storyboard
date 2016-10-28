@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,32 +15,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBr-xF-fUl">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="736"/>
-                                <color key="backgroundColor" red="1" green="0.33059605069999998" blue="0.22669051109999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="r0G-W9-OhQ"/>
-                                </constraints>
+                                <color key="backgroundColor" red="1" green="0.33059605069999998" blue="0.22669051109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dBr-xF-fUl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W6z-LT-gU2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dBr-xF-fUl" secondAttribute="bottom" id="YlB-yY-z4E"/>
-                            <constraint firstItem="dBr-xF-fUl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cEh-8O-lCC"/>
+                            <constraint firstAttribute="bottom" secondItem="dBr-xF-fUl" secondAttribute="bottom" id="2hV-5m-xsQ"/>
+                            <constraint firstItem="dBr-xF-fUl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8ok-7n-0i3"/>
+                            <constraint firstAttribute="trailing" secondItem="dBr-xF-fUl" secondAttribute="trailing" id="aCX-ao-mHK"/>
+                            <constraint firstItem="dBr-xF-fUl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jjF-Ut-rgj"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="myVIew" destination="dBr-xF-fUl" id="BND-8r-LgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="267" y="172"/>
+            <point key="canvasLocation" x="397.60000000000002" y="85.007496251874073"/>
         </scene>
     </scenes>
 </document>

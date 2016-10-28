@@ -21,7 +21,7 @@
 
 +(void)showIn:(UIView *)desView models:(NSArray *)models itemH:(CGFloat)itemH col:(NSInteger)col startY:(CGFloat)startY itemClick:(void(^)(NSInteger index))itemClick
 {
-    [LDGridView configSubItemsIn:desView count:models.count col:col itemH:itemH startY:startY fetchItemAtIndex:^UIView *(NSInteger index) {
+    [LDGridView configSubItemsIn:desView count:models.count col:col itemH:itemH margin:10 startY:startY fetchItemAtIndex:^UIView *(NSInteger index) {
         TextView * textView = [[[NSBundle mainBundle]loadNibNamed:@"TextView" owner:nil options:nil]lastObject];
         textView.button.tag = index;
         textView.model = models[index];
