@@ -67,7 +67,6 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     WBCell * cell = [WBCell cell:tableView];
-    WBStatus * status = _datas[indexPath.row];
     cell.status = _datas[indexPath.row];
     return cell;
 }

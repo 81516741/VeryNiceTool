@@ -355,7 +355,7 @@
     }
     NSInteger col = self.imageContainerCol(self.pics.count);
     NSInteger row = (self.pics.count - 1)/col + 1;
-    _imageContainerHeight = row * (kContentWidth/col + kImageViewMargin) - kImageViewMargin;
+    _imageContainerHeight = row * (kContentWidth - (col - 1)*kImageViewMargin)/col + (row-1) * kImageViewMargin + kImageViewMargin;
     return _imageContainerHeight;
 }
 

@@ -9,6 +9,9 @@
 
 @interface UIView (Extension)
 
+@property (assign ,nonatomic)IBInspectable CGFloat cornerRadius;
+
+
 //------------------修改获取view尺寸的----------------------
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
@@ -40,8 +43,16 @@
 - (void)hideBadgeFromItemAtIndex:(NSUInteger)index;
 
 /**
- 添加target对像,监听点击事件
+ * 添加target对像,监听点击事件
  */
 -(void)addTarget:(id)target sel:(SEL)sel;
+/**
+ * 添加handler点击事件
+ */
+-(void)clickHandler:(void(^)(UIView * view))handler;
+/**
+ * 给对象绑定一个属性
+ */
+@property (nonatomic,strong) id obj;
 
 @end

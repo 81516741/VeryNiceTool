@@ -15,7 +15,8 @@
     NSInteger rowCount = (count-1)/col + 1;
     CGFloat itemW= (desView.frame.size.width - (col - 1) * margin)/col ;
     itemH = itemH > 0 ? itemH : itemW;
-    LDGridView * gridView = [[LDGridView alloc]initWithFrame:CGRectMake(0, startY, desView.bounds.size.width, (margin + itemH) * rowCount - margin)];
+    CGFloat contentHeight = (margin + itemH) * rowCount - margin;
+    LDGridView * gridView = [[LDGridView alloc]initWithFrame:CGRectMake(0, startY, desView.bounds.size.width,contentHeight)];
     [desView addSubview:gridView];
     for (int i=0; i<count; i++) {
         int tmpRow = i/col;
@@ -29,7 +30,7 @@
             }
         }
     }
-    gridView.contentHeight = rowCount * (itemH + margin) - margin;
+    gridView.contentHeight = contentHeight;
     return gridView;
 }
 

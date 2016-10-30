@@ -12,6 +12,13 @@
 #define LDViewTouchDeliver(target,sel) ((void (*)(id,SEL,UIView *))objc_msgSend)((id)target,sel,self)
 
 @implementation UIView (Extension)
+@dynamic trail,bottom,cornerRadius;
+
+-(void)setCor:(CGFloat)cornerRadius
+{
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = true;
+}
 
 - (void)setX:(CGFloat)x
 {
@@ -136,6 +143,7 @@
     return CGRectGetMinY(self.frame);
 }
 
+
 //显示小红点
 - (void)showBadgeInItemAtIndex:(NSUInteger)index itemCount:(NSUInteger)itemCount centerXOffsetInItem:(CGFloat)centerXOffsetInItem yOffsetInItem:(CGFloat)yOffsetInItem{
     //移除之前的小红点
@@ -171,25 +179,37 @@
 }
 
 
-
-
-
 -(void)addTarget:(id)target sel:(SEL)sel
 {
+    [self addGuesture];
     self.target = target;
     self.sel = sel;
 }
 
-#pragma view被点击后将事件传出去
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+-(void)clickHandler:(void (^)(UIView *))handler
 {
-    [super touchesBegan:touches withEvent:event];
+    [self addGuesture];
+    objc_setAssociatedObject(self, _cmd, handler, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+-(void)addGuesture
+{
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
+    [self addGestureRecognizer:tap];
+    self.userInteractionEnabled = true;
+}
+
+-(void)tap
+{
     if ([self.target respondsToSelector:self.sel]) {
         LDViewTouchDeliver(self.target, self.sel);
     }
+    void (^handler)(UIView *) = objc_getAssociatedObject(self, @selector(clickHandler:));
+    if (handler) {
+        handler(self);
+    }
 }
 
-#pragma 动态绑定一个target 和一个sel（有点类似添加两个变量）
 -(id)target
 {
     return objc_getAssociatedObject(self, _cmd);
@@ -208,6 +228,16 @@
 -(void)setSel:(SEL)sel
 {
     objc_setAssociatedObject(self,@selector(sel),NSStringFromSelector(sel), OBJC_ASSOCIATION_RETAIN);
+}
+
+-(void)setObj:(id)obj
+{
+    objc_setAssociatedObject(self, @selector(obj), obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+-(id)obj
+{
+   return objc_getAssociatedObject(self, _cmd);
 }
 
 @end

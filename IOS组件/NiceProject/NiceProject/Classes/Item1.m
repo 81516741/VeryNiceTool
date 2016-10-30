@@ -9,13 +9,15 @@
 #import "Item1.h"
 #import "VIPCenterModel.h"
 #import "AFNetworkReachabilityManager.h"
+#import "UIView+Extension.h"
+#import "HRThirdAlterViewVC.h"
 
 #define kTableViewCellReuseID @"kTableViewCellReuseID"
 
 #define kThirdLogin  @"thirdLogin"
 @interface Item1 ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *titles;
-@property (nonatomic, strong) NSMutableArray *classNames;
+@property (nonatomic, strong) NSMutableArray *strings;
 @end
 
 @implementation Item1
@@ -25,8 +27,8 @@
     [super viewDidLoad];
     [self netRequest];
     [self configUIAndData];
-
 }
+
 //配置UI 和 数据
 -(void)configUIAndData
 {
@@ -38,8 +40,8 @@
     [self.view addSubview:tableView];
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellReuseID];
     //数据
-    [self addCell:@"图文混排" className:@"WeiBoVC"];
-    [self addCell:kThirdLogin className:@""];
+    [self addCellTitle:@"图文混排"  string:@"WeiBoVC"];
+    [self addCellTitle:@"第三方登录" string:kThirdLogin];
     
 }
 //示范一个网络请求
@@ -68,34 +70,28 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:true];
-    NSString * title = self.titles[indexPath.row];
-    if ([self respondsToSelector:NSSelectorFromString(title)]) {
+    NSString * string = self.strings[indexPath.row];
+    if ([self respondsToSelector:NSSelectorFromString(string)]) {
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [self performSelector:NSSelectorFromString(title)];
+        [self performSelector:NSSelectorFromString(string)];
         #pragma clang diagnostic pop
         return;
     }
-    [HRFunctionTool pushViewController:[NSClassFromString(self.classNames[indexPath.row]) new] animated:true];
+    [HRFunctionTool pushViewController:[NSClassFromString(string) new] animated:true];
 }
 
 #pragma mark - 私有方法
 //第三方登录
 -(void)thirdLogin
 {
-    [HRThirdLoginTool QQLoginSuccess:^{
-        HRLog(@"qq登录成功");
-    } failure:^(QQLoginFailure failure) {
-        HRLog(@"qq登录失败");
-    } userInfo:^(APIResponse *userInfo) {
-        HRLog(@"qq用户信息-->%@",userInfo);
-    }];
+    [HRThirdAlterViewVC show];
 }
 
--(void)addCell:(NSString *)title className:(NSString *)className
+-(void)addCellTitle:(NSString *)title string:(NSString *)className
 {
     [self.titles addObject:title];
-    [self.classNames addObject:className];
+    [self.strings addObject:className];
 }
 
 #pragma mark - click 点击事件
@@ -109,12 +105,12 @@
     return _titles;
 }
 
--(NSMutableArray *)classNames
+-(NSMutableArray *)strings
 {
-    if (_classNames == nil) {
-        _classNames = @[].mutableCopy;
+    if (_strings == nil) {
+        _strings = @[].mutableCopy;
     }
-    return _classNames;
+    return _strings;
 }
 
 @end

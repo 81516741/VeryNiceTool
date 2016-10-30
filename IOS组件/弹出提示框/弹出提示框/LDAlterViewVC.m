@@ -10,6 +10,7 @@
 
 @interface LDAlterViewVC ()
 @property (nonatomic, copy) void(^sureActionBlock)();
+@property (weak, nonatomic) IBOutlet UIView *alterView;
 @end
 
 @implementation LDAlterViewVC
@@ -19,6 +20,20 @@
     LDAlterViewVC * alterVC = [[LDAlterViewVC alloc]init];
     alterVC.sureActionBlock = handle;
     [vc presentViewController:alterVC animated:YES completion:nil];
+}
+
+-(void)viewDidLoad
+{
+    self.alterView.transform = CGAffineTransformMakeScale(0, 0);
+    self.alterView.alpha = 0;
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.alterView.transform = CGAffineTransformIdentity;
+        self.alterView.alpha = 1;
+    }];
 }
 
 - (instancetype)init

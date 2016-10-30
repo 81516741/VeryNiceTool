@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B11154C1DC46D7000B43EAD /* HRDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B11154B1DC46D7000B43EAD /* HRDBTool.m */; };
 		6B1219671DC3236100CE9CBB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1219661DC3236100CE9CBB /* UIView+Extension.m */; };
 		6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF41D9A045500257D97 /* HRBaseVC.m */; };
 		6B178E071D9A045500257D97 /* HRItemNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF61D9A045500257D97 /* HRItemNC.m */; };
@@ -19,6 +20,7 @@
 		6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */; };
 		6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */; };
 		6B178E101D9A045500257D97 /* Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B178E051D9A045500257D97 /* Stars@2x.png */; };
+		6B1A15201DC3AE95009F58CA /* UIImageView+SDWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A151F1DC3AE95009F58CA /* UIImageView+SDWeb.m */; };
 		6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B497EA01DC2357A00EC74E1 /* LDGridView.m */; };
 		6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */; };
 		6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */; };
@@ -41,6 +43,10 @@
 		6BBE59A91DC089D8000511DC /* WBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A71DC089D8000511DC /* WBCell.m */; };
 		6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59B11DC09923000511DC /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BBE59B41DC0998B000511DC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE59B31DC0998B000511DC /* libicucore.tbd */; };
+		6BE53FA11DC5B83B007FDD5F /* HRThirdAlterViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE53F9F1DC5B83B007FDD5F /* HRThirdAlterViewVC.m */; };
+		6BE53FA21DC5B83B007FDD5F /* HRThirdAlterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE53FA01DC5B83B007FDD5F /* HRThirdAlterViewVC.xib */; };
+		6BE53FA61DC5BAC1007FDD5F /* HRShareAlterViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE53FA41DC5BAC1007FDD5F /* HRShareAlterViewVC.m */; };
+		6BE53FA91DC5BCFF007FDD5F /* HRShareAlterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE53FA81DC5BCFF007FDD5F /* HRShareAlterViewVC.xib */; };
 		6BF3A10A1D9913EA00583D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A1091D9913EA00583D4D /* main.m */; };
 		6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10C1D9913EA00583D4D /* AppDelegate.m */; };
 		6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10F1D9913EA00583D4D /* ViewController.m */; };
@@ -67,6 +73,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B11154A1DC46D7000B43EAD /* HRDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRDBTool.h; sourceTree = "<group>"; };
+		6B11154B1DC46D7000B43EAD /* HRDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDBTool.m; sourceTree = "<group>"; };
 		6B1219651DC3236100CE9CBB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		6B1219661DC3236100CE9CBB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		6B178DF31D9A045500257D97 /* HRBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBaseVC.h; sourceTree = "<group>"; };
@@ -86,6 +94,8 @@
 		6B178E031D9A045500257D97 /* bg_backBarButton_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_backBarButton_normal.png; sourceTree = "<group>"; };
 		6B178E041D9A045500257D97 /* bg_backBarButton_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_backBarButton_normal@2x.png"; sourceTree = "<group>"; };
 		6B178E051D9A045500257D97 /* Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@2x.png"; sourceTree = "<group>"; };
+		6B1A151E1DC3AE95009F58CA /* UIImageView+SDWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWeb.h"; sourceTree = "<group>"; };
+		6B1A151F1DC3AE95009F58CA /* UIImageView+SDWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWeb.m"; sourceTree = "<group>"; };
 		6B497E9F1DC2357A00EC74E1 /* LDGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGridView.h; sourceTree = "<group>"; };
 		6B497EA01DC2357A00EC74E1 /* LDGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGridView.m; sourceTree = "<group>"; };
 		6B5E404F1DC1ADD1006E57D3 /* HRLayoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRLayoutModel.h; sourceTree = "<group>"; };
@@ -125,6 +135,12 @@
 		6BBE59B01DC09923000511DC /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		6BBE59B11DC09923000511DC /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		6BBE59B31DC0998B000511DC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6BE53F9E1DC5B83B007FDD5F /* HRThirdAlterViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRThirdAlterViewVC.h; path = ../View/HRThirdAlterViewVC.h; sourceTree = "<group>"; };
+		6BE53F9F1DC5B83B007FDD5F /* HRThirdAlterViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRThirdAlterViewVC.m; path = ../View/HRThirdAlterViewVC.m; sourceTree = "<group>"; };
+		6BE53FA01DC5B83B007FDD5F /* HRThirdAlterViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRThirdAlterViewVC.xib; path = ../View/HRThirdAlterViewVC.xib; sourceTree = "<group>"; };
+		6BE53FA31DC5BAC1007FDD5F /* HRShareAlterViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRShareAlterViewVC.h; sourceTree = "<group>"; };
+		6BE53FA41DC5BAC1007FDD5F /* HRShareAlterViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRShareAlterViewVC.m; sourceTree = "<group>"; };
+		6BE53FA81DC5BCFF007FDD5F /* HRShareAlterViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRShareAlterViewVC.xib; sourceTree = "<group>"; };
 		6BF3A1051D9913EA00583D4D /* NiceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF3A1091D9913EA00583D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BF3A10B1D9913EA00583D4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +204,8 @@
 			children = (
 				6B1219651DC3236100CE9CBB /* UIView+Extension.h */,
 				6B1219661DC3236100CE9CBB /* UIView+Extension.m */,
+				6B1A151E1DC3AE95009F58CA /* UIImageView+SDWeb.h */,
+				6B1A151F1DC3AE95009F58CA /* UIImageView+SDWeb.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -235,6 +253,9 @@
 		6B6E19F01DBEEB8500306D69 /* ThirdLogin */ = {
 			isa = PBXGroup;
 			children = (
+				6BE53F9E1DC5B83B007FDD5F /* HRThirdAlterViewVC.h */,
+				6BE53F9F1DC5B83B007FDD5F /* HRThirdAlterViewVC.m */,
+				6BE53FA01DC5B83B007FDD5F /* HRThirdAlterViewVC.xib */,
 				6B6E19F11DBEEBD700306D69 /* HRThirdLoginTool.h */,
 				6B6E19F21DBEEBD700306D69 /* HRThirdLoginTool.m */,
 			);
@@ -244,6 +265,9 @@
 		6B6E19F41DBEFA6700306D69 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				6BE53FA31DC5BAC1007FDD5F /* HRShareAlterViewVC.h */,
+				6BE53FA41DC5BAC1007FDD5F /* HRShareAlterViewVC.m */,
+				6BE53FA81DC5BCFF007FDD5F /* HRShareAlterViewVC.xib */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -404,6 +428,8 @@
 				6BF3A13A1D99141B00583D4D /* HRObject.m */,
 				6BF3A1371D99141B00583D4D /* HRFunctionTool.h */,
 				6BF3A1381D99141B00583D4D /* HRFunctionTool.m */,
+				6B11154A1DC46D7000B43EAD /* HRDBTool.h */,
+				6B11154B1DC46D7000B43EAD /* HRDBTool.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -510,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE53FA91DC5BCFF007FDD5F /* HRShareAlterViewVC.xib in Resources */,
 				6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */,
 				6BF3A1181D9913EA00583D4D /* LaunchScreen.storyboard in Resources */,
 				6BBE598F1DC0796C000511DC /* weibo_5.json in Resources */,
@@ -521,6 +548,7 @@
 				6BBE598E1DC0796C000511DC /* weibo_4.json in Resources */,
 				6B178E0C1D9A045500257D97 /* bg_backBarButton_hight.png in Resources */,
 				6BBE598A1DC0796C000511DC /* weibo_0.json in Resources */,
+				6BE53FA21DC5B83B007FDD5F /* HRThirdAlterViewVC.xib in Resources */,
 				6BF3A1151D9913EA00583D4D /* Assets.xcassets in Resources */,
 				6BF3A1651D99141B00583D4D /* LeftVC.xib in Resources */,
 				6BBE598B1DC0796C000511DC /* weibo_1.json in Resources */,
@@ -592,6 +620,7 @@
 			files = (
 				6BF3A1621D99141B00583D4D /* Item3.m in Sources */,
 				6B178E091D9A045500257D97 /* HRSideMenuVC.m in Sources */,
+				6BE53FA11DC5B83B007FDD5F /* HRThirdAlterViewVC.m in Sources */,
 				6BBE59A91DC089D8000511DC /* WBCell.m in Sources */,
 				6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */,
 				6BBE59A51DC08548000511DC /* WBModel.m in Sources */,
@@ -600,8 +629,10 @@
 				6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */,
 				6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */,
 				6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */,
+				6B1A15201DC3AE95009F58CA /* UIImageView+SDWeb.m in Sources */,
 				6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */,
 				6B6E19F31DBEEBD700306D69 /* HRThirdLoginTool.m in Sources */,
+				6B11154C1DC46D7000B43EAD /* HRDBTool.m in Sources */,
 				6BF3A1601D99141B00583D4D /* Item1.m in Sources */,
 				6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */,
 				6B1219671DC3236100CE9CBB /* UIView+Extension.m in Sources */,
@@ -612,6 +643,7 @@
 				6BF3A1611D99141B00583D4D /* Item2.m in Sources */,
 				6B178E0A1D9A045500257D97 /* HRTabVC.m in Sources */,
 				6BF3A15F1D99141B00583D4D /* HRHTTPTool.m in Sources */,
+				6BE53FA61DC5BAC1007FDD5F /* HRShareAlterViewVC.m in Sources */,
 				6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */,
 				6BF3A15D1D99141B00583D4D /* HRHTTPManager.m in Sources */,
 				6BF3A1661D99141B00583D4D /* PushedVC.m in Sources */,

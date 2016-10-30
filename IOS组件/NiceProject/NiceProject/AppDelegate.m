@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "HRRootNC.h"
 #import "SDWebImageManager.h"
+#import "HRDBTool.h"
+
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
@@ -25,6 +27,9 @@
     HRRootNC * rootNC1 = [HRRootNC rootNC:@[@"Item1",@"Item2",@"Item3"] centerVCTitles:@[@"Item1",@"Item2",@"Item3"] centerVCImagePres:@[@"first",@"second",@"third"] leftVCName:@"LeftVC"];
     self.window.rootViewController = rootNC1;
     [self.window makeKeyAndVisible];
+    
+    [HRDBTool createAllTable];
+    
     return YES;
 }
 

@@ -44,6 +44,7 @@
     self.retweetContentView.hidden = false;
     self.retweetContentView.status = status.retweetedStatus;
     self.retweetContentView.y = self.myContentView.height;
+    self.retweetContentView.backgroundColor = RGBAlpha(10, 10, 10, 0.1);
     
 
 
@@ -81,6 +82,7 @@
 -(void)setStatus:(WBStatus *)status
 {
     _status = status;
+    self.frame = CGRectMake(0, 0, kScreenWidth, status.textHeight + status.imageContainerHeight);
     //文字内容
     self.contentLable.highlightTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
         YYTextHighlight *highlight = [text attribute:YYTextHighlightAttributeName atIndex:range.location effectiveRange:NULL];
@@ -90,13 +92,11 @@
         HRLog(@"%@",model.content);
     };
     self.contentLable.textLayout = status.textLayout;
-    self.contentLable.frame = CGRectMake(0, 0, kContentWidth, status.textHeight);
+    self.contentLable.frame = CGRectMake(kContentXOffsetX, 0, kContentWidth, status.textHeight);
     
     //图片内容
     self.imageContainerView.status = status;
-    self.imageContainerView.frame = CGRectMake(0, status.textHeight, kContentWidth, self.imageContainerView.contentHeight);
-    
-    self.frame = CGRectMake(kContentXOffsetX, 0, kContentWidth, status.textHeight + status.imageContainerHeight);
+    self.imageContainerView.frame = CGRectMake(kContentXOffsetX, status.textHeight, kContentWidth, status.imageContainerHeight);
 }
 
 -(WBImageContainerView *)imageContainerView
@@ -126,7 +126,8 @@
 
 
 #import "LDGridView.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+SDWeb.h"
+
 @interface WBImageContainerView()
 @property (nonatomic,strong) LDGridView * gridView;
 @end
@@ -143,15 +144,16 @@
         return;
     }
     NSInteger col = status.imageContainerCol(pics.count);
-    self.frame = CGRectMake(0, 0, kContentWidth, 0);
+    self.frame = CGRectMake(kContentXOffsetX, 0, kContentWidth, 0);
     _gridView = [LDGridView configSubItemsIn:self count:pics.count col:col itemH:0 margin:kImageViewMargin startY:0 fetchItemAtIndex:^UIView *(NSInteger index) {
         WBPicture * picture = status.pics[index];
-        UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_placeholder"]];
-        [imageView performSelectorOnMainThread:@selector(sd_setImageWithURL:) withObject:picture.large.url waitUntilDone:false modes:@[NSDefaultRunLoopMode]];
+        UIImageView * imageView = [UIImageView hr_imageView:picture.large.url placeHolder:[UIImage imageNamed:@"ic_placeholder"] modes:@[NSRunLoopCommonModes]];
+        [imageView clickHandler:^(UIView *view) {
+            HRLog(@"%@",picture);
+        }];
         return imageView;
     }];
     _gridView.backgroundColor = RGBAlpha(10, 10, 10, 0.1);
 }
-
 
 @end
