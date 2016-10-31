@@ -10,10 +10,11 @@
 #import "HRRootNC.h"
 #import "SDWebImageManager.h"
 #import "HRDBTool.h"
+#import "HRConst.h"
+#import "HRWChatApiManager.h"
+#import "HRQQApiManager.h"
+#import "HRSinaApiManager.h"
 
-#import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/TencentOAuthObject.h>
-#import <TencentOpenAPI/TencentApiInterface.h>
 
 @interface AppDelegate ()
 
@@ -27,8 +28,17 @@
     HRRootNC * rootNC1 = [HRRootNC rootNC:@[@"Item1",@"Item2",@"Item3"] centerVCTitles:@[@"Item1",@"Item2",@"Item3"] centerVCImagePres:@[@"first",@"second",@"third"] leftVCName:@"LeftVC"];
     self.window.rootViewController = rootNC1;
     [self.window makeKeyAndVisible];
-    
+
     [HRDBTool createAllTable];
+    
+    [WXApi registerApp:kWChatAppID withDescription:@"demo 2.0"];
+    //向微信注册支持的文件类型
+    UInt64 typeFlag = MMAPP_SUPPORT_TEXT | MMAPP_SUPPORT_PICTURE | MMAPP_SUPPORT_LOCATION | MMAPP_SUPPORT_VIDEO |MMAPP_SUPPORT_AUDIO | MMAPP_SUPPORT_WEBPAGE | MMAPP_SUPPORT_DOC | MMAPP_SUPPORT_DOCX | MMAPP_SUPPORT_PPT | MMAPP_SUPPORT_PPTX | MMAPP_SUPPORT_XLS | MMAPP_SUPPORT_XLSX | MMAPP_SUPPORT_PDF;
+    [WXApi registerAppSupportContentFlag:typeFlag];
+    
+    
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kSinaAppKey];
     
     return YES;
 }
@@ -62,12 +72,33 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    return [TencentOAuth HandleOpenURL:url];
+    
+    return [self shouldOpenUrl:url];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    return [TencentOAuth HandleOpenURL:url];
+    return [self shouldOpenUrl:url];
+}
+
+- (BOOL)shouldOpenUrl:(NSURL *)url
+{
+    NSString *scheme = url.scheme;
+    if ([scheme isEqualToString:kWChatAppID]){
+        NSRange range = [url.absoluteString rangeOfString:@"pay"];
+        if (range.length > 0) { //微信支付
+            return YES;
+        } else { //微信
+            return [WXApi handleOpenURL:url delegate:[ HRWChatApiManager share]];
+        }
+        
+    } else if ([scheme isEqualToString:kQQAppScheme]){
+        return [TencentOAuth HandleOpenURL:url];
+        
+    } else if ([scheme isEqualToString:kSinaAppScheme]){
+        return [WeiboSDK handleOpenURL:url delegate:[HRSinaApiManager share]];
+    }
+    return false;
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application{

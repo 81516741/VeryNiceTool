@@ -27,11 +27,11 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPU-Gd-hZA">
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="ZZu-EK-yy2"/>
-                                <constraint firstAttribute="height" constant="55" id="eRf-N0-3Gu"/>
+                                <constraint firstAttribute="height" constant="80" id="vhQ-ql-gRA"/>
+                                <constraint firstAttribute="width" constant="60" id="w5V-lO-QZE"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <inset key="titleEdgeInsets" minX="-90" minY="45" maxX="0.0" maxY="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
                             <state key="normal" title="QQ登录" image="Exclusive_QQ">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,12 +40,46 @@
                                 <action selector="qqLogin:" destination="-1" eventType="touchUpInside" id="lwU-vZ-DXc"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uq2-j4-NCv">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="LR5-au-InU"/>
+                                <constraint firstAttribute="width" constant="60" id="SBy-0o-zj8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="QQ登录" image="Exclusive_sina">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sinaLogin:" destination="-1" eventType="touchUpInside" id="LjH-Of-Lgq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-2m-ma1">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Dqq-35-26e"/>
+                                <constraint firstAttribute="height" constant="80" id="diN-Ur-bTq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="QQ登录" image="Exclusive_wechat">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="wchatLogin:" destination="-1" eventType="touchUpInside" id="KBT-tr-9Qy"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="EPU-Gd-hZA" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="Aql-da-eY6"/>
+                        <constraint firstItem="uq2-j4-NCv" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="3Fv-0P-kmk"/>
+                        <constraint firstItem="EPU-Gd-hZA" firstAttribute="leading" secondItem="eWi-7o-0T9" secondAttribute="leading" constant="10" id="PnN-5l-GfL"/>
+                        <constraint firstItem="EPU-Gd-hZA" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="Vsy-iw-hcz"/>
+                        <constraint firstAttribute="trailing" secondItem="uq2-j4-NCv" secondAttribute="trailing" constant="10" id="Z9j-02-Ww1"/>
+                        <constraint firstItem="fFI-2m-ma1" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="hCe-il-NKG"/>
                         <constraint firstAttribute="height" constant="200" id="hIJ-fr-t5m"/>
-                        <constraint firstItem="EPU-Gd-hZA" firstAttribute="centerX" secondItem="eWi-7o-0T9" secondAttribute="centerX" id="thM-aV-857"/>
+                        <constraint firstItem="fFI-2m-ma1" firstAttribute="centerX" secondItem="eWi-7o-0T9" secondAttribute="centerX" id="kIY-2N-8C3"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -64,10 +98,12 @@
                 <constraint firstItem="baL-tD-4vI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yeG-zD-thb"/>
                 <constraint firstAttribute="bottom" secondItem="baL-tD-4vI" secondAttribute="bottom" id="zbN-Kh-TZT"/>
             </constraints>
-            <point key="canvasLocation" x="-1275" y="85"/>
+            <point key="canvasLocation" x="-1275.5" y="84.5"/>
         </view>
     </objects>
     <resources>
         <image name="Exclusive_QQ" width="90" height="90"/>
+        <image name="Exclusive_sina" width="90" height="90"/>
+        <image name="Exclusive_wechat" width="90" height="90"/>
     </resources>
 </document>

@@ -12,7 +12,7 @@
 #import "HRHTTPTool.h"
 #import "HRHTTPModel.h"
 #import "HRConst.h"
-#import "HRThirdLoginTool.h"
+
 
 @interface HRBaseVC : UIViewController
 

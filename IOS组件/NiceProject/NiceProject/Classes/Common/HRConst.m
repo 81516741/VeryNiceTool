@@ -10,9 +10,6 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- *  成员变量类型（属性类型）
- */
-NSString *const kHRTypeInt = @"i";
+NSString *const kHR    = @"HR";
 
 #endif

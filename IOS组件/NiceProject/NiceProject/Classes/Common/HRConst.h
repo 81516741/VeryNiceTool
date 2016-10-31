@@ -49,9 +49,7 @@
 #ifndef kiOS9Later
 #define kiOS9Later (kSystemVersion >= 9)
 #endif
-/**
- *  类型（属性类型）
- */
-extern NSString *const kHRTypeInt;
+
+extern NSString *const kHR;
 
 #endif

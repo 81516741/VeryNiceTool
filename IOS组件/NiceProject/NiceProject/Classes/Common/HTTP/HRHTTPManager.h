@@ -7,8 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HRHTTPModel.h"
+#import "AFHTTPSessionManager.h"
 
 @interface HRHTTPManager : NSObject
+@property (nonatomic,strong)  AFHTTPSessionManager * HTTPManager;
 /**
  * 单例
  */

@@ -7,10 +7,12 @@
 //
 
 #import "HRThirdAlterViewVC.h"
-#import "HRThirdLoginTool.h"
 #import "HRConst.h"
 #import "HRObject.h"
-
+#import "HRQQApiManager.h"
+#import "HRWChatApiManager.h"
+#import "HRSinaApiManager.h"
+#import "WeiboSDK.h"
 @interface HRThirdAlterViewVC ()
 @property (weak, nonatomic) IBOutlet UIView *alterView;
 @end
@@ -53,19 +55,38 @@
 {
     [self dismissViewControllerAnimated:false completion:nil];
 }
+
 - (IBAction)qqLogin:(id)sender
 {
-    [HRThirdLoginTool QQLoginSuccess:^{
+    [HRQQApiManager QQLoginSuccess:^{
         HRLog(@"qq登录成功");
-        [self dismissViewControllerAnimated:false completion:nil];
     } failure:^(QQLoginFailure failure) {
         HRLog(@"qq登录失败");
-        [self dismissViewControllerAnimated:false completion:nil];
     } userInfo:^(APIResponse *userInfo) {
         HRLog(@"qq用户信息-->%@",userInfo);
-        [self dismissViewControllerAnimated:false completion:nil];
     }];
+    [self dismissViewControllerAnimated:false completion:nil];
+}
+- (IBAction)wchatLogin:(UIButton *)sender
+{
+    [HRWChatApiManager wchatLogin];
+    [self dismissViewControllerAnimated:false completion:nil];
 }
 
+
+- (IBAction)sinaLogin:(UIButton *)sender
+{
+    __weak typeof(self) selfWeak = self;
+    [[HRSinaApiManager share] sinaLogin:^{
+        [selfWeak dismissViewControllerAnimated:false completion:nil];
+    }];
+    self.view.hidden = true;
+
+}
+
+-(void)dealloc
+{
+    HRLog(@"第三方登录显示vc被消灭了");
+}
 
 @end

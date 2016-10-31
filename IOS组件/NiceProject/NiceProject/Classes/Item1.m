@@ -12,9 +12,11 @@
 #import "UIView+Extension.h"
 #import "HRThirdAlterViewVC.h"
 
+
 #define kTableViewCellReuseID @"kTableViewCellReuseID"
 
 #define kThirdLogin  @"thirdLogin"
+
 @interface Item1 ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *titles;
 @property (nonatomic, strong) NSMutableArray *strings;

@@ -6,14 +6,7 @@
 //
 
 #import "HRHTTPManager.h"
-#import "AFHTTPSessionManager.h"
 #import "HRConst.h"
-
-@interface HRHTTPManager()
-
-@property (nonatomic,strong)  AFHTTPSessionManager * HTTPManager;
-
-@end
 
 @implementation HRHTTPManager
 
