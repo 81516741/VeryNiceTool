@@ -42,4 +42,35 @@
     }
 }
 
+#pragma mark - 微信分享
+- (void)shareToWXScene:(int)wxScene image:(UIImage *)image
+{
+    WXMediaMessage *message = [[WXMediaMessage alloc] init];
+    WXImageObject *imageObj = [[WXImageObject alloc] init];
+    [message setThumbImage:image];
+    imageObj.imageData = UIImageJPEGRepresentation(image, 1);
+    message.mediaObject = imageObj;
+    [self shareToWXScene:wxScene message:message];
+}
+
+- (void)shareToWXScene:(int)wxScene message:(WXMediaMessage *)message
+{
+    if (wxScene == WXSceneSession) {
+
+    } else {
+
+    }
+//    if([WXApi isWXAppInstalled]){
+//        return;
+//    }
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = wxScene;
+    BOOL isSuccess = [WXApi sendReq:req];
+    if (!isSuccess) {
+        
+    }
+}
 @end

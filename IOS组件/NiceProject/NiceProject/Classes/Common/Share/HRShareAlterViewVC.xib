@@ -8,29 +8,142 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HRShareAlterViewVC">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="alterView" destination="UNa-EY-5jn" id="IPx-Oo-8F2"/>
+                <outlet property="view" destination="ZBc-3a-THg" id="oaq-JB-Ewd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" alpha="0.69999999999999996" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" alpha="0.69999998807907104" contentMode="scaleToFill" id="ZBc-3a-THg">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baL-tD-4vI">
+                <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0og-zG-wea">
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
-                        <action selector="bViewClick:" destination="-1" eventType="touchUpInside" id="c5j-kj-PfN"/>
+                        <action selector="bViewClick:" destination="-1" eventType="touchUpInside" id="eZu-dR-Chb"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-EY-5jn">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96c-0w-jgB">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Ryg-Ze-dYe"/>
+                                <constraint firstAttribute="width" constant="60" id="ttJ-aq-Dx6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="QQ好友分享" image="Exclusive_QQ">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="qqShare:" destination="-1" eventType="touchUpInside" id="oZR-7g-uXh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkB-ZS-k8B">
+                            <frame key="frameInset" minX="124" minY="8" width="60" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="EVS-XV-ME8"/>
+                                <constraint firstAttribute="height" constant="80" id="PK5-Zm-hC0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="微信好友分享" image="Exclusive_wechat">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="wchatShare:" destination="-1" eventType="touchUpInside" id="khU-vS-BDc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3I-GI-Qll">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="E12-iG-GpW"/>
+                                <constraint firstAttribute="height" constant="80" id="ksO-H1-mKf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="微博分享" image="Exclusive_sina">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sinaShare:" destination="-1" eventType="touchUpInside" id="LOa-dV-QTT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgQ-K9-3hK">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="AIm-Jf-zTI"/>
+                                <constraint firstAttribute="height" constant="80" id="VeO-Cr-NMY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="QQ空间分享" image="Exclusive_zone">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="qqShare:" destination="-1" eventType="touchUpInside" id="ycV-hV-P3E"/>
+                                <action selector="qqZoneShare:" destination="-1" eventType="touchUpInside" id="n00-ai-DZv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCP-uu-Mw7">
+                            <frame key="frameInset" minX="124" minY="112" width="60" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="D84-Xh-W3V"/>
+                                <constraint firstAttribute="height" constant="80" id="s6L-wv-rNc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
+                            <state key="normal" title="朋友圈分享" image="Exclusive_ Circle">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="qqShare:" destination="-1" eventType="touchUpInside" id="Mrb-hm-VIN"/>
+                                <action selector="wchatCircleShare:" destination="-1" eventType="touchUpInside" id="TqB-ap-8jz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NgQ-K9-3hK" firstAttribute="leading" secondItem="UNa-EY-5jn" secondAttribute="leading" constant="8" id="58e-Mm-akd"/>
+                        <constraint firstAttribute="height" constant="200" id="9A5-bp-EdH"/>
+                        <constraint firstItem="PkB-ZS-k8B" firstAttribute="centerX" secondItem="UNa-EY-5jn" secondAttribute="centerX" id="B9H-3d-1Pi"/>
+                        <constraint firstItem="DCP-uu-Mw7" firstAttribute="centerX" secondItem="UNa-EY-5jn" secondAttribute="centerX" id="Nnt-ro-uze"/>
+                        <constraint firstItem="DCP-uu-Mw7" firstAttribute="centerY" secondItem="NgQ-K9-3hK" secondAttribute="centerY" id="Xh9-1v-bXx"/>
+                        <constraint firstItem="O3I-GI-Qll" firstAttribute="top" secondItem="UNa-EY-5jn" secondAttribute="top" constant="8" id="dPX-IW-70r"/>
+                        <constraint firstItem="PkB-ZS-k8B" firstAttribute="centerY" secondItem="96c-0w-jgB" secondAttribute="centerY" id="l90-hV-c8e"/>
+                        <constraint firstItem="96c-0w-jgB" firstAttribute="top" secondItem="UNa-EY-5jn" secondAttribute="top" constant="8" id="l9a-L0-O9Y"/>
+                        <constraint firstAttribute="bottom" secondItem="NgQ-K9-3hK" secondAttribute="bottom" constant="8" id="oZo-Vt-JA9"/>
+                        <constraint firstAttribute="trailing" secondItem="O3I-GI-Qll" secondAttribute="trailing" constant="8" id="rxI-vj-Cub"/>
+                        <constraint firstItem="96c-0w-jgB" firstAttribute="leading" secondItem="UNa-EY-5jn" secondAttribute="leading" constant="8" id="ypT-Um-Usv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="baL-tD-4vI" secondAttribute="trailing" id="Buj-kT-6bo"/>
-                <constraint firstItem="baL-tD-4vI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="acG-od-sHO"/>
-                <constraint firstItem="baL-tD-4vI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yeG-zD-thb"/>
-                <constraint firstAttribute="bottom" secondItem="baL-tD-4vI" secondAttribute="bottom" id="zbN-Kh-TZT"/>
+                <constraint firstItem="0og-zG-wea" firstAttribute="leading" secondItem="ZBc-3a-THg" secondAttribute="leading" id="53s-9g-ETu"/>
+                <constraint firstAttribute="trailing" secondItem="UNa-EY-5jn" secondAttribute="trailing" constant="40" id="5zu-Wo-6R0"/>
+                <constraint firstItem="0og-zG-wea" firstAttribute="top" secondItem="ZBc-3a-THg" secondAttribute="top" id="7Ke-M7-f1q"/>
+                <constraint firstAttribute="bottom" secondItem="0og-zG-wea" secondAttribute="bottom" id="QRP-Gh-Ery"/>
+                <constraint firstItem="UNa-EY-5jn" firstAttribute="centerY" secondItem="0og-zG-wea" secondAttribute="centerY" id="bAu-Ve-21n"/>
+                <constraint firstItem="UNa-EY-5jn" firstAttribute="leading" secondItem="ZBc-3a-THg" secondAttribute="leading" constant="40" id="gLh-E5-e63"/>
+                <constraint firstAttribute="trailing" secondItem="0og-zG-wea" secondAttribute="trailing" id="sS9-hC-FvL"/>
             </constraints>
-            <point key="canvasLocation" x="257" y="176"/>
+            <point key="canvasLocation" x="-1275.5" y="84.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Exclusive_ Circle" width="90" height="90"/>
+        <image name="Exclusive_QQ" width="90" height="90"/>
+        <image name="Exclusive_sina" width="90" height="90"/>
+        <image name="Exclusive_wechat" width="90" height="90"/>
+        <image name="Exclusive_zone" width="90" height="90"/>
+    </resources>
 </document>

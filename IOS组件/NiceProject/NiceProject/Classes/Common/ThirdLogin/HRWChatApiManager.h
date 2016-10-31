@@ -15,4 +15,7 @@
 @interface HRWChatApiManager : NSObject<WXApiDelegate>
 +(instancetype)share;
 +(void)wchatLogin;
+
+- (void)shareToWXScene:(int)wxScene image:(UIImage *)image;
+
 @end

@@ -10,7 +10,8 @@
 @interface HRSinaApiManager()
 @property (nonatomic,copy) void(^shareSuccess)();
 @property (nonatomic,copy) void(^shareFailure)();
-@property (nonatomic,copy) void(^handler)();
+@property (nonatomic,copy) void(^loginSuccess)();
+@property (nonatomic,copy) void(^loginFailure)();
 @end
 @implementation HRSinaApiManager
 
@@ -24,9 +25,10 @@
     return _instance;
 }
 
--(void)sinaLogin:(void (^)())handler
+-(void)sinaLogin:(void (^)())success failure:(void (^)())failure
 {
-    self.handler = handler;
+    self.loginSuccess = success;
+    self.loginFailure = failure;
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
     request.redirectURI = kSinaAppRedirectURI;
     request.scope = @"all";
@@ -68,17 +70,20 @@
         self.wbRefreshToken = authResponse.refreshToken;
         if (self.shareSuccess) {
             self.shareSuccess();
+            self.shareSuccess = nil;
         }
         return;
     }else if ([response isKindOfClass:WBAuthorizeResponse.class])//登录
     {
-        if (self.handler) {
-            self.handler();
-        }
-        return;
+       
+    }
+    if (self.loginFailure) {
+        self.loginFailure();
+        self.loginFailure = nil;
     }
     if (self.shareFailure) {
         self.shareFailure();
+        self.shareFailure = nil;
     }
 }
 
@@ -111,5 +116,6 @@
     
     return message;
 }
+
 
 @end

@@ -12,7 +12,7 @@
 #import "HRQQApiManager.h"
 #import "HRWChatApiManager.h"
 #import "HRSinaApiManager.h"
-#import "WeiboSDK.h"
+
 @interface HRThirdAlterViewVC ()
 @property (weak, nonatomic) IBOutlet UIView *alterView;
 @end
@@ -78,6 +78,8 @@
 {
     __weak typeof(self) selfWeak = self;
     [[HRSinaApiManager share] sinaLogin:^{
+        [selfWeak dismissViewControllerAnimated:false completion:nil];
+    } failure:^{
         [selfWeak dismissViewControllerAnimated:false completion:nil];
     }];
     self.view.hidden = true;

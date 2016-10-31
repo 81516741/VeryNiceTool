@@ -10,6 +10,6 @@
 
 @interface HRShareAlterViewVC : UIViewController
 
-+(void)showIn:(UIViewController *)vc handle:(void(^)()) handle;
++(void)show;
 
 @end

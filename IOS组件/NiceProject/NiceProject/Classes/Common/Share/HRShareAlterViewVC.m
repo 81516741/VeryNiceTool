@@ -7,19 +7,21 @@
 //
 
 #import "HRShareAlterViewVC.h"
+#import "HRObject.h"
+#import "HRConst.h"
+#import "HRQQApiManager.h"
+#import "HRWChatApiManager.h"
+#import "HRSinaApiManager.h"
 
 @interface HRShareAlterViewVC ()
-@property (nonatomic, copy) void(^sureActionBlock)();
 @property (weak, nonatomic) IBOutlet UIView *alterView;
 @end
 
 @implementation HRShareAlterViewVC
 
-+(void)showIn:(UIViewController *)vc handle:(void(^)()) handle
-{
++(void)show{
     HRShareAlterViewVC * alterVC = [[HRShareAlterViewVC alloc]init];
-    alterVC.sureActionBlock = handle;
-    [vc presentViewController:alterVC animated:YES completion:nil];
+    [[HRObject share].rootNC presentViewController:alterVC animated:YES completion:nil];
 }
 
 -(void)viewDidLoad
@@ -31,8 +33,11 @@
 {
     [super viewWillAppear:animated];
     [UIView animateWithDuration:0.25 animations:^{
-        self.alterView.transform = CGAffineTransformIdentity;
+        self.alterView.transform = CGAffineTransformMakeScale(1.2, 1.2);
         self.alterView.alpha = 1;
+        
+    } completion:^(BOOL finished) {
+        self.alterView.transform = CGAffineTransformIdentity;
     }];
 }
 
@@ -49,12 +54,41 @@
 {
     [self dismissViewControllerAnimated:false completion:nil];
 }
-- (IBAction)goVIPBtnClick:(UIButton *)sender
+
+- (IBAction)qqShare:(id)sender
 {
-    if (self.sureActionBlock) {
-        self.sureActionBlock();
-        [self dismissViewControllerAnimated:false completion:nil];
-    }
+    [[HRQQApiManager share]shareToTencent:QQShareTypeFriend title:@"fdsa" des:@"没有描述" image:[UIImage imageNamed:@"Exclusive_ Circle"] url:@"www.baidu.com"];
+    
+    [self dismissViewControllerAnimated:false completion:nil];
+}
+
+- (IBAction)qqZoneShare:(id)sender
+{
+    [self dismissViewControllerAnimated:false completion:nil];
+}
+
+- (IBAction)wchatCircleShare:(UIButton *)sender
+{
+    [[HRWChatApiManager share]shareToWXScene:1 image:[UIImage imageNamed:@"Exclusive_ Circle"]];
+    [self dismissViewControllerAnimated:false completion:nil];
+}
+
+
+- (IBAction)sinaShare:(UIButton *)sender
+{
+    __weak typeof(self) selfWeak = self;
+    [[HRSinaApiManager share] sinaShare:^{
+        [selfWeak dismissViewControllerAnimated:false completion:nil];
+    } failure:^{
+        [selfWeak dismissViewControllerAnimated:false completion:nil];
+    }];
+    self.view.hidden = true;
+    
+}
+
+-(void)dealloc
+{
+    HRLog(@"第三方登录显示vc被消灭了");
 }
 
 @end

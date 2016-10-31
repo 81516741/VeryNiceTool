@@ -11,11 +11,13 @@
 #import "AFNetworkReachabilityManager.h"
 #import "UIView+Extension.h"
 #import "HRThirdAlterViewVC.h"
+#import "HRShareAlterViewVC.h"
 
 
 #define kTableViewCellReuseID @"kTableViewCellReuseID"
 
 #define kThirdLogin  @"thirdLogin"
+#define kShare       @"share"
 
 @interface Item1 ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *titles;
@@ -44,6 +46,7 @@
     //数据
     [self addCellTitle:@"图文混排"  string:@"WeiBoVC"];
     [self addCellTitle:@"第三方登录" string:kThirdLogin];
+    [self addCellTitle:@"分享" string:kShare];
     
 }
 //示范一个网络请求
@@ -88,6 +91,11 @@
 -(void)thirdLogin
 {
     [HRThirdAlterViewVC show];
+}
+//分享
+-(void)share
+{
+    [HRShareAlterViewVC show];
 }
 
 -(void)addCellTitle:(NSString *)title string:(NSString *)className

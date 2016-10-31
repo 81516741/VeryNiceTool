@@ -19,7 +19,7 @@
 /**
  * 登录
  */
--(void)sinaLogin:(void (^)())handler;
+-(void)sinaLogin:(void (^)())success failure:(void (^)())failure; //这个登录有问题，官方的demo也一样
 
 /**
  * 分享

@@ -7,6 +7,7 @@
 //
 
 #import "HRQQApiManager.h"
+#import "HRConst.h"
 
 @interface HRQQApiManager()
 //第三方登录
@@ -103,6 +104,35 @@
         [HRQQApiManager share].QQLoginUserInfo(response);
     }
 }
+
+#pragma mark - QQ分享
+- (void)shareToTencent:(QQShareType)tencent title:(NSString *)title des:(NSString *)des image:(id)image url:(NSString *)url
+{
+    QQApiNewsObject *newsObj;
+    if ([image isKindOfClass:[NSString class]]) {
+        newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:des previewImageURL:[NSURL URLWithString:image]];
+    }else if ([image isKindOfClass:[UIImage class]]){
+        newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:url] title:title description:des previewImageData:UIImageJPEGRepresentation(image, 1)];
+    }
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
+    
+    if (![TencentOAuth iphoneQQInstalled]) {
+        
+        HRLog(@"您还没有安装手机QQ客户端,无法分享。");
+        return;
+    }
+    QQApiSendResultCode resultCode;
+    if (tencent == QQShareTypeFriend) {
+        resultCode = [QQApiInterface sendReq:req];
+    }else{
+        resultCode = [QQApiInterface SendReqToQZone:req];
+    }
+    if (resultCode != EQQAPISENDSUCESS) {
+        
+    }
+    
+}
+
 
 
 @end
