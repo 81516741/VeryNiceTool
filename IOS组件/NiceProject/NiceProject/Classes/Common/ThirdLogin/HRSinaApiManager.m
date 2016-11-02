@@ -7,6 +7,8 @@
 //
 
 #import "HRSinaApiManager.h"
+#import "HRConst.h"
+
 @interface HRSinaApiManager()
 @property (nonatomic,copy) void(^shareSuccess)();
 @property (nonatomic,copy) void(^shareFailure)();
@@ -27,6 +29,10 @@
 
 -(void)sinaLogin:(void (^)())success failure:(void (^)())failure
 {
+    if(![WeiboSDK isWeiboAppInstalled]){
+        HRLog(@"微博应用未安装");
+        return;
+    }
     self.loginSuccess = success;
     self.loginFailure = failure;
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
@@ -41,6 +47,10 @@
 
 -(void)sinaShare:(void (^)())success failure:(void (^)())failure
 {
+    if (![WeiboSDK isWeiboAppInstalled]) {
+        HRLog(@"微博应用未安装");
+        return;
+    }
     self.shareSuccess = success;
     self.shareFailure = failure;
     WBAuthorizeRequest *authRequest = [WBAuthorizeRequest request];
@@ -73,7 +83,7 @@
             self.shareSuccess = nil;
         }
         return;
-    }else if ([response isKindOfClass:WBAuthorizeResponse.class])//登录
+    }else if ([response isKindOfClass:WBAuthorizeResponse.class])//登录授权
     {
        
     }

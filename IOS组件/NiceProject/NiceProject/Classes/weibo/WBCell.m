@@ -11,7 +11,7 @@
 #import "YYLabel.h"
 #import "HRConst.h"
 #import "NSAttributedString+YYText.h"
-#import "UIView+Extension.h"
+#import "UIView+hr_Extension.h"
 
 @interface WBCell()
 @property (nonatomic,strong) WBContentView * myContentView;
@@ -126,7 +126,7 @@
 
 
 #import "LDGridView.h"
-#import "UIImageView+SDWeb.h"
+#import "UIImageView+hr_SDWeb.h"
 
 @interface WBImageContainerView()
 @property (nonatomic,strong) LDGridView * gridView;

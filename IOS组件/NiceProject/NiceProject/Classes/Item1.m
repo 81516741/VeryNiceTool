@@ -9,7 +9,7 @@
 #import "Item1.h"
 #import "VIPCenterModel.h"
 #import "AFNetworkReachabilityManager.h"
-#import "UIView+Extension.h"
+#import "UIView+hr_Extension.h"
 #import "HRThirdAlterViewVC.h"
 #import "HRShareAlterViewVC.h"
 

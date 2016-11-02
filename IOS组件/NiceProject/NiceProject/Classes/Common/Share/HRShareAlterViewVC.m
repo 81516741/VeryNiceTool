@@ -55,21 +55,44 @@
     [self dismissViewControllerAnimated:false completion:nil];
 }
 
-- (IBAction)qqShare:(id)sender
+- (IBAction)qqFriendShare:(id)sender
 {
-    [[HRQQApiManager share]shareToTencent:QQShareTypeFriend title:@"fdsa" des:@"没有描述" image:[UIImage imageNamed:@"Exclusive_ Circle"] url:@"www.baidu.com"];
+    [HRQQApiManager QQShare:QQShareTypeFriend title:@"😘蓉" des:@"这是一个感人肺腑的乡村爱情故事😉" image:[UIImage imageNamed:@"ta"] url:@"www.baidu.com" success:^{
+        
+    } failure:^(NSString *message) {
+        
+    }];
     
     [self dismissViewControllerAnimated:false completion:nil];
 }
 
 - (IBAction)qqZoneShare:(id)sender
 {
+    [HRQQApiManager QQShare:QQShareTypeZone title:@"😘蓉" des:@"这是一个感人肺腑的乡村爱情故事😉" image:[UIImage imageNamed:@"ta"] url:@"www.baidu.com" success:^{
+        
+    } failure:^(NSString *message) {
+        
+    }];
+    [self dismissViewControllerAnimated:false completion:nil];
+}
+
+- (IBAction)wchatFriendShare:(UIButton *)sender
+{
+    [HRWChatApiManager WChatShare:WChatShareTypeFriend title:@"😘蓉" des:@"这是一个感人肺腑的乡村爱情故事😉" image:[UIImage imageNamed:@"ta"] url:@"www.baidu.com" success:^{
+        
+    } failure:^(NSString *message) {
+        
+    }];
     [self dismissViewControllerAnimated:false completion:nil];
 }
 
 - (IBAction)wchatCircleShare:(UIButton *)sender
 {
-    [[HRWChatApiManager share]shareToWXScene:1 image:[UIImage imageNamed:@"Exclusive_ Circle"]];
+    [HRWChatApiManager WChatShare:WChatShareTypeCircle title:@"😘蓉" des:@"这是一个感人肺腑的乡村爱情故事😉" image:[UIImage imageNamed:@"ta"] url:@"www.baidu.com" success:^{
+        
+    } failure:^(NSString *message) {
+        
+    }];
     [self dismissViewControllerAnimated:false completion:nil];
 }
 
@@ -78,11 +101,9 @@
 {
     __weak typeof(self) selfWeak = self;
     [[HRSinaApiManager share] sinaShare:^{
-        [selfWeak dismissViewControllerAnimated:false completion:nil];
     } failure:^{
-        [selfWeak dismissViewControllerAnimated:false completion:nil];
     }];
-    self.view.hidden = true;
+    [selfWeak dismissViewControllerAnimated:false completion:nil];
     
 }
 

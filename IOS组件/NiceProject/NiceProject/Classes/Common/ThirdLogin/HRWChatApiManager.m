@@ -35,7 +35,6 @@
 
 -(void) onResp:(BaseResp*)resp
 {
-    
     if ([resp isKindOfClass:[SendAuthResp class]]){
         SendAuthResp * authResp = (SendAuthResp *)resp;
         HRLog(@"%@",authResp);
@@ -43,34 +42,32 @@
 }
 
 #pragma mark - 微信分享
-- (void)shareToWXScene:(int)wxScene image:(UIImage *)image
++(void)WChatShare:(WChatShareType)type title:(NSString *)title des:(NSString *)des image:(id)image url:(NSString *)url success:(void(^)())success failure:(void(^)(NSString * message))failure
 {
-    WXMediaMessage *message = [[WXMediaMessage alloc] init];
-    WXImageObject *imageObj = [[WXImageObject alloc] init];
-    [message setThumbImage:image];
-    imageObj.imageData = UIImageJPEGRepresentation(image, 1);
-    message.mediaObject = imageObj;
-    [self shareToWXScene:wxScene message:message];
-}
-
-- (void)shareToWXScene:(int)wxScene message:(WXMediaMessage *)message
-{
-    if (wxScene == WXSceneSession) {
-
-    } else {
-
-    }
-//    if([WXApi isWXAppInstalled]){
-//        return;
-//    }
-    
-    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
-    req.bText = NO;
-    req.message = message;
-    req.scene = wxScene;
-    BOOL isSuccess = [WXApi sendReq:req];
-    if (!isSuccess) {
+    //为什么是反的，搞不懂
+    if(![WXApi isWXAppInstalled]){
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = title;
+        message.description = des;
+        WXWebpageObject *imageObj = [WXWebpageObject object];
+        [message setThumbImage:image];
+        imageObj.webpageUrl = url;
+        message.mediaObject = imageObj;
         
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.bText = NO;
+        req.message = message;
+        req.scene = type;
+        BOOL isSuccess = [WXApi sendReq:req];
+        if (!isSuccess) {
+            failure(@"分享失败");
+        }else{
+            success();
+        }
+    }else{
+        failure(@"请安装微信客户端");
     }
+    
 }
+
 @end

@@ -29,17 +29,21 @@ typedef NS_ENUM(NSInteger,QQShareType){
 };
 
 
-@interface HRQQApiManager : NSObject<TencentSessionDelegate>
+
+@interface HRQQApiManager : NSObject<TencentSessionDelegate,QQApiInterfaceDelegate>
 /**
  *  单例
  */
 +(instancetype)share;
+@property (nonatomic,strong) TencentOAuth * tencentOAuth;
 /**
  * success只是表示登录成功，并不代表获取用户信息成功
  */
 +(void)QQLoginSuccess:(void(^)())success failure:(void(^)(QQLoginFailure failure))failure userInfo:(void(^)(APIResponse * userInfo))userInfo;
-
-- (void)shareToTencent:(QQShareType)tencent title:(NSString *)title des:(NSString *)des image:(id)image url:(NSString *)url;
+/**
+ * 分享一条新闻的形式分享出去
+ */
++(void)QQShare:(QQShareType)tencent title:(NSString *)title des:(NSString *)des image:(id)image url:(NSString *)url success:(void(^)())success failure:(void(^)(NSString * message))failure;
 
 @property (assign ,nonatomic) QQShareType shareType;
 

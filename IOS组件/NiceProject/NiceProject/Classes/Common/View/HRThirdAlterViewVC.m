@@ -78,11 +78,9 @@
 {
     __weak typeof(self) selfWeak = self;
     [[HRSinaApiManager share] sinaLogin:^{
-        [selfWeak dismissViewControllerAnimated:false completion:nil];
     } failure:^{
-        [selfWeak dismissViewControllerAnimated:false completion:nil];
     }];
-    self.view.hidden = true;
+    [selfWeak dismissViewControllerAnimated:false completion:nil];
 
 }
 
