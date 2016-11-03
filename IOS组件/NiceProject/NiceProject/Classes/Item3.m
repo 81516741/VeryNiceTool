@@ -11,6 +11,8 @@
 @interface Item3 ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerCons;
+
 @end
 
 @implementation Item3
@@ -35,6 +37,14 @@
     UITableViewCell * cell = [UITableViewCell new];
     cell.textLabel.text = @"我要找bug";
     return  cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.centerCons.constant  = 150;
+    [UIView animateWithDuration:1 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 @end

@@ -37,7 +37,6 @@
     [WXApi registerAppSupportContentFlag:typeFlag];
     
 
-    
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kSinaAppKey];
 

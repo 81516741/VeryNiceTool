@@ -45,27 +45,27 @@
 +(void)WChatShare:(WChatShareType)type title:(NSString *)title des:(NSString *)des image:(id)image url:(NSString *)url success:(void(^)())success failure:(void(^)(NSString * message))failure
 {
     //为什么是反的，搞不懂
-    if(![WXApi isWXAppInstalled]){
-        WXMediaMessage *message = [WXMediaMessage message];
-        message.title = title;
-        message.description = des;
-        WXWebpageObject *imageObj = [WXWebpageObject object];
-        [message setThumbImage:image];
-        imageObj.webpageUrl = url;
-        message.mediaObject = imageObj;
-        
-        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
-        req.bText = NO;
-        req.message = message;
-        req.scene = type;
-        BOOL isSuccess = [WXApi sendReq:req];
-        if (!isSuccess) {
-            failure(@"分享失败");
-        }else{
-            success();
-        }
+    if([WXApi isWXAppInstalled]){
+       failure(@"请安装微信客户端");
+        return;
+    }
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = title;
+    message.description = des;
+    WXWebpageObject *imageObj = [WXWebpageObject object];
+    [message setThumbImage:image];
+    imageObj.webpageUrl = url;
+    message.mediaObject = imageObj;
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = type;
+    BOOL isSuccess = [WXApi sendReq:req];
+    if (!isSuccess) {
+        failure(@"分享失败");
     }else{
-        failure(@"请安装微信客户端");
+        success();
     }
     
 }

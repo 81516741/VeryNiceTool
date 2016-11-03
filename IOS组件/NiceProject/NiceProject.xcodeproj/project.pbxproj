@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B110B761DC715780002BD2D /* HRSinaApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B110B751DC715780002BD2D /* HRSinaApiManager.m */; };
 		6B11154C1DC46D7000B43EAD /* HRDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B11154B1DC46D7000B43EAD /* HRDBTool.m */; };
 		6B1219671DC3236100CE9CBB /* UIView+hr_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1219661DC3236100CE9CBB /* UIView+hr_Extension.m */; };
 		6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF41D9A045500257D97 /* HRBaseVC.m */; };
@@ -30,8 +29,6 @@
 		6B1D608B1DC6DA35002C2EEB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40CB1DBDEDE60017B00A /* Security.framework */; };
 		6B1D608C1DC6DA3F002C2EEB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40D51DBDEE320017B00A /* CoreTelephony.framework */; };
 		6B1D608E1DC6DA49002C2EEB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1D608D1DC6DA49002C2EEB /* CFNetwork.framework */; };
-		6B1D60971DC6E972002C2EEB /* HRQQApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1D60961DC6E972002C2EEB /* HRQQApiManager.m */; };
-		6B1D609A1DC6EA7B002C2EEB /* HRWChatApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1D60991DC6EA7B002C2EEB /* HRWChatApiManager.m */; };
 		6B36A5B51DC9919300DB09C1 /* NSString+hr_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B36A5B41DC9919300DB09C1 /* NSString+hr_Extension.m */; };
 		6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B497EA01DC2357A00EC74E1 /* LDGridView.m */; };
 		6B5E40511DC1ADD1006E57D3 /* HRLayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40501DC1ADD1006E57D3 /* HRLayoutModel.m */; };
@@ -54,10 +51,13 @@
 		6BBE59A91DC089D8000511DC /* WBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A71DC089D8000511DC /* WBCell.m */; };
 		6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59B11DC09923000511DC /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BBE59B41DC0998B000511DC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE59B31DC0998B000511DC /* libicucore.tbd */; };
-		6BE53FA11DC5B83B007FDD5F /* HRThirdAlterViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE53F9F1DC5B83B007FDD5F /* HRThirdAlterViewVC.m */; };
-		6BE53FA21DC5B83B007FDD5F /* HRThirdAlterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE53FA01DC5B83B007FDD5F /* HRThirdAlterViewVC.xib */; };
-		6BE53FA61DC5BAC1007FDD5F /* HRShareAlterViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE53FA41DC5BAC1007FDD5F /* HRShareAlterViewVC.m */; };
-		6BE53FA91DC5BCFF007FDD5F /* HRShareAlterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE53FA81DC5BCFF007FDD5F /* HRShareAlterViewVC.xib */; };
+		6BEE8B7B1DCAEB0E00FB7AC8 /* HRQQApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B761DCAEB0E00FB7AC8 /* HRQQApiManager.m */; };
+		6BEE8B7C1DCAEB0E00FB7AC8 /* HRSinaApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B781DCAEB0E00FB7AC8 /* HRSinaApiManager.m */; };
+		6BEE8B7D1DCAEB0E00FB7AC8 /* HRWChatApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B7A1DCAEB0E00FB7AC8 /* HRWChatApiManager.m */; };
+		6BEE8B841DCAEB5500FB7AC8 /* HRShareAlterViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B7F1DCAEB5500FB7AC8 /* HRShareAlterViewVC.m */; };
+		6BEE8B851DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEE8B801DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib */; };
+		6BEE8B861DCAEB5500FB7AC8 /* HRThirdAlterViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B821DCAEB5500FB7AC8 /* HRThirdAlterViewVC.m */; };
+		6BEE8B871DCAEB5500FB7AC8 /* HRThirdAlterViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEE8B831DCAEB5500FB7AC8 /* HRThirdAlterViewVC.xib */; };
 		6BF3A10A1D9913EA00583D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A1091D9913EA00583D4D /* main.m */; };
 		6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10C1D9913EA00583D4D /* AppDelegate.m */; };
 		6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3A10F1D9913EA00583D4D /* ViewController.m */; };
@@ -84,8 +84,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B110B741DC715780002BD2D /* HRSinaApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRSinaApiManager.h; sourceTree = "<group>"; };
-		6B110B751DC715780002BD2D /* HRSinaApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRSinaApiManager.m; sourceTree = "<group>"; };
 		6B11154A1DC46D7000B43EAD /* HRDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRDBTool.h; sourceTree = "<group>"; };
 		6B11154B1DC46D7000B43EAD /* HRDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDBTool.m; sourceTree = "<group>"; };
 		6B1219651DC3236100CE9CBB /* UIView+hr_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+hr_Extension.h"; sourceTree = "<group>"; };
@@ -116,10 +114,6 @@
 		6B1D60841DC6D99F002C2EEB /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		6B1D60881DC6DA19002C2EEB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		6B1D608D1DC6DA49002C2EEB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		6B1D60951DC6E972002C2EEB /* HRQQApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRQQApiManager.h; sourceTree = "<group>"; };
-		6B1D60961DC6E972002C2EEB /* HRQQApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRQQApiManager.m; sourceTree = "<group>"; };
-		6B1D60981DC6EA7B002C2EEB /* HRWChatApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWChatApiManager.h; sourceTree = "<group>"; };
-		6B1D60991DC6EA7B002C2EEB /* HRWChatApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWChatApiManager.m; sourceTree = "<group>"; };
 		6B36A5B31DC9919300DB09C1 /* NSString+hr_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+hr_Extension.h"; sourceTree = "<group>"; };
 		6B36A5B41DC9919300DB09C1 /* NSString+hr_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+hr_Extension.m"; sourceTree = "<group>"; };
 		6B497E9F1DC2357A00EC74E1 /* LDGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGridView.h; sourceTree = "<group>"; };
@@ -159,12 +153,18 @@
 		6BBE59B01DC09923000511DC /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		6BBE59B11DC09923000511DC /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		6BBE59B31DC0998B000511DC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
-		6BE53F9E1DC5B83B007FDD5F /* HRThirdAlterViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRThirdAlterViewVC.h; path = ../View/HRThirdAlterViewVC.h; sourceTree = "<group>"; };
-		6BE53F9F1DC5B83B007FDD5F /* HRThirdAlterViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRThirdAlterViewVC.m; path = ../View/HRThirdAlterViewVC.m; sourceTree = "<group>"; };
-		6BE53FA01DC5B83B007FDD5F /* HRThirdAlterViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HRThirdAlterViewVC.xib; path = ../View/HRThirdAlterViewVC.xib; sourceTree = "<group>"; };
-		6BE53FA31DC5BAC1007FDD5F /* HRShareAlterViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRShareAlterViewVC.h; sourceTree = "<group>"; };
-		6BE53FA41DC5BAC1007FDD5F /* HRShareAlterViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRShareAlterViewVC.m; sourceTree = "<group>"; };
-		6BE53FA81DC5BCFF007FDD5F /* HRShareAlterViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRShareAlterViewVC.xib; sourceTree = "<group>"; };
+		6BEE8B751DCAEB0E00FB7AC8 /* HRQQApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRQQApiManager.h; sourceTree = "<group>"; };
+		6BEE8B761DCAEB0E00FB7AC8 /* HRQQApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRQQApiManager.m; sourceTree = "<group>"; };
+		6BEE8B771DCAEB0E00FB7AC8 /* HRSinaApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRSinaApiManager.h; sourceTree = "<group>"; };
+		6BEE8B781DCAEB0E00FB7AC8 /* HRSinaApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRSinaApiManager.m; sourceTree = "<group>"; };
+		6BEE8B791DCAEB0E00FB7AC8 /* HRWChatApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRWChatApiManager.h; sourceTree = "<group>"; };
+		6BEE8B7A1DCAEB0E00FB7AC8 /* HRWChatApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRWChatApiManager.m; sourceTree = "<group>"; };
+		6BEE8B7E1DCAEB5500FB7AC8 /* HRShareAlterViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRShareAlterViewVC.h; sourceTree = "<group>"; };
+		6BEE8B7F1DCAEB5500FB7AC8 /* HRShareAlterViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRShareAlterViewVC.m; sourceTree = "<group>"; };
+		6BEE8B801DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRShareAlterViewVC.xib; sourceTree = "<group>"; };
+		6BEE8B811DCAEB5500FB7AC8 /* HRThirdAlterViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRThirdAlterViewVC.h; sourceTree = "<group>"; };
+		6BEE8B821DCAEB5500FB7AC8 /* HRThirdAlterViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRThirdAlterViewVC.m; sourceTree = "<group>"; };
+		6BEE8B831DCAEB5500FB7AC8 /* HRThirdAlterViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRThirdAlterViewVC.xib; sourceTree = "<group>"; };
 		6BF3A1051D9913EA00583D4D /* NiceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF3A1091D9913EA00583D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BF3A10B1D9913EA00583D4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -295,32 +295,6 @@
 			path = WeChatSDK;
 			sourceTree = "<group>";
 		};
-		6B6E19F01DBEEB8500306D69 /* ThirdLogin */ = {
-			isa = PBXGroup;
-			children = (
-				6BE53F9E1DC5B83B007FDD5F /* HRThirdAlterViewVC.h */,
-				6BE53F9F1DC5B83B007FDD5F /* HRThirdAlterViewVC.m */,
-				6BE53FA01DC5B83B007FDD5F /* HRThirdAlterViewVC.xib */,
-				6B1D60951DC6E972002C2EEB /* HRQQApiManager.h */,
-				6B1D60961DC6E972002C2EEB /* HRQQApiManager.m */,
-				6B1D60981DC6EA7B002C2EEB /* HRWChatApiManager.h */,
-				6B1D60991DC6EA7B002C2EEB /* HRWChatApiManager.m */,
-				6B110B741DC715780002BD2D /* HRSinaApiManager.h */,
-				6B110B751DC715780002BD2D /* HRSinaApiManager.m */,
-			);
-			path = ThirdLogin;
-			sourceTree = "<group>";
-		};
-		6B6E19F41DBEFA6700306D69 /* Share */ = {
-			isa = PBXGroup;
-			children = (
-				6BE53FA31DC5BAC1007FDD5F /* HRShareAlterViewVC.h */,
-				6BE53FA41DC5BAC1007FDD5F /* HRShareAlterViewVC.m */,
-				6BE53FA81DC5BCFF007FDD5F /* HRShareAlterViewVC.xib */,
-			);
-			path = Share;
-			sourceTree = "<group>";
-		};
 		6BBE597B1DC0796C000511DC /* weibo */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +349,12 @@
 		6BBE599F1DC081D2000511DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BEE8B7E1DCAEB5500FB7AC8 /* HRShareAlterViewVC.h */,
+				6BEE8B7F1DCAEB5500FB7AC8 /* HRShareAlterViewVC.m */,
+				6BEE8B801DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib */,
+				6BEE8B811DCAEB5500FB7AC8 /* HRThirdAlterViewVC.h */,
+				6BEE8B821DCAEB5500FB7AC8 /* HRThirdAlterViewVC.m */,
+				6BEE8B831DCAEB5500FB7AC8 /* HRThirdAlterViewVC.xib */,
 				6B497E9F1DC2357A00EC74E1 /* LDGridView.h */,
 				6B497EA01DC2357A00EC74E1 /* LDGridView.m */,
 				6BBE59A01DC081D2000511DC /* HRButton.h */,
@@ -392,6 +372,19 @@
 				6BBE59B11DC09923000511DC /* RegexKitLite.m */,
 			);
 			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		6BEE8B741DCAEB0E00FB7AC8 /* ThirdHandle */ = {
+			isa = PBXGroup;
+			children = (
+				6BEE8B751DCAEB0E00FB7AC8 /* HRQQApiManager.h */,
+				6BEE8B761DCAEB0E00FB7AC8 /* HRQQApiManager.m */,
+				6BEE8B771DCAEB0E00FB7AC8 /* HRSinaApiManager.h */,
+				6BEE8B781DCAEB0E00FB7AC8 /* HRSinaApiManager.m */,
+				6BEE8B791DCAEB0E00FB7AC8 /* HRWChatApiManager.h */,
+				6BEE8B7A1DCAEB0E00FB7AC8 /* HRWChatApiManager.m */,
+			);
+			path = ThirdHandle;
 			sourceTree = "<group>";
 		};
 		6BF3A0FC1D9913EA00583D4D = {
@@ -466,10 +459,9 @@
 		6BF3A1341D99141B00583D4D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6BEE8B741DCAEB0E00FB7AC8 /* ThirdHandle */,
 				6B1219611DC3231D00CE9CBB /* Category */,
 				6BBE599F1DC081D2000511DC /* View */,
-				6B6E19F41DBEFA6700306D69 /* Share */,
-				6B6E19F01DBEEB8500306D69 /* ThirdLogin */,
 				6B178DF21D9A045500257D97 /* Base */,
 				6BF3A13B1D99141B00583D4D /* HTTP */,
 				6BF3A1351D99141B00583D4D /* HRConst.h */,
@@ -588,7 +580,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE53FA91DC5BCFF007FDD5F /* HRShareAlterViewVC.xib in Resources */,
+				6BEE8B851DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib in Resources */,
 				6B178E0E1D9A045500257D97 /* bg_backBarButton_normal.png in Resources */,
 				6BF3A1181D9913EA00583D4D /* LaunchScreen.storyboard in Resources */,
 				6BBE598F1DC0796C000511DC /* weibo_5.json in Resources */,
@@ -600,8 +592,8 @@
 				6BBE598E1DC0796C000511DC /* weibo_4.json in Resources */,
 				6B178E0C1D9A045500257D97 /* bg_backBarButton_hight.png in Resources */,
 				6BBE598A1DC0796C000511DC /* weibo_0.json in Resources */,
-				6BE53FA21DC5B83B007FDD5F /* HRThirdAlterViewVC.xib in Resources */,
 				6BF3A1151D9913EA00583D4D /* Assets.xcassets in Resources */,
+				6BEE8B871DCAEB5500FB7AC8 /* HRThirdAlterViewVC.xib in Resources */,
 				6B1D60861DC6D99F002C2EEB /* README.txt in Resources */,
 				6BF3A1651D99141B00583D4D /* LeftVC.xib in Resources */,
 				6BBE598B1DC0796C000511DC /* weibo_1.json in Resources */,
@@ -671,12 +663,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BEE8B841DCAEB5500FB7AC8 /* HRShareAlterViewVC.m in Sources */,
 				6BF3A1621D99141B00583D4D /* Item3.m in Sources */,
 				6B178E091D9A045500257D97 /* HRSideMenuVC.m in Sources */,
-				6BE53FA11DC5B83B007FDD5F /* HRThirdAlterViewVC.m in Sources */,
 				6BBE59A91DC089D8000511DC /* WBCell.m in Sources */,
 				6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */,
-				6B110B761DC715780002BD2D /* HRSinaApiManager.m in Sources */,
+				6BEE8B7C1DCAEB0E00FB7AC8 /* HRSinaApiManager.m in Sources */,
 				6BBE59A51DC08548000511DC /* WBModel.m in Sources */,
 				6BF3A1641D99141B00583D4D /* LeftVC.m in Sources */,
 				6BBE59A21DC081D2000511DC /* HRButton.m in Sources */,
@@ -689,7 +681,6 @@
 				6BF3A1601D99141B00583D4D /* Item1.m in Sources */,
 				6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */,
 				6B1219671DC3236100CE9CBB /* UIView+hr_Extension.m in Sources */,
-				6B1D609A1DC6EA7B002C2EEB /* HRWChatApiManager.m in Sources */,
 				6B178E0B1D9A045500257D97 /* KKNavigationController.m in Sources */,
 				6B178E081D9A045500257D97 /* HRRootNC.m in Sources */,
 				6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */,
@@ -697,7 +688,6 @@
 				6BF3A1611D99141B00583D4D /* Item2.m in Sources */,
 				6B178E0A1D9A045500257D97 /* HRTabVC.m in Sources */,
 				6BF3A15F1D99141B00583D4D /* HRHTTPTool.m in Sources */,
-				6BE53FA61DC5BAC1007FDD5F /* HRShareAlterViewVC.m in Sources */,
 				6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */,
 				6BF3A15D1D99141B00583D4D /* HRHTTPManager.m in Sources */,
 				6BF3A1661D99141B00583D4D /* PushedVC.m in Sources */,
@@ -705,9 +695,11 @@
 				6B36A5B51DC9919300DB09C1 /* NSString+hr_Extension.m in Sources */,
 				6BF3A16A1D99153600583D4D /* VIPCenterModel.m in Sources */,
 				6BF3A15B1D99141B00583D4D /* HRFunctionTool.m in Sources */,
-				6B1D60971DC6E972002C2EEB /* HRQQApiManager.m in Sources */,
+				6BEE8B7B1DCAEB0E00FB7AC8 /* HRQQApiManager.m in Sources */,
+				6BEE8B7D1DCAEB0E00FB7AC8 /* HRWChatApiManager.m in Sources */,
 				6BF3A15E1D99141B00583D4D /* HRHTTPModel.m in Sources */,
 				6BF3A15C1D99141B00583D4D /* HRObject.m in Sources */,
+				6BEE8B861DCAEB5500FB7AC8 /* HRThirdAlterViewVC.m in Sources */,
 				6BF3A15A1D99141B00583D4D /* HRConst.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

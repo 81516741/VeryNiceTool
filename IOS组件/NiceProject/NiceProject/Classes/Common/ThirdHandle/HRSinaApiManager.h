@@ -14,17 +14,14 @@
 #define kSinaAppScheme          @"wb3299513026"
 #define kSinaAppRedirectURI     @"http://gd.10086.cn/"
 
+
 @interface HRSinaApiManager : NSObject<WeiboSDKDelegate>
 +(instancetype)share;
-/**
- * 登录
- */
--(void)sinaLogin:(void (^)())success failure:(void (^)())failure; //这个登录有问题，官方的demo也一样
 
 /**
- * 分享
+ * 描述加图片分享
  */
--(void)sinaShare:(void (^)())success failure:(void (^)())failure;
++(void)sinaShareText:(NSString *)text image:(UIImage *)image success:(void(^)())success failure:(void(^)(NSString * message))failure;
 
 //分享完后，保存的几个参数
 @property (nonatomic,strong) NSString * wbtoken;

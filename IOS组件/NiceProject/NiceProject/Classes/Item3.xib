@@ -8,6 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Item3">
             <connections>
+                <outlet property="centerCons" destination="THu-bQ-UPN" id="PAB-h8-0IW"/>
                 <outlet property="tableview" destination="WMM-gt-AmQ" id="FRT-e6-Eap"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,11 +31,20 @@
                         <outlet property="delegate" destination="-1" id="Fs1-Hw-NQW"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wi-yJ-LOw">
+                    <color key="backgroundColor" red="0.062745098040000002" green="0.58823529409999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="3tW-9V-mvz"/>
+                        <constraint firstAttribute="height" constant="80" id="imi-BW-bk5"/>
+                    </constraints>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.47058823529999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WMM-gt-AmQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="4Vd-ZP-JlG"/>
+                <constraint firstItem="7Wi-yJ-LOw" firstAttribute="centerY" secondItem="WMM-gt-AmQ" secondAttribute="centerY" id="7wH-1w-iP3"/>
                 <constraint firstItem="WMM-gt-AmQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GtH-YL-iWL"/>
+                <constraint firstItem="7Wi-yJ-LOw" firstAttribute="centerX" secondItem="WMM-gt-AmQ" secondAttribute="centerX" id="THu-bQ-UPN"/>
                 <constraint firstItem="8Hu-Ey-0Gk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Us1-aA-Ifg"/>
                 <constraint firstAttribute="bottom" secondItem="WMM-gt-AmQ" secondAttribute="bottom" constant="49" id="Yey-Su-bDb"/>
                 <constraint firstItem="8Hu-Ey-0Gk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rya-4j-efN"/>

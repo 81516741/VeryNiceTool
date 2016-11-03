@@ -55,31 +55,14 @@
                                 <action selector="wchatLogin:" destination="-1" eventType="touchUpInside" id="KBT-tr-9Qy"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uq2-j4-NCv">
-                            <constraints>
-                                <constraint firstAttribute="height" constant="80" id="LR5-au-InU"/>
-                                <constraint firstAttribute="width" constant="60" id="SBy-0o-zj8"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <inset key="titleEdgeInsets" minX="-90" minY="70" maxX="0.0" maxY="0.0"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="15"/>
-                            <state key="normal" title="微博登录" image="Exclusive_sina">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="sinaLogin:" destination="-1" eventType="touchUpInside" id="LjH-Of-Lgq"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="uq2-j4-NCv" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="3Fv-0P-kmk"/>
-                        <constraint firstItem="EPU-Gd-hZA" firstAttribute="leading" secondItem="eWi-7o-0T9" secondAttribute="leading" constant="10" id="PnN-5l-GfL"/>
                         <constraint firstItem="EPU-Gd-hZA" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="Vsy-iw-hcz"/>
-                        <constraint firstAttribute="trailing" secondItem="uq2-j4-NCv" secondAttribute="trailing" constant="10" id="Z9j-02-Ww1"/>
                         <constraint firstItem="fFI-2m-ma1" firstAttribute="centerY" secondItem="eWi-7o-0T9" secondAttribute="centerY" id="hCe-il-NKG"/>
                         <constraint firstAttribute="height" constant="200" id="hIJ-fr-t5m"/>
-                        <constraint firstItem="fFI-2m-ma1" firstAttribute="centerX" secondItem="eWi-7o-0T9" secondAttribute="centerX" id="kIY-2N-8C3"/>
+                        <constraint firstItem="fFI-2m-ma1" firstAttribute="centerX" secondItem="eWi-7o-0T9" secondAttribute="centerX" constant="60" id="kIY-2N-8C3"/>
+                        <constraint firstItem="EPU-Gd-hZA" firstAttribute="centerX" secondItem="eWi-7o-0T9" secondAttribute="centerX" constant="-60" id="vTU-4N-oFk"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -103,7 +86,6 @@
     </objects>
     <resources>
         <image name="Exclusive_QQ" width="90" height="90"/>
-        <image name="Exclusive_sina" width="90" height="90"/>
         <image name="Exclusive_wechat" width="90" height="90"/>
     </resources>
 </document>

@@ -116,6 +116,11 @@
 #pragma mark - QQ分享
 +(void)QQShare:(QQShareType)tencent title:(NSString *)title des:(NSString *)des image:(id)image url:(NSString *)url success:(void(^)())success failure:(void(^)(NSString * message))failure
 {
+    if (![QQApiInterface isQQInstalled]) {
+        failure(@"请安装QQ客户端");
+        return;
+    }
+    
     HRQQApiManager * manager = [HRQQApiManager share];
     manager.QQShareSuccess = success;
     manager.QQShareFailure = failure;

@@ -100,8 +100,10 @@
 - (IBAction)sinaShare:(UIButton *)sender
 {
     __weak typeof(self) selfWeak = self;
-    [[HRSinaApiManager share] sinaShare:^{
-    } failure:^{
+    [HRSinaApiManager sinaShareText:@"就是这个达www.baidu.com" image:[UIImage imageNamed:@"ta"] success:^{
+        
+    } failure:^(NSString *message) {
+        
     }];
     [selfWeak dismissViewControllerAnimated:false completion:nil];
     

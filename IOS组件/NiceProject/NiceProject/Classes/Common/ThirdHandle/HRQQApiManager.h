@@ -12,9 +12,9 @@
 #import <TencentOpenAPI/TencentApiInterface.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
-
 #define kQQAppID         @"100809973"
 #define kQQAppScheme    @"tencent100809973"
+
 
 typedef NS_ENUM(NSInteger,QQLoginFailure){
     QQLoginFailureCancel,

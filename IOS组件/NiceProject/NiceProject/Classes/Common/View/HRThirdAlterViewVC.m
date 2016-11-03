@@ -74,16 +74,6 @@
 }
 
 
-- (IBAction)sinaLogin:(UIButton *)sender
-{
-    __weak typeof(self) selfWeak = self;
-    [[HRSinaApiManager share] sinaLogin:^{
-    } failure:^{
-    }];
-    [selfWeak dismissViewControllerAnimated:false completion:nil];
-
-}
-
 -(void)dealloc
 {
     HRLog(@"第三方登录显示vc被消灭了");
