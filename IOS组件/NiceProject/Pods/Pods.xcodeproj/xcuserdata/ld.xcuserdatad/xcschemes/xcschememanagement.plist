@@ -9,7 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MWPhotoBrowser-MWPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MWPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,27 +62,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>028A175F7156B6BFD8079A2C010A98D8</key>
+		<key>3D35AB904CE76DFE7714455075C08AFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17A8C4F98522B23B134AD0DF4021CDAA</key>
+		<key>5813251FEA21E4AEE97385709F1912DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>36B4315B871382547CF4ED146E2C4220</key>
+		<key>7AEF094C009C56D7158D62D7E36A72A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7309513808F6B980E2326377551380A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8479A8C431F4447B0BB290D96BE9DFD1</key>
+		<key>8A9BA83A7F4C2D6AEEA5D7225622B266</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +87,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9775596B3CA16905FC8F66DA8E2A3C67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9F12FB4A63E20F601CFB2E64A65B57C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE3B07ED7FF04F506B0C5E00F4973589</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0BE759A3DD41EB97790D32AE24A878A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E2FE87384A67337831E53490EEA8BF11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

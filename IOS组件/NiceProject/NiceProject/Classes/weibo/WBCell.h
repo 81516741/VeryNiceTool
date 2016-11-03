@@ -15,6 +15,9 @@
 
 @property (nonatomic,strong) WBStatus * status;
 
+@property (nonatomic,copy) void(^pictureClick)(NSArray<NSURL *> * picture,NSInteger selectedIndex);
+@property (nonatomic,copy) void(^worldsClick)(NSString * worlds);
+
 @end
 
 /**
@@ -22,12 +25,16 @@
  */
 @interface WBContentView : UIView
 @property (nonatomic,strong) WBStatus * status;
+
+@property (nonatomic,copy) void(^pictureClick)(NSArray<NSURL *> * picture,NSInteger selectedIndex);
+@property (nonatomic,copy) void(^worldsClick)(NSString * worlds);
 @end
 
 /**
  * 显示图片的容器
  */
 @interface WBImageContainerView : UIView
+@property (nonatomic,copy) void(^pictureClick)(NSArray<NSURL *> * picture,NSInteger selectedIndex);
 @property (nonatomic,strong) WBStatus * status;
 @property (assign ,nonatomic) CGFloat contentHeight;
 @end

@@ -34,13 +34,16 @@
 {
     _status = status;
     //自己的微博内容
+    self.myContentView.worldsClick = self.worldsClick;
+    self.myContentView.pictureClick = self.pictureClick;
     self.myContentView.status = status;
-    
     //转发的微博内容
     if (status.retweetedStatus == nil) {
         self.retweetContentView.hidden = true;
         return;
     }
+    self.retweetContentView.worldsClick = self.worldsClick;
+    self.retweetContentView.pictureClick = self.pictureClick;
     self.retweetContentView.hidden = false;
     self.retweetContentView.status = status.retweetedStatus;
     self.retweetContentView.y = self.myContentView.height;
@@ -82,6 +85,7 @@
 -(void)setStatus:(WBStatus *)status
 {
     _status = status;
+    __weak typeof(self) selfWeak = self;
     self.frame = CGRectMake(0, 0, kScreenWidth, status.textHeight + status.imageContainerHeight);
     //文字内容
     self.contentLable.highlightTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
@@ -89,12 +93,16 @@
         //这里的info是在模型里面设置特殊文字颜色的时候加进去的
         NSDictionary *info = highlight.userInfo;
         WBRegexDataModel  * model = info[@"model"];
+        if (selfWeak.worldsClick) {
+            selfWeak.worldsClick(model.content);
+        }
         HRLog(@"%@",model.content);
     };
     self.contentLable.textLayout = status.textLayout;
     self.contentLable.frame = CGRectMake(kContentXOffsetX, 0, kContentWidth, status.textHeight);
     
     //图片内容
+    self.imageContainerView.pictureClick = self.pictureClick;
     self.imageContainerView.status = status;
     self.imageContainerView.frame = CGRectMake(kContentXOffsetX, status.textHeight, kContentWidth, status.imageContainerHeight);
 }
@@ -145,11 +153,18 @@
     }
     NSInteger col = status.imageContainerCol(pics.count);
     self.frame = CGRectMake(kContentXOffsetX, 0, kContentWidth, 0);
+    __weak typeof(self) selfWeak = self;
     _gridView = [LDGridView configSubItemsIn:self count:pics.count col:col itemH:0 margin:kImageViewMargin startY:0 fetchItemAtIndex:^UIView *(NSInteger index) {
         WBPicture * picture = status.pics[index];
         UIImageView * imageView = [UIImageView hr_imageView:picture.large.url placeHolder:[UIImage imageNamed:@"ic_placeholder"] modes:@[NSRunLoopCommonModes]];
         [imageView clickHandler:^(UIView *view) {
-            HRLog(@"%@",picture);
+            NSMutableArray * picURLs = @[].mutableCopy;
+            for (WBPicture * picture in status.pics) {
+                [picURLs addObject:picture.large.url];
+            }
+            if (selfWeak.pictureClick) {
+                selfWeak.pictureClick(picURLs,index);
+            }
         }];
         return imageView;
     }];
