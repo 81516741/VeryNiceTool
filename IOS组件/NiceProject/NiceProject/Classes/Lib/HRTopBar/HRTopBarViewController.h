@@ -10,7 +10,7 @@
 
 @interface HRTopBarViewController : UIViewController
 
-+(instancetype)instanceWithControllers:(NSArray<UIViewController *> *)viewControllers titles:(NSArray<NSString *> *)titles;
+-(instancetype)initWithControllers:(NSArray<UIViewController *> *)viewControllers titles:(NSArray<NSString *> *)titles;
 /**
  * topbar是否是在导航条上
  */
@@ -44,6 +44,11 @@
  * 文字选中的颜色  默认淡蓝色
  */
 @property (nonatomic,strong) UIColor * titleSelectedColor;
+/**
+ * 文字的字体大小  默认16
+ */
+@property (assign ,nonatomic) NSInteger titleFontSize;
+
 /**
  * 默认4
  * 目前只支持 (maxCount >= 子控制器的数目) 的情况

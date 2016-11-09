@@ -102,7 +102,7 @@
 
 -(void)topBar
 {
-    HRTopBarViewController * vc = [HRTopBarViewController instanceWithControllers:@[[Item1 new],[Item1 new],[Item1 new],[Item1 new]] titles:@[@"项目一",@"项目二",@"项目三",@"项目四"]];
+    HRTopBarViewController * vc = [[HRTopBarViewController alloc ]initWithControllers:@[[Item1 new],[Item1 new],[Item1 new],[Item1 new]] titles:@[@"项目一",@"项目二",@"项目三",@"项目四"]];
     vc.topOffsetY = 64;
     vc.isNaviTopBar = YES;
     [HRFunctionTool pushViewController:vc animated:true];

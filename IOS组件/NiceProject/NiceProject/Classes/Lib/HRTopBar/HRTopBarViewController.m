@@ -33,36 +33,32 @@
 
 @implementation HRTopBarViewController
 
-+(instancetype)instanceWithControllers:(NSArray<UIViewController *> *)viewControllers titles:(NSArray<NSString *> *)titles
+-(instancetype)initWithControllers:(NSArray<UIViewController *> *)viewControllers titles:(NSArray<NSString *> *)titles
 {
-    HRTopBarViewController * vc = [[HRTopBarViewController alloc]init];
-    vc.viewControllers = viewControllers;
-    vc.titles = titles;
     NSAssert((viewControllers != nil) && (titles != nil), @"控制器 或 titles 为nil");
     NSAssert(titles.count == viewControllers.count, @"控制器和titles的数量必须一致");
-    return vc;
-}
-
-#pragma life cricle
-
--(instancetype)init
-{
+    
     self = [super init];
     if (self) {
+        self.viewControllers = viewControllers;
+        self.titles = titles;
         self.automaticallyAdjustsScrollViewInsets = false;
         _preIndex = 0;
         _maxCount = 4;
         _canScroll = YES;
         _canBounce = YES;
-        _topScrollerViewHeight = 42;
+        _topScrollerViewHeight = 44;
         _topScrollerViewColor = [UIColor whiteColor];
-        _topLineHeight = 2;
+        _topLineHeight = 2.5;
+        _titleFontSize = 16;
         _topLineColor = [UIColor colorWithRed:4/255. green:182/255. blue:236/255. alpha:1];
         _titleSelectedColor = [UIColor colorWithRed:4/255.0 green:182/255. blue:236/255. alpha:1];
         _titleNormalColor = [UIColor lightGrayColor];
     }
     return self;
 }
+
+#pragma life cricle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
