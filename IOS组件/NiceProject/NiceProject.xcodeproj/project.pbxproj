@@ -35,6 +35,7 @@
 		6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */; };
 		6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */; };
 		6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40EA1DBE08010017B00A /* libc++.tbd */; };
+		6BA5ECC01DD2C2600076585F /* HRTopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5ECBF1DD2C2600076585F /* HRTopBarViewController.m */; };
 		6BBE598A1DC0796C000511DC /* weibo_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597D1DC0796C000511DC /* weibo_0.json */; };
 		6BBE598B1DC0796C000511DC /* weibo_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597E1DC0796C000511DC /* weibo_1.json */; };
 		6BBE598C1DC0796C000511DC /* weibo_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597F1DC0796C000511DC /* weibo_2.json */; };
@@ -132,6 +133,8 @@
 		6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6B5F40D91DBDEE440017B00A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B5F40EA1DBE08010017B00A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6BA5ECBE1DD2C2600076585F /* HRTopBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTopBarViewController.h; sourceTree = "<group>"; };
+		6BA5ECBF1DD2C2600076585F /* HRTopBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTopBarViewController.m; sourceTree = "<group>"; };
 		6BBE597D1DC0796C000511DC /* weibo_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_0.json; sourceTree = "<group>"; };
 		6BBE597E1DC0796C000511DC /* weibo_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_1.json; sourceTree = "<group>"; };
 		6BBE597F1DC0796C000511DC /* weibo_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_2.json; sourceTree = "<group>"; };
@@ -295,6 +298,15 @@
 			path = WeChatSDK;
 			sourceTree = "<group>";
 		};
+		6BA5ECBD1DD2C2580076585F /* HRTopBar */ = {
+			isa = PBXGroup;
+			children = (
+				6BA5ECBE1DD2C2600076585F /* HRTopBarViewController.h */,
+				6BA5ECBF1DD2C2600076585F /* HRTopBarViewController.m */,
+			);
+			path = HRTopBar;
+			sourceTree = "<group>";
+		};
 		6BBE597B1DC0796C000511DC /* weibo */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +342,7 @@
 		6BBE59951DC07A61000511DC /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				6BA5ECBD1DD2C2580076585F /* HRTopBar */,
 				6B1D607F1DC6D99F002C2EEB /* WeChatSDK */,
 				6BBE59AF1DC09923000511DC /* RegexKitLite */,
 				6BBE59971DC07A61000511DC /* TencentOpenApi */,
@@ -691,6 +704,7 @@
 				6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */,
 				6BF3A15D1D99141B00583D4D /* HRHTTPManager.m in Sources */,
 				6BF3A1661D99141B00583D4D /* PushedVC.m in Sources */,
+				6BA5ECC01DD2C2600076585F /* HRTopBarViewController.m in Sources */,
 				6B178E071D9A045500257D97 /* HRItemNC.m in Sources */,
 				6B36A5B51DC9919300DB09C1 /* NSString+hr_Extension.m in Sources */,
 				6BF3A16A1D99153600583D4D /* VIPCenterModel.m in Sources */,

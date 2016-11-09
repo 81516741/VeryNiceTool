@@ -12,12 +12,13 @@
 #import "UIView+hr_Extension.h"
 #import "HRThirdAlterViewVC.h"
 #import "HRShareAlterViewVC.h"
-
+#import "HRTopBarViewController.h"
 
 #define kTableViewCellReuseID @"kTableViewCellReuseID"
 
 #define kThirdLogin  @"thirdLogin"
 #define kShare       @"share"
+#define kTopBar      @"topBar"
 
 @interface Item1 ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *titles;
@@ -47,6 +48,7 @@
     [self addCellTitle:@"图文混排"  string:@"WeiBoVC"];
     [self addCellTitle:@"第三方登录" string:kThirdLogin];
     [self addCellTitle:@"分享" string:kShare];
+    [self addCellTitle:@"topBar示例" string:kTopBar];
     
 }
 //示范一个网络请求
@@ -96,6 +98,14 @@
 -(void)share
 {
     [HRShareAlterViewVC show];
+}
+
+-(void)topBar
+{
+    HRTopBarViewController * vc = [HRTopBarViewController instanceWithControllers:@[[Item1 new],[Item1 new],[Item1 new],[Item1 new]] titles:@[@"项目一",@"项目二",@"项目三",@"项目四"]];
+    vc.topOffsetY = 64;
+    vc.isNaviTopBar = YES;
+    [HRFunctionTool pushViewController:vc animated:true];
 }
 
 -(void)addCellTitle:(NSString *)title string:(NSString *)className

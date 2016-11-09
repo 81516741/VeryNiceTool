@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "WXApi.h"
 
-#define kWChatAppID     @"wxbcd4101ffb8bee27"
+#define kWChatAppID     @"wx47b14a8c3a0c1c26"
 
 typedef NS_ENUM(NSInteger,WChatShareType){
     WChatShareTypeFriend,

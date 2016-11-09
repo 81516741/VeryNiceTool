@@ -52,8 +52,9 @@
     WXMediaMessage *message = [WXMediaMessage message];
     message.title = title;
     message.description = des;
-    WXWebpageObject *imageObj = [WXWebpageObject object];
     [message setThumbImage:image];
+    
+    WXWebpageObject *imageObj = [WXWebpageObject object];
     imageObj.webpageUrl = url;
     message.mediaObject = imageObj;
     

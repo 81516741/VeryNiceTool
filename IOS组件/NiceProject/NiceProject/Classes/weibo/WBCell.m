@@ -157,6 +157,9 @@
     _gridView = [LDGridView configSubItemsIn:self count:pics.count col:col itemH:0 margin:kImageViewMargin startY:0 fetchItemAtIndex:^UIView *(NSInteger index) {
         WBPicture * picture = status.pics[index];
         UIImageView * imageView = [UIImageView hr_imageView:picture.large.url placeHolder:[UIImage imageNamed:@"ic_placeholder"] modes:@[NSRunLoopCommonModes]];
+        imageView.backgroundColor = [UIColor whiteColor];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.clipsToBounds = YES;
         [imageView clickHandler:^(UIView *view) {
             NSMutableArray * picURLs = @[].mutableCopy;
             for (WBPicture * picture in status.pics) {

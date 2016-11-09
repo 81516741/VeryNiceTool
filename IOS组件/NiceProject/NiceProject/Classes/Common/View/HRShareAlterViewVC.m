@@ -88,7 +88,7 @@
 
 - (IBAction)wchatCircleShare:(UIButton *)sender
 {
-    [HRWChatApiManager WChatShare:WChatShareTypeCircle title:@"😘蓉" des:@"这是一个感人肺腑的乡村爱情故事😉" image:[UIImage imageNamed:@"ta"] url:@"www.baidu.com" success:^{
+    [HRWChatApiManager WChatShare:WChatShareTypeCircle title:@"😘蓉\n" des:@"这是一个感人肺腑的乡村爱情故事😉" image:[UIImage imageNamed:@"ta"] url:@"www.baidu.com" success:^{
         
     } failure:^(NSString *message) {
         
