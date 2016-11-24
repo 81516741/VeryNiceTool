@@ -35,7 +35,6 @@
 		6B5E40531DC1B49A006E57D3 /* WeiBoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40521DC1B49A006E57D3 /* WeiBoVC.m */; };
 		6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */; };
 		6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40EA1DBE08010017B00A /* libc++.tbd */; };
-		6BA5ECC01DD2C2600076585F /* HRTopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5ECBF1DD2C2600076585F /* HRTopBarViewController.m */; };
 		6BBE598A1DC0796C000511DC /* weibo_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597D1DC0796C000511DC /* weibo_0.json */; };
 		6BBE598B1DC0796C000511DC /* weibo_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597E1DC0796C000511DC /* weibo_1.json */; };
 		6BBE598C1DC0796C000511DC /* weibo_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE597F1DC0796C000511DC /* weibo_2.json */; };
@@ -52,6 +51,7 @@
 		6BBE59A91DC089D8000511DC /* WBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A71DC089D8000511DC /* WBCell.m */; };
 		6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59B11DC09923000511DC /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6BBE59B41DC0998B000511DC /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE59B31DC0998B000511DC /* libicucore.tbd */; };
+		6BC6771B1DE6E4E1006C80A6 /* HRTopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC6771A1DE6E4E1006C80A6 /* HRTopBarViewController.m */; };
 		6BEE8B7B1DCAEB0E00FB7AC8 /* HRQQApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B761DCAEB0E00FB7AC8 /* HRQQApiManager.m */; };
 		6BEE8B7C1DCAEB0E00FB7AC8 /* HRSinaApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B781DCAEB0E00FB7AC8 /* HRSinaApiManager.m */; };
 		6BEE8B7D1DCAEB0E00FB7AC8 /* HRWChatApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEE8B7A1DCAEB0E00FB7AC8 /* HRWChatApiManager.m */; };
@@ -133,8 +133,6 @@
 		6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6B5F40D91DBDEE440017B00A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B5F40EA1DBE08010017B00A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		6BA5ECBE1DD2C2600076585F /* HRTopBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTopBarViewController.h; sourceTree = "<group>"; };
-		6BA5ECBF1DD2C2600076585F /* HRTopBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTopBarViewController.m; sourceTree = "<group>"; };
 		6BBE597D1DC0796C000511DC /* weibo_0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_0.json; sourceTree = "<group>"; };
 		6BBE597E1DC0796C000511DC /* weibo_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_1.json; sourceTree = "<group>"; };
 		6BBE597F1DC0796C000511DC /* weibo_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weibo_2.json; sourceTree = "<group>"; };
@@ -156,6 +154,8 @@
 		6BBE59B01DC09923000511DC /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		6BBE59B11DC09923000511DC /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		6BBE59B31DC0998B000511DC /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		6BC677191DE6E4E1006C80A6 /* HRTopBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTopBarViewController.h; sourceTree = "<group>"; };
+		6BC6771A1DE6E4E1006C80A6 /* HRTopBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTopBarViewController.m; sourceTree = "<group>"; };
 		6BEE8B751DCAEB0E00FB7AC8 /* HRQQApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRQQApiManager.h; sourceTree = "<group>"; };
 		6BEE8B761DCAEB0E00FB7AC8 /* HRQQApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRQQApiManager.m; sourceTree = "<group>"; };
 		6BEE8B771DCAEB0E00FB7AC8 /* HRSinaApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRSinaApiManager.h; sourceTree = "<group>"; };
@@ -301,8 +301,8 @@
 		6BA5ECBD1DD2C2580076585F /* HRTopBar */ = {
 			isa = PBXGroup;
 			children = (
-				6BA5ECBE1DD2C2600076585F /* HRTopBarViewController.h */,
-				6BA5ECBF1DD2C2600076585F /* HRTopBarViewController.m */,
+				6BC677191DE6E4E1006C80A6 /* HRTopBarViewController.h */,
+				6BC6771A1DE6E4E1006C80A6 /* HRTopBarViewController.m */,
 			);
 			path = HRTopBar;
 			sourceTree = "<group>";
@@ -704,7 +704,7 @@
 				6BBE59B21DC09923000511DC /* RegexKitLite.m in Sources */,
 				6BF3A15D1D99141B00583D4D /* HRHTTPManager.m in Sources */,
 				6BF3A1661D99141B00583D4D /* PushedVC.m in Sources */,
-				6BA5ECC01DD2C2600076585F /* HRTopBarViewController.m in Sources */,
+				6BC6771B1DE6E4E1006C80A6 /* HRTopBarViewController.m in Sources */,
 				6B178E071D9A045500257D97 /* HRItemNC.m in Sources */,
 				6B36A5B51DC9919300DB09C1 /* NSString+hr_Extension.m in Sources */,
 				6BF3A16A1D99153600583D4D /* VIPCenterModel.m in Sources */,
