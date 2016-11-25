@@ -49,7 +49,9 @@
     [self addCellTitle:@"第三方登录" string:kThirdLogin];
     [self addCellTitle:@"分享" string:kShare];
     [self addCellTitle:@"topBar示例" string:kTopBar];
-    
+    [self addCellTitle:@"转场动画" string:@"HRTransitonVC"];
+    [self addCellTitle:@"流量杯" string:@"HRWeaveVC"];
+    [self addCellTitle:@"淘宝购物车动画" string:@"HRTaobaoShopVC"];
 }
 //示范一个网络请求
 -(void)netRequest
