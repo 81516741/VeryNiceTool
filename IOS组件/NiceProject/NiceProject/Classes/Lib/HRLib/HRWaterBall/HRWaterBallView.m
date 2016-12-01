@@ -95,7 +95,7 @@
     self.offset += self.speed;
     //第一个波纹
     CGMutablePathRef pathRef = CGPathCreateMutable();
-    CGFloat startOffY = waveHeight * sinf(self.offset * M_PI * 2 / self.bounds.size.width);
+    CGFloat startOffY = waveHeight * sinf(self.offset * M_PI * 2 / self.bounds.size.width) + self.yHeight;
     CGFloat orignOffY = 0.0;
     CGPathMoveToPoint(pathRef, NULL, 0, startOffY);
     for (CGFloat i = 0.f; i <= self.bounds.size.width; i++) {
@@ -115,7 +115,7 @@
     //第二个波纹
     if (!self.isShowSingleWave) {
         CGMutablePathRef pathRef1 = CGPathCreateMutable();
-        CGFloat startOffY1 = waveHeight * sinf(self.offset * M_PI * 2 / self.bounds.size.width);
+        CGFloat startOffY1 = waveHeight * sinf(self.offset * M_PI * 2 / self.bounds.size.width) + self.yHeight;;
         CGFloat orignOffY1 = 0.0;
         CGPathMoveToPoint(pathRef1, NULL, 0, startOffY1);
         for (CGFloat i = 0.f; i <= self.bounds.size.width; i++) {

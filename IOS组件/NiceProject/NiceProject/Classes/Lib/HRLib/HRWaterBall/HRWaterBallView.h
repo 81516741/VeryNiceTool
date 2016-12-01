@@ -39,4 +39,9 @@
  *  是否显示单层波浪，默认NO
  */
 @property (nonatomic,assign)BOOL isShowSingleWave;
+
+/**
+ * 停止动画
+ */
+- (void)stopWaveAnimation;
 @end

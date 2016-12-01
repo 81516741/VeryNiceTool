@@ -10,7 +10,7 @@
 #import "HRWaterBallView.h"
 
 @interface HRWeaveVC ()
-
+@property (nonatomic,strong) HRWaterBallView * waterBallView;
 @end
 
 @implementation HRWeaveVC
@@ -19,6 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     HRWaterBallView *progressView1 = [[HRWaterBallView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.waterBallView = progressView1;
     progressView1.center=CGPointMake(CGRectGetMidX(self.view.bounds), 270);
     progressView1.progress = 0.5;
     progressView1.waveHeight = 3;
@@ -28,5 +29,8 @@
     [self.view addSubview:progressView1];
 }
 
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.waterBallView stopWaveAnimation];
+}
 @end

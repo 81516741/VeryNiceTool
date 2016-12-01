@@ -16,10 +16,6 @@
 
 #define kTableViewCellReuseID @"kTableViewCellReuseID"
 
-#define kThirdLogin  @"thirdLogin"
-#define kShare       @"share"
-#define kTopBar      @"topBar"
-
 @interface Item1 ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray *titles;
 @property (nonatomic, strong) NSMutableArray *strings;
@@ -46,9 +42,9 @@
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellReuseID];
     //数据
     [self addCellTitle:@"图文混排"  string:@"WeiBoVC"];
-    [self addCellTitle:@"第三方登录" string:kThirdLogin];
-    [self addCellTitle:@"分享" string:kShare];
-    [self addCellTitle:@"topBar示例" string:kTopBar];
+    [self addCellTitle:@"第三方登录" string:@"thirdLogin"];
+    [self addCellTitle:@"分享" string:@"share"];
+    [self addCellTitle:@"topBar示例" string:@"topBar"];
     [self addCellTitle:@"转场动画" string:@"HRTransitonVC"];
     [self addCellTitle:@"流量杯" string:@"HRWeaveVC"];
     [self addCellTitle:@"淘宝购物车动画" string:@"HRTaobaoShopVC"];
