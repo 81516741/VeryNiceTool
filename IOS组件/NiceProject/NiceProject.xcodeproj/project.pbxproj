@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6B11154C1DC46D7000B43EAD /* HRDBTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B11154B1DC46D7000B43EAD /* HRDBTool.m */; };
 		6B1219671DC3236100CE9CBB /* UIView+hr_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1219661DC3236100CE9CBB /* UIView+hr_Extension.m */; };
+		6B14F01C1DF12CBE00CB80CB /* CubeRotateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B14F01A1DF12CBE00CB80CB /* CubeRotateVC.m */; };
+		6B14F01D1DF12CBE00CB80CB /* CubeRotateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B14F01B1DF12CBE00CB80CB /* CubeRotateVC.xib */; };
 		6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF41D9A045500257D97 /* HRBaseVC.m */; };
 		6B178E071D9A045500257D97 /* HRItemNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF61D9A045500257D97 /* HRItemNC.m */; };
 		6B178E081D9A045500257D97 /* HRRootNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B178DF81D9A045500257D97 /* HRRootNC.m */; };
@@ -96,6 +98,9 @@
 		6B11154B1DC46D7000B43EAD /* HRDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDBTool.m; sourceTree = "<group>"; };
 		6B1219651DC3236100CE9CBB /* UIView+hr_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+hr_Extension.h"; sourceTree = "<group>"; };
 		6B1219661DC3236100CE9CBB /* UIView+hr_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+hr_Extension.m"; sourceTree = "<group>"; };
+		6B14F0191DF12CBE00CB80CB /* CubeRotateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeRotateVC.h; sourceTree = "<group>"; };
+		6B14F01A1DF12CBE00CB80CB /* CubeRotateVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeRotateVC.m; sourceTree = "<group>"; };
+		6B14F01B1DF12CBE00CB80CB /* CubeRotateVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CubeRotateVC.xib; sourceTree = "<group>"; };
 		6B178DF31D9A045500257D97 /* HRBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBaseVC.h; sourceTree = "<group>"; };
 		6B178DF41D9A045500257D97 /* HRBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBaseVC.m; sourceTree = "<group>"; };
 		6B178DF51D9A045500257D97 /* HRItemNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRItemNC.h; sourceTree = "<group>"; };
@@ -380,6 +385,9 @@
 				6B4393921DE824AC00958E8B /* HRTaobaoShopVC.h */,
 				6B4393931DE824AC00958E8B /* HRTaobaoShopVC.m */,
 				6B4393941DE824AC00958E8B /* HRTaobaoShopVC.xib */,
+				6B14F0191DF12CBE00CB80CB /* CubeRotateVC.h */,
+				6B14F01A1DF12CBE00CB80CB /* CubeRotateVC.m */,
+				6B14F01B1DF12CBE00CB80CB /* CubeRotateVC.xib */,
 			);
 			name = "Animation(动画)";
 			path = Animation;
@@ -658,6 +666,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B14F01D1DF12CBE00CB80CB /* CubeRotateVC.xib in Resources */,
 				6B43930A1DE8160300958E8B /* weibo_5.json in Resources */,
 				6B4393081DE8160300958E8B /* weibo_3.json in Resources */,
 				6BEE8B851DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib in Resources */,
@@ -782,6 +791,7 @@
 				6B4393631DE81EB700958E8B /* HRWaterBallView.m in Sources */,
 				6B4392EA1DE8152300958E8B /* Item1.m in Sources */,
 				6B4393951DE824AC00958E8B /* HRTaobaoShopVC.m in Sources */,
+				6B14F01C1DF12CBE00CB80CB /* CubeRotateVC.m in Sources */,
 				6BEE8B7D1DCAEB0E00FB7AC8 /* HRWChatApiManager.m in Sources */,
 				6BF3A15E1D99141B00583D4D /* HRHTTPModel.m in Sources */,
 				6BF3A15C1D99141B00583D4D /* HRObject.m in Sources */,
