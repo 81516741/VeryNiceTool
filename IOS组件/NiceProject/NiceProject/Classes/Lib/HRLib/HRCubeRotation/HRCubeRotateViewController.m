@@ -12,7 +12,7 @@
 #define kStandAngle (M_PI * 2/self.cubeViewControllers.count)
 
 static CGFloat animationInterval = 0.04;//越小转动越快
-static CGFloat animationDuration = 5; //2次转动的间隔时间
+static CGFloat animationDuration = 1; //2次转动的间隔时间
 
 @interface HRCubeRotateViewController ()
 

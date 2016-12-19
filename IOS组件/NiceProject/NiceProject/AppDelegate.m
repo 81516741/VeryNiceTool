@@ -25,7 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    HRRootNC * rootNC1 = [HRRootNC rootNC:@[@"Item1",@"Item2",@"Item3"] centerVCTitles:@[@"Item1",@"Item2",@"Item3"] centerVCImagePres:@[@"first",@"second",@"third"] leftVCName:@"LeftVC"];
+    HRRootNC * rootNC1 = [HRRootNC rootNC:@[@"Item1",@"Item2",@"Item3"] centerVCTitles:@[@"首页",@"中间",@"最后"] centerVCImagePres:@[@"first",@"second",@"third"] leftVCName:@"LeftVC"];
     self.window.rootViewController = rootNC1;
     [self.window makeKeyAndVisible];
 
