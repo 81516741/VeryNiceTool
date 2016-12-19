@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Cube4">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-Tf-G6R"/>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk1-Cf-aIz"/>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.52549019610000003" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="q3D-Tf-G6R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H4r-hd-6bo"/>
+                <constraint firstAttribute="bottom" secondItem="q3D-Tf-G6R" secondAttribute="bottom" id="bGA-Bc-kfb"/>
+                <constraint firstItem="Fk1-Cf-aIz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kEC-Ej-VLE"/>
+                <constraint firstAttribute="trailing" secondItem="q3D-Tf-G6R" secondAttribute="trailing" id="lKr-8d-sk8"/>
+                <constraint firstItem="Fk1-Cf-aIz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yZv-hI-cDh"/>
+                <constraint firstItem="q3D-Tf-G6R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z5b-hV-e62"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="4" width="320" height="160"/>
+    </resources>
+</document>

@@ -62,6 +62,20 @@
 		6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B497EA01DC2357A00EC74E1 /* LDGridView.m */; };
 		6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */; };
 		6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40EA1DBE08010017B00A /* libc++.tbd */; };
+		6B9EDA051E07B11100DC6519 /* HRCubeRotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA041E07B11100DC6519 /* HRCubeRotateViewController.m */; };
+		6B9EDA091E07B46400DC6519 /* CubeRotateApplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA081E07B46400DC6519 /* CubeRotateApplyVC.m */; };
+		6B9EDA0D1E07B4C000DC6519 /* Cube0.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA0B1E07B4C000DC6519 /* Cube0.m */; };
+		6B9EDA0E1E07B4C000DC6519 /* Cube0.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9EDA0C1E07B4C000DC6519 /* Cube0.xib */; };
+		6B9EDA121E07B4CD00DC6519 /* Cube1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA101E07B4CD00DC6519 /* Cube1.m */; };
+		6B9EDA131E07B4CD00DC6519 /* Cube1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9EDA111E07B4CD00DC6519 /* Cube1.xib */; };
+		6B9EDA171E07B4DA00DC6519 /* Cube2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA151E07B4DA00DC6519 /* Cube2.m */; };
+		6B9EDA181E07B4DA00DC6519 /* Cube2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9EDA161E07B4DA00DC6519 /* Cube2.xib */; };
+		6B9EDA1C1E07B4E600DC6519 /* Cube3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA1A1E07B4E600DC6519 /* Cube3.m */; };
+		6B9EDA1D1E07B4E600DC6519 /* Cube3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9EDA1B1E07B4E600DC6519 /* Cube3.xib */; };
+		6B9EDA211E07B4F400DC6519 /* Cube4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA1F1E07B4F400DC6519 /* Cube4.m */; };
+		6B9EDA221E07B4F400DC6519 /* Cube4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9EDA201E07B4F400DC6519 /* Cube4.xib */; };
+		6B9EDA261E07B50000DC6519 /* Cube5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA241E07B50000DC6519 /* Cube5.m */; };
+		6B9EDA271E07B50000DC6519 /* Cube5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9EDA251E07B50000DC6519 /* Cube5.xib */; };
 		6BBE599A1DC07A62000511DC /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBE59981DC07A61000511DC /* TencentOpenAPI.framework */; };
 		6BBE599B1DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE59991DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle */; };
 		6BBE59A21DC081D2000511DC /* HRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE59A11DC081D2000511DC /* HRButton.m */; };
@@ -183,6 +197,28 @@
 		6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6B5F40D91DBDEE440017B00A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B5F40EA1DBE08010017B00A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6B9EDA031E07B11100DC6519 /* HRCubeRotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCubeRotateViewController.h; sourceTree = "<group>"; };
+		6B9EDA041E07B11100DC6519 /* HRCubeRotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCubeRotateViewController.m; sourceTree = "<group>"; };
+		6B9EDA071E07B46400DC6519 /* CubeRotateApplyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeRotateApplyVC.h; sourceTree = "<group>"; };
+		6B9EDA081E07B46400DC6519 /* CubeRotateApplyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeRotateApplyVC.m; sourceTree = "<group>"; };
+		6B9EDA0A1E07B4C000DC6519 /* Cube0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube0.h; sourceTree = "<group>"; };
+		6B9EDA0B1E07B4C000DC6519 /* Cube0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube0.m; sourceTree = "<group>"; };
+		6B9EDA0C1E07B4C000DC6519 /* Cube0.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube0.xib; sourceTree = "<group>"; };
+		6B9EDA0F1E07B4CD00DC6519 /* Cube1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube1.h; sourceTree = "<group>"; };
+		6B9EDA101E07B4CD00DC6519 /* Cube1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube1.m; sourceTree = "<group>"; };
+		6B9EDA111E07B4CD00DC6519 /* Cube1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube1.xib; sourceTree = "<group>"; };
+		6B9EDA141E07B4DA00DC6519 /* Cube2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube2.h; sourceTree = "<group>"; };
+		6B9EDA151E07B4DA00DC6519 /* Cube2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube2.m; sourceTree = "<group>"; };
+		6B9EDA161E07B4DA00DC6519 /* Cube2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube2.xib; sourceTree = "<group>"; };
+		6B9EDA191E07B4E600DC6519 /* Cube3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube3.h; sourceTree = "<group>"; };
+		6B9EDA1A1E07B4E600DC6519 /* Cube3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube3.m; sourceTree = "<group>"; };
+		6B9EDA1B1E07B4E600DC6519 /* Cube3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube3.xib; sourceTree = "<group>"; };
+		6B9EDA1E1E07B4F400DC6519 /* Cube4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube4.h; sourceTree = "<group>"; };
+		6B9EDA1F1E07B4F400DC6519 /* Cube4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube4.m; sourceTree = "<group>"; };
+		6B9EDA201E07B4F400DC6519 /* Cube4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube4.xib; sourceTree = "<group>"; };
+		6B9EDA231E07B50000DC6519 /* Cube5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube5.h; sourceTree = "<group>"; };
+		6B9EDA241E07B50000DC6519 /* Cube5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube5.m; sourceTree = "<group>"; };
+		6B9EDA251E07B50000DC6519 /* Cube5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube5.xib; sourceTree = "<group>"; };
 		6BBE59981DC07A61000511DC /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		6BBE59991DC07A62000511DC /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		6BBE59A01DC081D2000511DC /* HRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRButton.h; sourceTree = "<group>"; };
@@ -388,6 +424,7 @@
 				6B14F0191DF12CBE00CB80CB /* CubeRotateVC.h */,
 				6B14F01A1DF12CBE00CB80CB /* CubeRotateVC.m */,
 				6B14F01B1DF12CBE00CB80CB /* CubeRotateVC.xib */,
+				6B9EDA061E07B3E300DC6519 /* CubeRotateApply */,
 			);
 			name = "Animation(动画)";
 			path = Animation;
@@ -396,6 +433,7 @@
 		6B4393591DE81EB700958E8B /* HRLib */ = {
 			isa = PBXGroup;
 			children = (
+				6B9EDA021E07B11100DC6519 /* HRCubeRotation */,
 				6B43935A1DE81EB700958E8B /* HRTopBar */,
 				6B43935D1DE81EB700958E8B /* HRWaterBall */,
 			);
@@ -418,6 +456,43 @@
 				6B43935F1DE81EB700958E8B /* HRWaterBallView.m */,
 			);
 			path = HRWaterBall;
+			sourceTree = "<group>";
+		};
+		6B9EDA021E07B11100DC6519 /* HRCubeRotation */ = {
+			isa = PBXGroup;
+			children = (
+				6B9EDA031E07B11100DC6519 /* HRCubeRotateViewController.h */,
+				6B9EDA041E07B11100DC6519 /* HRCubeRotateViewController.m */,
+			);
+			path = HRCubeRotation;
+			sourceTree = "<group>";
+		};
+		6B9EDA061E07B3E300DC6519 /* CubeRotateApply */ = {
+			isa = PBXGroup;
+			children = (
+				6B9EDA071E07B46400DC6519 /* CubeRotateApplyVC.h */,
+				6B9EDA081E07B46400DC6519 /* CubeRotateApplyVC.m */,
+				6B9EDA0A1E07B4C000DC6519 /* Cube0.h */,
+				6B9EDA0B1E07B4C000DC6519 /* Cube0.m */,
+				6B9EDA0C1E07B4C000DC6519 /* Cube0.xib */,
+				6B9EDA0F1E07B4CD00DC6519 /* Cube1.h */,
+				6B9EDA101E07B4CD00DC6519 /* Cube1.m */,
+				6B9EDA111E07B4CD00DC6519 /* Cube1.xib */,
+				6B9EDA141E07B4DA00DC6519 /* Cube2.h */,
+				6B9EDA151E07B4DA00DC6519 /* Cube2.m */,
+				6B9EDA161E07B4DA00DC6519 /* Cube2.xib */,
+				6B9EDA191E07B4E600DC6519 /* Cube3.h */,
+				6B9EDA1A1E07B4E600DC6519 /* Cube3.m */,
+				6B9EDA1B1E07B4E600DC6519 /* Cube3.xib */,
+				6B9EDA1E1E07B4F400DC6519 /* Cube4.h */,
+				6B9EDA1F1E07B4F400DC6519 /* Cube4.m */,
+				6B9EDA201E07B4F400DC6519 /* Cube4.xib */,
+				6B9EDA231E07B50000DC6519 /* Cube5.h */,
+				6B9EDA241E07B50000DC6519 /* Cube5.m */,
+				6B9EDA251E07B50000DC6519 /* Cube5.xib */,
+			);
+			name = CubeRotateApply;
+			path = CubeRotate;
 			sourceTree = "<group>";
 		};
 		6BBE59951DC07A61000511DC /* Lib */ = {
@@ -667,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B14F01D1DF12CBE00CB80CB /* CubeRotateVC.xib in Resources */,
+				6B9EDA221E07B4F400DC6519 /* Cube4.xib in Resources */,
 				6B43930A1DE8160300958E8B /* weibo_5.json in Resources */,
 				6B4393081DE8160300958E8B /* weibo_3.json in Resources */,
 				6BEE8B851DCAEB5500FB7AC8 /* HRShareAlterViewVC.xib in Resources */,
@@ -676,14 +752,19 @@
 				6B4393091DE8160300958E8B /* weibo_4.json in Resources */,
 				6BF3A1181D9913EA00583D4D /* LaunchScreen.storyboard in Resources */,
 				6B4393051DE8160300958E8B /* weibo_0.json in Resources */,
+				6B9EDA131E07B4CD00DC6519 /* Cube1.xib in Resources */,
 				6B178E101D9A045500257D97 /* Stars@2x.png in Resources */,
+				6B9EDA1D1E07B4E600DC6519 /* Cube3.xib in Resources */,
 				6B178E0F1D9A045500257D97 /* bg_backBarButton_normal@2x.png in Resources */,
 				6BF3A16C1D99167D00583D4D /* text.json in Resources */,
 				6B4392EF1DE8152300958E8B /* LeftVC.xib in Resources */,
 				6B4393101DE8160300958E8B /* WeiBoVC.xib in Resources */,
+				6B9EDA181E07B4DA00DC6519 /* Cube2.xib in Resources */,
 				6B178E0C1D9A045500257D97 /* bg_backBarButton_hight.png in Resources */,
 				6B43930B1DE8160300958E8B /* weibo_6.json in Resources */,
 				6B4392ED1DE8152300958E8B /* Item3.xib in Resources */,
+				6B9EDA271E07B50000DC6519 /* Cube5.xib in Resources */,
+				6B9EDA0E1E07B4C000DC6519 /* Cube0.xib in Resources */,
 				6B4393961DE824AC00958E8B /* HRTaobaoShopVC.xib in Resources */,
 				6BF3A1151D9913EA00583D4D /* Assets.xcassets in Resources */,
 				6B43930C1DE8160300958E8B /* weibo_7.json in Resources */,
@@ -764,15 +845,19 @@
 				6BBE59A21DC081D2000511DC /* HRButton.m in Sources */,
 				6B4393621DE81EB700958E8B /* HRTopBarViewController.m in Sources */,
 				6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */,
+				6B9EDA1C1E07B4E600DC6519 /* Cube3.m in Sources */,
+				6B9EDA211E07B4F400DC6519 /* Cube4.m in Sources */,
 				6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */,
 				6B1A15201DC3AE95009F58CA /* UIImageView+hr_SDWeb.m in Sources */,
 				6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */,
 				6B11154C1DC46D7000B43EAD /* HRDBTool.m in Sources */,
 				6B43930D1DE8160300958E8B /* WBCell.m in Sources */,
 				6B4392EB1DE8152300958E8B /* Item2.m in Sources */,
+				6B9EDA051E07B11100DC6519 /* HRCubeRotateViewController.m in Sources */,
 				6B4393671DE81EEF00958E8B /* HRWeaveVC.m in Sources */,
 				6BF3A10D1D9913EA00583D4D /* AppDelegate.m in Sources */,
 				6B1219671DC3236100CE9CBB /* UIView+hr_Extension.m in Sources */,
+				6B9EDA121E07B4CD00DC6519 /* Cube1.m in Sources */,
 				6B178E0B1D9A045500257D97 /* KKNavigationController.m in Sources */,
 				6B178E081D9A045500257D97 /* HRRootNC.m in Sources */,
 				6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */,
@@ -783,12 +868,16 @@
 				6BF3A15D1D99141B00583D4D /* HRHTTPManager.m in Sources */,
 				6B4392EC1DE8152300958E8B /* Item3.m in Sources */,
 				6BF3A1661D99141B00583D4D /* PushedVC.m in Sources */,
+				6B9EDA091E07B46400DC6519 /* CubeRotateApplyVC.m in Sources */,
+				6B9EDA0D1E07B4C000DC6519 /* Cube0.m in Sources */,
 				6B178E071D9A045500257D97 /* HRItemNC.m in Sources */,
 				6B36A5B51DC9919300DB09C1 /* NSString+hr_Extension.m in Sources */,
 				6BF3A16A1D99153600583D4D /* VIPCenterModel.m in Sources */,
+				6B9EDA261E07B50000DC6519 /* Cube5.m in Sources */,
 				6BF3A15B1D99141B00583D4D /* HRFunctionTool.m in Sources */,
 				6BEE8B7B1DCAEB0E00FB7AC8 /* HRQQApiManager.m in Sources */,
 				6B4393631DE81EB700958E8B /* HRWaterBallView.m in Sources */,
+				6B9EDA171E07B4DA00DC6519 /* Cube2.m in Sources */,
 				6B4392EA1DE8152300958E8B /* Item1.m in Sources */,
 				6B4393951DE824AC00958E8B /* HRTaobaoShopVC.m in Sources */,
 				6B14F01C1DF12CBE00CB80CB /* CubeRotateVC.m in Sources */,

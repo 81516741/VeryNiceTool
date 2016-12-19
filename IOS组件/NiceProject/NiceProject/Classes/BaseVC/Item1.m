@@ -47,8 +47,9 @@
     [self addCellTitle:@"topBar示例" string:@"topBar"];
     [self addCellTitle:@"转场动画" string:@"HRTransitonVC"];
     [self addCellTitle:@"流量杯" string:@"HRWeaveVC"];
-    [self addCellTitle:@"立体旋转" string:@"CubeRotateVC"];
     [self addCellTitle:@"淘宝购物车动画" string:@"HRTaobaoShopVC"];
+    [self addCellTitle:@"立体旋转" string:@"CubeRotateVC"];
+    [self addCellTitle:@"立体旋转控制器" string:@"CubeRotateApplyVC"];
 }
 //示范一个网络请求
 -(void)netRequest
