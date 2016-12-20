@@ -51,8 +51,8 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
 -(void)configBaseParam
 {
     self.cubeSubViewLRDistance = 80;
-    self.cubeSubViewTBDistance = 30;
-    self.cubeContainerViewHeight = 300;
+    self.cubeSubViewTBDistance = 60;
+    self.cubeContainerViewHeight = 360;
 }
 
 - (void)viewDidLoad {
@@ -260,8 +260,9 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
     for (int i = 0; i < self.cubeViewControllers.count; i ++)
     {
         UIViewController * vc = self.cubeViewControllers[i];
-        CATransform3D rotate = CATransform3DMakeRotation(kStandAngle * i - angle, 0, 1, 0);
-        CATransform3D mat =CATransform3DConcat(CATransform3DConcat(move, rotate), back);
+        CATransform3D rotateY = CATransform3DMakeRotation(kStandAngle * i - angle, 0, 1, 0);
+        CATransform3D rotateX = CATransform3DMakeRotation(-M_PI_4 * 0.4, 1, 0, 0);
+        CATransform3D mat =CATransform3DConcat(CATransform3DConcat(CATransform3DConcat(move, rotateY), rotateX), back);
         vc.view.layer.transform = [self CATransform3DPerspect:mat center:CGPointZero disZ:disZ];
     }
     

@@ -22,9 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.cubeSubViewLRDistance = 100;
-    self.cubeSubViewTBDistance = 30;
-    self.cubeContainerViewHeight = 300;
+    self.cubeSubViewLRDistance = 80;
+    self.cubeSubViewTBDistance = 60;
+    self.cubeContainerViewHeight = 360;
     self.cubeContainerViewY = 64;
     [self updateUI:@[[Cube0 new],[Cube1 new],[Cube2 new],[Cube3 new],[Cube4 new],[Cube5 new]]];
     [HRObject share].rootNC.canDragBack = false;
