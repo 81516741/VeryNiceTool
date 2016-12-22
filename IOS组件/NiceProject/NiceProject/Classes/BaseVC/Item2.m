@@ -19,6 +19,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blueColor];
+    CALayer * layer = [[CALayer alloc]init];
+    layer.bounds = CGRectMake(0, 54, 100, 100);
+    [self.view.layer addSublayer:layer];
+    layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"1"].CGImage);
+    layer.contentsGravity = kCAGravityResizeAspectFill;
+    layer.contentsRect = CGRectMake(0, 0, 0.5, 0.5);
+    layer.contentsCenter = CGRectMake(0.25, 0.25, 0.5, 0.5);
+    layer.position = CGPointMake(0, 64);
+    layer.anchorPoint = CGPointMake(0.5, 0.5);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

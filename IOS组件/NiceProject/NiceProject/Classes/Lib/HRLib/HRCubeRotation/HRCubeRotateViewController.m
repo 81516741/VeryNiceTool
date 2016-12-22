@@ -71,9 +71,7 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
     for (int i = 0; i < _cubeViewControllers.count; i++) {
         UIViewController * vc = controllers[i];
         vc.view.frame = CGRectMake(0, 0, self.cubeContainerView.bounds.size.width - 2 * self.cubeSubViewLRDistance, self.cubeContainerView.bounds.size.height - 2 * self.cubeSubViewTBDistance);
-        vc.view.center = CGPointMake(self.cubeContainerView.bounds.size.width * 0.5, self.cubeContainerView.bounds.size.height * 0.5);
-        vc.view.userInteractionEnabled = true;
-        vc.automaticallyAdjustsScrollViewInsets = false;
+        vc.view.center = self.cubeContainerView.center;
         [self.cubeContainerView addSubview:vc.view];
         [self addChildViewController:vc];
     }
@@ -254,20 +252,44 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
 {
     CGFloat disZ = 1000;
     CGFloat length = self.cubeContainerView.bounds.size.width - 2 * self.cubeSubViewLRDistance;
-    CGFloat multiParam = cosf(M_PI_2 - (M_PI * 2/self.cubeViewControllers.count));
+    CGFloat multiParam = ratio(self.cubeViewControllers.count);
     CATransform3D move = CATransform3DMakeTranslation(0, 0, length * multiParam);
     CATransform3D back = CATransform3DMakeTranslation(0, 0, -length * multiParam);
     for (int i = 0; i < self.cubeViewControllers.count; i ++)
     {
         UIViewController * vc = self.cubeViewControllers[i];
         CATransform3D rotateY = CATransform3DMakeRotation(kStandAngle * i - angle, 0, 1, 0);
-        CATransform3D rotateX = CATransform3DMakeRotation(-M_PI_4 * 0.4, 1, 0, 0);
-        CATransform3D mat =CATransform3DConcat(CATransform3DConcat(CATransform3DConcat(move, rotateY), rotateX), back);
+        CATransform3D rotateX = CATransform3DMakeRotation(_angleX, 1, 0, 0);
+        CATransform3D mat = CATransform3DConcat(CATransform3DConcat(CATransform3DConcat(move, rotateY), rotateX), back);
         vc.view.layer.transform = [self CATransform3DPerspect:mat center:CGPointZero disZ:disZ];
     }
     
 }
 
+CGFloat ratio(NSInteger VCCount){
+    CGFloat ratio = 1;
+    switch (VCCount) {
+        case 4:
+            ratio = 0.5;
+            break;
+        case 5:
+            ratio = 0.688;
+            break;
+        case 6:
+            ratio = 0.866;
+            break;
+        case 7:
+            ratio = 1.038;
+            break;
+        case 8:
+            ratio = 1.205;
+            break;
+            
+        default:
+            break;
+    }
+    return ratio;
+}
 
 -(CATransform3D)CATransform3DMakePerspective:(CGPoint) center disZ:(CGFloat) disZ
 {
@@ -323,7 +345,6 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
         self.touchEnd();
     }
 }
-
 -(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
 {
     if (self.invalidTimer) {

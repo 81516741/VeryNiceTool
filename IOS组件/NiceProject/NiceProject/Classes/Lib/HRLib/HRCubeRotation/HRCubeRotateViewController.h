@@ -5,6 +5,9 @@
 //  Created by ld on 16/12/2.
 //  Copyright © 2016年 ld. All rights reserved.
 //
+/*
+ * 备注:只支持4-8个面的立柱形状，controllers.count = 8;
+ */
 
 #import <UIKit/UIKit.h>
 @class CubeContainerView;
@@ -34,6 +37,11 @@
  * 立方体容器里面的view 距立方体容器上下边距 默认 30
  */
 @property (assign ,nonatomic) CGFloat cubeSubViewTBDistance;
+/**
+ *  立柱整体绕x轴的旋转角度
+ */
+@property (assign ,nonatomic) CGFloat angleX;
+
 /**
  * 所有的控制器
  */
