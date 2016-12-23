@@ -35,4 +35,14 @@
     [HRObject share].rootNC.canDragBack = true;
 }
 
+-(void)didRotation:(CGFloat)angle
+{
+    NSLog(@"角度:%f",angle);
+}
+
+-(void)didEndRotation:(CGFloat)angle index:(NSInteger)index
+{
+    NSLog(@"角度:%f,索引:%ld",angle,index);
+}
+
 @end

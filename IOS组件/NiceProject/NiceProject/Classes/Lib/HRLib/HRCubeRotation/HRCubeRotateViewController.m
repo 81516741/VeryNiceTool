@@ -247,6 +247,7 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
     [_cubeContainerView bringSubviewToFront:vcNext.view];
     [_cubeContainerView bringSubviewToFront:vcPre.view];
     [_cubeContainerView bringSubviewToFront:vc.view];
+    [self didEndRotation:_angle index:_step % _cubeViewControllers.count];
 }
 - (void)setCubeRotateAngle:(float)angle
 {
@@ -254,16 +255,16 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
     CGFloat length = self.cubeContainerView.bounds.size.width - 2 * self.cubeSubViewLRDistance;
     length = 0.5 * length / tan(M_PI/self.cubeViewControllers.count);
     CATransform3D move = CATransform3DMakeTranslation(0, 0, length);
-    CATransform3D back = CATransform3DMakeTranslation(0, 0, -length);
+    CATransform3D back = CATransform3DMakeTranslation(0, 0, -length * 1.5);//这个是视角距离，随便设置
     for (int i = 0; i < self.cubeViewControllers.count; i ++)
     {
         UIViewController * vc = self.cubeViewControllers[i];
         CATransform3D rotateY = CATransform3DMakeRotation(kStandAngle * i - angle, 0, 1, 0);
         CATransform3D rotateX = CATransform3DMakeRotation(_angleX, 1, 0, 0);
-        CATransform3D mat = CATransform3DConcat(CATransform3DConcat(CATransform3DConcat(move, rotateY), rotateX), back);
+        CATransform3D mat = CATransform3DConcat(CATransform3DConcat(CATransform3DConcat(move,rotateY), rotateX), back);
         vc.view.layer.transform = [self CATransform3DPerspect:mat center:CGPointZero disZ:disZ];
     }
-    
+    [self didRotation:_angle];
 }
 
 -(CATransform3D)CATransform3DMakePerspective:(CGPoint) center disZ:(CGFloat) disZ
@@ -278,6 +279,16 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
 -(CATransform3D)CATransform3DPerspect:(CATransform3D) t center:(CGPoint) center disZ:(CGFloat) disZ
 {
     return CATransform3DConcat(t, [self CATransform3DMakePerspective:center disZ:disZ]);
+}
+
+-(void)didRotation:(CGFloat)angle
+{
+    
+}
+
+-(void)didEndRotation:(CGFloat)angle index:(NSInteger)index
+{
+    
 }
 
 -(void)invalidateAllTimer

@@ -42,6 +42,10 @@
  * 所有的控制器
  */
 @property (nonatomic,strong) NSArray * cubeViewControllers;
+//子类实现，可以监听转动
+-(void)didRotation:(CGFloat)angle;
+-(void)didEndRotation:(CGFloat)angle index:(NSInteger)index;
+
 @end
 
 
