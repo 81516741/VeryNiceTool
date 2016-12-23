@@ -4,10 +4,6 @@
 //
 //  Created by ld on 16/12/2.
 //  Copyright © 2016年 ld. All rights reserved.
-//
-/*
- * 备注:只支持4-8个面的立柱形状，controllers.count = 8;
- */
 
 #import <UIKit/UIKit.h>
 @class CubeContainerView;
