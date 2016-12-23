@@ -27,7 +27,7 @@
     self.cubeContainerViewHeight = 360;
     self.cubeContainerViewY = 64;
     self.angleX = 0;
-    [self updateUI:@[[Cube0 new],[Cube1 new],[Cube2 new],[Cube3 new],[Cube0 new],[Cube1 new],[Cube2 new],[Cube1 new]]];
+    [self updateUI:@[[Cube0 new],[Cube1 new],[Cube2 new],[Cube3 new],[Cube4 new],[Cube5 new]]];
     [HRObject share].rootNC.canDragBack = false;
 }
 -(void)dealloc

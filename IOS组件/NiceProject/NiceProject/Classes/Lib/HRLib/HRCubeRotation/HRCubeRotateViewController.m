@@ -252,9 +252,9 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
 {
     CGFloat disZ = 1000;
     CGFloat length = self.cubeContainerView.bounds.size.width - 2 * self.cubeSubViewLRDistance;
-    CGFloat multiParam = ratio(self.cubeViewControllers.count);
-    CATransform3D move = CATransform3DMakeTranslation(0, 0, length * multiParam);
-    CATransform3D back = CATransform3DMakeTranslation(0, 0, -length * multiParam);
+    length = 0.5 * length / tan(M_PI/self.cubeViewControllers.count);
+    CATransform3D move = CATransform3DMakeTranslation(0, 0, length);
+    CATransform3D back = CATransform3DMakeTranslation(0, 0, -length);
     for (int i = 0; i < self.cubeViewControllers.count; i ++)
     {
         UIViewController * vc = self.cubeViewControllers[i];
@@ -264,31 +264,6 @@ static CGFloat animationDuration = 1; //2次转动的间隔时间
         vc.view.layer.transform = [self CATransform3DPerspect:mat center:CGPointZero disZ:disZ];
     }
     
-}
-
-CGFloat ratio(NSInteger VCCount){
-    CGFloat ratio = 1;
-    switch (VCCount) {
-        case 4:
-            ratio = 0.5;
-            break;
-        case 5:
-            ratio = 0.688;
-            break;
-        case 6:
-            ratio = 0.866;
-            break;
-        case 7:
-            ratio = 1.038;
-            break;
-        case 8:
-            ratio = 1.205;
-            break;
-            
-        default:
-            break;
-    }
-    return ratio;
 }
 
 -(CATransform3D)CATransform3DMakePerspective:(CGPoint) center disZ:(CGFloat) disZ
