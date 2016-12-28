@@ -11,6 +11,13 @@
 //announcement表的存储路径
 #define  kImageFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:@"hr_image_db.sqlite"]
 
+
+#ifdef DEBUG
+#define hr_ImageLoader_Log(...) NSLog(__VA_ARGS__)
+#else
+#define hr_ImageLoader_Log(...)
+#endif
+
 @interface HRDBTool : NSObject
 /**
  *  创建所有的table

@@ -8,7 +8,6 @@
 
 #import "HRDBTool.h"
 #import "FMDB.h"
-#import "HRConst.h"
 
 //announcement表的两个管理者
 static FMDatabase *_imageDB=nil;
@@ -28,7 +27,7 @@ static NSString * const kImageURL   = @"image_url";
 {
     [HRDBTool createImageDataBase];
     [HRDBTool creatImageDataTable];
-    HRLog(@"%@",kImageFilePath);
+    hr_ImageLoader_Log(@"%@",kImageFilePath);
 }
 
 +(void)createImageDataBase
@@ -53,9 +52,9 @@ static NSString * const kImageURL   = @"image_url";
     
     BOOL state1 = [_imageDB executeUpdate:sqlit];
     if (state1) {
-        HRLog(@"创建image_table---成功");
+        hr_ImageLoader_Log(@"创建image_table---成功");
     } else {
-        HRLog(@"创建image_table---失败");
+        hr_ImageLoader_Log(@"创建image_table---失败");
     }
     [_imageDB close];
 }
@@ -78,9 +77,9 @@ static NSString * const kImageURL   = @"image_url";
         [sqlit appendFormat:@"values('%@','%@')",url,imageString];
         BOOL state = [db executeUpdate:sqlit];
         if (state) {
-            HRLog(@"image_table插入数据---成功");
+            hr_ImageLoader_Log(@"image_table插入数据---成功");
         } else {
-            HRLog(@"image_table插入数据---失败");
+            hr_ImageLoader_Log(@"image_table插入数据---失败");
         }
         [db close];
     }];
@@ -96,11 +95,13 @@ static NSString * const kImageURL   = @"image_url";
         NSData * imageData = [[NSData alloc]initWithBase64EncodedString:imageString options:NSDataBase64DecodingIgnoreUnknownCharacters];
         UIImage * image = [UIImage imageWithData:imageData];
         if (image) {
-            HRLog(@"%@查询图片成功",kImageTable);
+            hr_ImageLoader_Log(@"%@查询图片成功",kImageTable);
+            [_imageDB close];
             return image;
         }
     }
-    HRLog(@"%@查询图片失败",kImageTable);
+    [_imageDB close];
+    hr_ImageLoader_Log(@"%@查询图片失败",kImageTable);
     return nil;
     
 }
@@ -112,12 +113,15 @@ static NSString * const kImageURL   = @"image_url";
         [db open];
         NSMutableString * sqlit = [NSMutableString string];
         [sqlit appendFormat:@"DELETE FROM %@ ",kImageTable];
-        [sqlit appendFormat:@"WHERE %@ = %@",kImageURL,url];
+        if (url != nil) {
+            [sqlit appendFormat:@"WHERE %@ = %@",kImageURL,url];
+        }
         BOOL state = [db executeUpdate:sqlit];
         if (state) {
-            HRLog(@"image_table删除数据---成功");
+            [db executeUpdate:@"VACUUM"];
+            hr_ImageLoader_Log(@"image_table删除数据---成功");
         } else {
-            HRLog(@"image_table删除数据---失败");
+            hr_ImageLoader_Log(@"image_table删除数据---失败");
         }
         [db close];
     }];
@@ -137,13 +141,11 @@ static NSString * const kImageURL   = @"image_url";
         [sqlit appendFormat:@"WHERE %@ = %@",kImageURL,url];
         BOOL state = [db executeUpdate:sqlit];
         if (state) {
-            HRLog(@"image_table更新数据---成功");
+            hr_ImageLoader_Log(@"image_table更新数据---成功");
         } else {
-            HRLog(@"image_table更新数据---失败");
+            hr_ImageLoader_Log(@"image_table更新数据---失败");
         }
         [db close];
     }];
 }
-
-
 @end

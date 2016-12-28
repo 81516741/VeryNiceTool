@@ -6,7 +6,6 @@
 //
 
 #import "HRObject.h"
-
 @implementation HRObject
 
 +(instancetype)share
@@ -18,5 +17,4 @@
     });
     return _instance;
 }
-
 @end

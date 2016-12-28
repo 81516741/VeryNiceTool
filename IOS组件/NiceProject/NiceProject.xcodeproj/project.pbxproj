@@ -62,6 +62,7 @@
 		6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B497EA01DC2357A00EC74E1 /* LDGridView.m */; };
 		6B5E405A1DC1BA22006E57D3 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E40591DC1BA22006E57D3 /* YYFPSLabel.m */; };
 		6B5F40EB1DBE08010017B00A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5F40EA1DBE08010017B00A /* libc++.tbd */; };
+		6B83FBD81E1398FA00D701F4 /* HRImageDownLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B83FBD71E1398FA00D701F4 /* HRImageDownLoader.m */; };
 		6B9EDA051E07B11100DC6519 /* HRCubeRotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA041E07B11100DC6519 /* HRCubeRotateViewController.m */; };
 		6B9EDA091E07B46400DC6519 /* CubeRotateApplyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA081E07B46400DC6519 /* CubeRotateApplyVC.m */; };
 		6B9EDA0D1E07B4C000DC6519 /* Cube0.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9EDA0B1E07B4C000DC6519 /* Cube0.m */; };
@@ -108,8 +109,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B11154A1DC46D7000B43EAD /* HRDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRDBTool.h; sourceTree = "<group>"; };
-		6B11154B1DC46D7000B43EAD /* HRDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDBTool.m; sourceTree = "<group>"; };
+		6B11154A1DC46D7000B43EAD /* HRDBTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRDBTool.h; path = ../../../Common/HRDBTool.h; sourceTree = "<group>"; };
+		6B11154B1DC46D7000B43EAD /* HRDBTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRDBTool.m; path = ../../../Common/HRDBTool.m; sourceTree = "<group>"; };
 		6B1219651DC3236100CE9CBB /* UIView+hr_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+hr_Extension.h"; sourceTree = "<group>"; };
 		6B1219661DC3236100CE9CBB /* UIView+hr_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+hr_Extension.m"; sourceTree = "<group>"; };
 		6B14F0191DF12CBE00CB80CB /* CubeRotateVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeRotateVC.h; sourceTree = "<group>"; };
@@ -197,6 +198,8 @@
 		6B5F40D71DBDEE3A0017B00A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		6B5F40D91DBDEE440017B00A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6B5F40EA1DBE08010017B00A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		6B83FBD61E1398FA00D701F4 /* HRImageDownLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRImageDownLoader.h; path = ../../HRImageDownLoader.h; sourceTree = "<group>"; };
+		6B83FBD71E1398FA00D701F4 /* HRImageDownLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRImageDownLoader.m; path = ../../HRImageDownLoader.m; sourceTree = "<group>"; };
 		6B9EDA031E07B11100DC6519 /* HRCubeRotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCubeRotateViewController.h; sourceTree = "<group>"; };
 		6B9EDA041E07B11100DC6519 /* HRCubeRotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCubeRotateViewController.m; sourceTree = "<group>"; };
 		6B9EDA071E07B46400DC6519 /* CubeRotateApplyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeRotateApplyVC.h; sourceTree = "<group>"; };
@@ -360,6 +363,17 @@
 			path = WeChatSDK;
 			sourceTree = "<group>";
 		};
+		6B2BC2901E13B9A6007EDC44 /* HRNiceTool */ = {
+			isa = PBXGroup;
+			children = (
+				6B83FBD61E1398FA00D701F4 /* HRImageDownLoader.h */,
+				6B83FBD71E1398FA00D701F4 /* HRImageDownLoader.m */,
+				6B11154A1DC46D7000B43EAD /* HRDBTool.h */,
+				6B11154B1DC46D7000B43EAD /* HRDBTool.m */,
+			);
+			path = HRNiceTool;
+			sourceTree = "<group>";
+		};
 		6B4392DF1DE8152300958E8B /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +447,7 @@
 		6B4393591DE81EB700958E8B /* HRLib */ = {
 			isa = PBXGroup;
 			children = (
+				6B2BC2901E13B9A6007EDC44 /* HRNiceTool */,
 				6B9EDA021E07B11100DC6519 /* HRCubeRotation */,
 				6B43935A1DE81EB700958E8B /* HRTopBar */,
 				6B43935D1DE81EB700958E8B /* HRWaterBall */,
@@ -631,8 +646,6 @@
 				6BF3A13A1D99141B00583D4D /* HRObject.m */,
 				6BF3A1371D99141B00583D4D /* HRFunctionTool.h */,
 				6BF3A1381D99141B00583D4D /* HRFunctionTool.m */,
-				6B11154A1DC46D7000B43EAD /* HRDBTool.h */,
-				6B11154B1DC46D7000B43EAD /* HRDBTool.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -847,6 +860,7 @@
 				6B497EA11DC2357A00EC74E1 /* LDGridView.m in Sources */,
 				6B9EDA1C1E07B4E600DC6519 /* Cube3.m in Sources */,
 				6B9EDA211E07B4F400DC6519 /* Cube4.m in Sources */,
+				6B83FBD81E1398FA00D701F4 /* HRImageDownLoader.m in Sources */,
 				6BF3A1101D9913EA00583D4D /* ViewController.m in Sources */,
 				6B1A15201DC3AE95009F58CA /* UIImageView+hr_SDWeb.m in Sources */,
 				6B178E061D9A045500257D97 /* HRBaseVC.m in Sources */,

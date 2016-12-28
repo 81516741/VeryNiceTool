@@ -32,5 +32,6 @@
  *  单例
  */
 +(instancetype)share;
-
 @end
+
+

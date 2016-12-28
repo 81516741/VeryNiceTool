@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Item3">
             <connections>
                 <outlet property="centerCons" destination="THu-bQ-UPN" id="PAB-h8-0IW"/>
+                <outlet property="imageView" destination="SbW-ig-ob4" id="J5R-CV-bvL"/>
                 <outlet property="tableview" destination="WMM-gt-AmQ" id="FRT-e6-Eap"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,16 +39,21 @@
                         <constraint firstAttribute="height" constant="80" id="imi-BW-bk5"/>
                     </constraints>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SbW-ig-ob4"/>
             </subviews>
             <color key="backgroundColor" red="1" green="0.47058823529999999" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="SbW-ig-ob4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="35O-eH-eJ4"/>
                 <constraint firstItem="WMM-gt-AmQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="4Vd-ZP-JlG"/>
                 <constraint firstItem="7Wi-yJ-LOw" firstAttribute="centerY" secondItem="WMM-gt-AmQ" secondAttribute="centerY" id="7wH-1w-iP3"/>
                 <constraint firstItem="WMM-gt-AmQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GtH-YL-iWL"/>
                 <constraint firstItem="7Wi-yJ-LOw" firstAttribute="centerX" secondItem="WMM-gt-AmQ" secondAttribute="centerX" id="THu-bQ-UPN"/>
                 <constraint firstItem="8Hu-Ey-0Gk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Us1-aA-Ifg"/>
                 <constraint firstAttribute="bottom" secondItem="WMM-gt-AmQ" secondAttribute="bottom" constant="49" id="Yey-Su-bDb"/>
+                <constraint firstAttribute="bottom" secondItem="SbW-ig-ob4" secondAttribute="bottom" constant="120" id="eS8-GC-sA1"/>
                 <constraint firstItem="8Hu-Ey-0Gk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rya-4j-efN"/>
+                <constraint firstAttribute="trailing" secondItem="SbW-ig-ob4" secondAttribute="trailing" id="vHs-zI-WcV"/>
+                <constraint firstItem="SbW-ig-ob4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vVu-lI-8EU"/>
                 <constraint firstAttribute="trailing" secondItem="WMM-gt-AmQ" secondAttribute="trailing" id="wj1-f9-HzB"/>
             </constraints>
             <point key="canvasLocation" x="78.5" y="184.5"/>
