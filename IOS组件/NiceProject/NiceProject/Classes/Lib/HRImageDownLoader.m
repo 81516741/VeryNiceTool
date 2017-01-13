@@ -11,8 +11,6 @@
 
 @interface HRImageDownLoader()
 @property (nonatomic,strong) NSMutableDictionary * taskCache;
-@property (nonatomic,strong) NSMutableDictionary * imageCache;
-
 @end
 
 @implementation HRImageDownLoader
@@ -30,11 +28,6 @@
 {
     if (self.taskCache[urlStr] != nil) {
         hr_ImageLoader_Log(@"正在下载");
-        return;
-    }
-    if (self.imageCache[urlStr] != nil) {
-        progress(UIImagePNGRepresentation(self.imageCache[urlStr]),YES);
-        hr_ImageLoader_Log(@"已经下载过了");
         return;
     }
     if ([HRImageDBTool imageStringWithURL:urlStr] != nil) {
@@ -77,10 +70,8 @@
 // 3.请求成功或者失败（如果失败，error有值）
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     // 请求完成,成功或者失败的处理
-    [self.taskCache removeObjectForKey:task.urlStr];
     UIImage * image = [UIImage imageWithData:task.receivedDatas];
     if (image != nil) {
-        self.imageCache[task.urlStr] = image;
         [HRImageDBTool insert:image url:task.urlStr];
     }
     dispatch_sync(dispatch_get_main_queue(), ^{
@@ -88,11 +79,11 @@
             task.progressBlock(task.receivedDatas,NO);
         }
     });
+    [self.taskCache removeObjectForKey:task.urlStr];
 }
 
 -(void)clearImageCache
 {
-    [self.imageCache removeAllObjects];
     [HRImageDBTool deleteImageWithURL:nil];
 }
 
@@ -103,13 +94,7 @@
     }
     return _taskCache;
 }
--(NSMutableDictionary *)imageCache
-{
-    if (_imageCache == nil) {
-        _imageCache = @{}.mutableCopy;
-    }
-    return _imageCache;
-}
+
 @end
 #import <objc/runtime.h>
 @implementation NSURLSessionTask (hr_image)
