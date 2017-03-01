@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B12196B1DC3343D00CE9CBB /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1219681DC3343D00CE9CBB /* TextView.xib */; };
-		6B12196F1DC3345200CE9CBB /* TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B12196E1DC3345200CE9CBB /* TextView.m */; };
 		6B1219721DC3348D00CE9CBB /* LDGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1219711DC3348D00CE9CBB /* LDGridView.m */; };
 		6BB3FAA21D813D8700954AFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3FAA11D813D8700954AFF /* AppDelegate.m */; };
 		6BB3FAA51D813D8700954AFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3FAA41D813D8700954AFF /* ViewController.m */; };
@@ -20,8 +19,6 @@
 
 /* Begin PBXFileReference section */
 		6B1219681DC3343D00CE9CBB /* TextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextView.xib; sourceTree = "<group>"; };
-		6B12196D1DC3345200CE9CBB /* TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextView.h; sourceTree = "<group>"; };
-		6B12196E1DC3345200CE9CBB /* TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextView.m; sourceTree = "<group>"; };
 		6B1219701DC3348D00CE9CBB /* LDGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDGridView.h; sourceTree = "<group>"; };
 		6B1219711DC3348D00CE9CBB /* LDGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDGridView.m; sourceTree = "<group>"; };
 		6BB3FA9A1D813D8700954AFF /* 宫格布局.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "宫格布局.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				6BB3FAC11D815AFC00954AFF /* Grid */,
-				6B12196D1DC3345200CE9CBB /* TextView.h */,
-				6B12196E1DC3345200CE9CBB /* TextView.m */,
 				6B1219681DC3343D00CE9CBB /* TextView.xib */,
 				6BB3FAA01D813D8700954AFF /* AppDelegate.h */,
 				6BB3FAA11D813D8700954AFF /* AppDelegate.m */,
@@ -171,7 +166,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B12196F1DC3345200CE9CBB /* TextView.m in Sources */,
 				6BB3FAA51D813D8700954AFF /* ViewController.m in Sources */,
 				6BB3FAA21D813D8700954AFF /* AppDelegate.m in Sources */,
 				6B1219721DC3348D00CE9CBB /* LDGridView.m in Sources */,

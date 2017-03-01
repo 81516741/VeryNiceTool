@@ -15,6 +15,7 @@
  */
 -(void)awakeFromNib
 {
+    [super awakeFromNib];
     self.commitButton.backgroundColor = self.hr_EnabledColor ?: self.commitButton.backgroundColor;
     [self.textFieldsBehavior enumerateObjectsUsingBlock:^(HRTextFieldBehavior * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj.textField addTarget:self action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];

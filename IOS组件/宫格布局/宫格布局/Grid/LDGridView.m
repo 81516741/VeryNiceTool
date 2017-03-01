@@ -10,27 +10,25 @@
 
 @implementation LDGridView
 
-+(instancetype)configSubItemsIn:(UIView *)desView count:(NSInteger)count col:(NSInteger)col itemH:(CGFloat)itemH margin:(CGFloat)margin startY:(CGFloat)startY fetchItemAtIndex:(UIView * (^)(NSInteger index))fetchItemAtIndex
+- (void)configItemsByItemCount:(NSInteger)itemcount column:(NSInteger)col itemHeight:(CGFloat)itemHeight fetchItemAtIndex:(UIView * (^)(NSInteger index))fetchItemAtIndex
 {
-    NSInteger rowCount = (count-1)/col + 1;
-    CGFloat itemW= (desView.frame.size.width - (col - 1) * margin)/col ;
-    itemH = itemH > 0 ? itemH : itemW;
-    LDGridView * gridView = [[LDGridView alloc]initWithFrame:CGRectMake(0, startY, desView.bounds.size.width, (margin + itemH) * rowCount - margin)];
-    [desView addSubview:gridView];
-    for (int i=0; i<count; i++) {
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    CGFloat itemW= (self.frame.size.width - (col - 1) * self.itemMargin)/col ;
+    itemHeight = itemHeight > 0 ? itemHeight : itemW;
+    for (int i=0; i<itemcount; i++) {
         int tmpRow = i/col;
         int tmpColum = i%col;
-        CGRect itemFrame = CGRectMake(tmpColum * (itemW + margin), tmpRow * (itemH + margin), itemW, itemH);
+        CGRect itemFrame = CGRectMake(tmpColum * (itemW + self.itemMargin), tmpRow * (itemHeight + self.itemMargin), itemW, itemHeight);
         if (fetchItemAtIndex) {
             UIView *sView = fetchItemAtIndex(i);
             if (sView) {
                 sView.frame = itemFrame;
-                [gridView addSubview:sView];
+                [self addSubview:sView];
             }
         }
     }
-    gridView.contentHeight = rowCount * (itemH + margin) - margin;
-    return gridView;
+    NSInteger rowCount = (itemcount-1)/col + 1;
+    self.gridViewHeight = rowCount * (itemHeight + self.itemMargin) - self.itemMargin;
 }
 
 @end
